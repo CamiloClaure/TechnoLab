@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Presentacion/MasterPage.Master" CodeBehind="frmPrincipal.aspx.cs" Inherits="TechnoLab.Presentacion.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmPrincipal.aspx.cs" Inherits="TechnoLab.Presentacion.WebForm1" %>
 
 <!DOCTYPE html>
 
