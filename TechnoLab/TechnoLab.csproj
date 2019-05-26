@@ -218,6 +218,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Imagenes\" />
+    <Folder Include="Presentacion\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
