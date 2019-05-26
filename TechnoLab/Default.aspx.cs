@@ -13,5 +13,10 @@ namespace TechnoLab
         {
 
         }
+
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Presentacion/frmPrincipal.aspx", false);
+        }
     }
 }

@@ -1,0 +1,475 @@
+.dxvgControl_Metropolis1,
+.dxvgDisabled_Metropolis1
+{
+    border: 1px Solid #c0c0c0;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    background-color: White;
+    color: #333333;
+    cursor: default;
+}
+.dxvgDisabled_Metropolis1
+{
+    color: #b8b8b8;
+}
+.dxvgControl_Metropolis1 a.dxeHyperlink:not([href]):not([onclick]):not(.dxbButtonSys)
+{
+    color: #333333;
+    text-decoration: none;
+}
+.dxvgControl_Metropolis1 a
+{
+    color: #1A5DA7;
+}
+.dxvgDisabled_Metropolis1 a
+{
+    color: #b8b8b8;
+}
+.dxvgTable_Metropolis1
+{
+    background-color: White;
+    border-width: 0;
+    border-collapse: separate !important;
+    overflow: hidden;
+    table-layout: fixed;
+}
+.dxvgTable_Metropolis1 .dxvgHEC
+{
+    background-color: White;
+    border-width: 0;
+    overflow: hidden;
+}
+.dxvgHeader_Metropolis1
+{
+    cursor: pointer;
+    font-weight: normal;
+    text-align: left;
+    background-color: white;
+    padding: 4px 6px 5px;
+    border: 1px Solid #c0c0c0;
+    border-width: 0 1px 1px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.dxvgCategory_Metropolis1
+{
+    font-weight: bold;
+    background-color: white;
+    padding: 9px 6px;
+    border-bottom: 1px solid #cacbd3;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.dxvgCSD .dxvgCategory_Metropolis1:not(.dxvg__I)
+{
+    border-right: 1px solid #cacbd3;
+}
+.dxvgCategoryRow_Metropolis1.dxvgER .dxvgCategory_Metropolis1,
+.dxvgCategoryRow_Metropolis1.dxvgCR .dxvgCategory_Metropolis1
+{
+    cursor: pointer;
+}
+.dxvgCategoryRow_Metropolis1.dxvgER .dxvgCategory_Metropolis1.dxvg__I,
+.dxvgCategoryRow_Metropolis1.dxvgCR .dxvgCategory_Metropolis1.dxvg__I
+{
+    cursor: default;
+}
+.dxvgRecord_Metropolis1
+{
+    padding: 3px 6px 4px;
+    border: 1px Solid #c0c0c0;
+    border-width: 0 1px 1px 0;
+    background: White;
+    overflow: hidden;
+}
+.dxvgRecord_Metropolis1:last-child
+{
+    border-right-width: 0;
+}
+.dxvgRPFC .dxvgRecord_Metropolis1
+{
+    border-bottom: 1px Solid #cacbd3;
+}
+.dxvgGLNV .dxvgRecord_Metropolis1
+{
+    border-right-width: 0;
+}
+.dxvgGLNH .dxvgRecord_Metropolis1
+{
+    border-bottom-width: 0;
+}
+.dxvgGLNH .dxvgRPFC .dxvgRecord_Metropolis1
+{
+    border-bottom-width: 1px;
+}
+.dxvgGLNH .dxvgRPFC.dxvgER .dxvgRecord_Metropolis1
+{
+    border-bottom-width: 0;
+}
+.dxvgFC .dxvgGLNH tr:last-child .dxvgRecord_Metropolis1
+{
+    border-bottom-width: 1px;
+}
+.dxvgControl_Metropolis1 .dxvgFCSD
+{
+    border-top: 1px solid #cacbd3;
+}
+.dxvgRecordAlt_Metropolis1
+{
+    background-color: WhiteSmoke;
+}
+/* Select, Hover */
+.dxvgSelectedRecord_Metropolis1
+{
+    background-color: #e0e0e0;
+    color: #333333;
+}
+.dxvgSelectedRecord_Metropolis1 a
+{
+    color: #1A5DA7;
+}
+.dxvgDataRowHover_Metropolis1 .dxvgRecord_Metropolis1
+{
+    background-color: #f0f0f0;
+    color: #333333;
+}
+.dxvgDataRowHover_Metropolis1 a
+{
+    color: #1A5DA7 !important;
+}
+/* Command Items */
+.dxvgCommandCell_Metropolis1 a,
+.dxvgHeader_Metropolis1 a.dxvgCommandItem_Metropolis1
+{
+    margin: 0 3px 0 0;
+}
+.dxvgHeader_Metropolis1 a,
+.dxvgCommandCell_Metropolis1 a
+{
+    color: #1A5DA7;
+}
+.dxbButton_Metropolis1[class~="dxvgCommandItem_Metropolis1"]
+{
+    margin: 0px 2px -1px;
+}
+.dxbButton_Metropolis1[class~="dxvgCommandItem_Metropolis1"] .dxb
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* Indents */
+.dxvgControl_Metropolis1 .dxvg__I
+{
+    border-style: solid;
+    border-color: #cacbd3;
+    border-width: 0 1px 0 0;
+    cursor: default;
+}
+.dxvgControl_Metropolis1 .dxvg__I.dxvg__BB
+{
+    border-bottom-width: 1px;
+}
+.dxvgControl_Metropolis1 .dxvgER .dxvg__I.dxvg__BB
+{
+    border-bottom-width: 0;
+}
+.dxvgControl_Metropolis1 .dxvgMHI .dxvg__I
+{
+    border-right-width: 0;
+}
+.dxvgControl_Metropolis1 .dxvgMHI .dxvgER .dxvg__I.dxvg__BB
+{
+    border-bottom-width: 1px;
+}
+/* Title Panel, Status bar, Summary Panel */
+.dxvgTitlePanel_Metropolis1,
+.dxvgTable_Metropolis1 caption
+{
+    font-size: 1.25em;
+    font-weight: normal;
+    padding: 3px 3px 5px;
+    text-align: center;
+    color: #999999;
+    border-bottom: 1px Solid #c0c0c0;
+}
+.dxvgStatusBar_Metropolis1
+{
+    border-top: 1px Solid #c0c0c0;
+}
+.dxvgStatusBar_Metropolis1 tr.dxvg
+{
+    height: 20px;
+}
+.dxvgStatusBar_Metropolis1 tr.dxvg > td
+{
+    padding: 4px;
+}
+.dxvgStatusBar_Metropolis1 tr.dxvg span .dxbButtonSys:first-child
+{
+    margin-left: 20px;
+}
+.dxvgSummaryPanel_Metropolis1
+{
+    border-top: 1px solid #c0c0c0;
+    padding: 8px 21px;
+}
+.dxvgSummaryItem_Metropolis1
+{
+    display: inline-block;
+    margin: 5px 8px 5px 0;
+}
+/* Pager */
+.dxvgPagerTopPanel_Metropolis1,
+.dxvgPagerBottomPanel_Metropolis1
+{
+    padding: 4px 0;
+}
+.dxvgPagerTopPanel_Metropolis1
+{
+    border-bottom: 1px Solid #c0c0c0;
+}
+.dxvgPagerBottomPanel_Metropolis1
+{
+    border-top: 1px Solid #c0c0c0;
+}
+.dxvgControl_Metropolis1 .dxpLite_Metropolis1,
+.dxvgDisabled_Metropolis1 .dxpLite_Metropolis1
+{
+    padding-top: 4px;
+}
+/* Toolbar */
+.dxvgControl_Metropolis1 .dxctToolbar_Metropolis1.dxm-main.dxvgCTTop
+{
+    border-bottom: 1px solid #cacbd3;
+}
+.dxvgControl_Metropolis1 .dxctToolbar_Metropolis1.dxm-main.dxvgCTBottom
+{
+    border-top: 1px solid #cacbd3;
+}
+/* Filter Builder, Filter Bar */
+.dxvgFilterBar_Metropolis1
+{
+    border-top: 1px Solid #c0c0c0;
+}
+.dxvgFilterBar_Metropolis1 a
+{
+    color: #1A5DA7;
+    text-decoration: underline;
+}
+.dxvgFilterBarCheckBoxCell_Metropolis1
+{
+    padding: 0 7px;
+}
+.dxvgFilterBarImageCell_Metropolis1
+{
+    padding: 0 1px 0 3px;
+    cursor: pointer;
+}
+.dxvgFilterBarExpressionCell_Metropolis1
+{
+    padding: 5px 5px 8px 0;
+    white-space: nowrap;
+}
+.dxvgFilterBarClearButtonCell_Metropolis1
+{
+    padding: 5px 6px 8px;
+}
+.dxvgFilterBuilderMainArea_Metropolis1
+{
+    background: white none;
+    padding: 6px 2px;
+}
+.dxvgFilterBuilderButtonArea_Metropolis1
+{
+    border-top: 1px solid #c0c0c0;
+    padding: 6px;
+    white-space: nowrap;
+}
+/* Header Filter */
+.dxvgControl_Metropolis1 .dxvgHFC
+{
+    padding-left: 4px;
+}
+.dxvgControl_Metropolis1 .dxvgHFC .dxeCalendar_Metropolis1
+{
+    margin-top: 3px;
+    margin-left: 7px;
+}
+.dxvgControl_Metropolis1 div[id$='DXEPLPC']
+{
+    height: 53px;
+}
+.dxvgControl_Metropolis1 .dxvgHFSD
+{
+    height: 1px;
+    margin: 2px 0;
+}
+.dxvgControl_Metropolis1 .dxvgHFDRC
+{
+    margin: 15px 15px 25px;
+}
+.dxvgControl_Metropolis1 .dxvgHFDRP
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 9px 0 6px;
+}
+.dxvgControl_Metropolis1 .dxvgHFDRP[id*="HFFDE"]
+{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.dxvgControl_Metropolis1 .dxvgHFDRP[id*="HFTDE"]
+{
+    margin-bottom: 25px;
+}
+/* Batch Edit */
+.dxvgControl_Metropolis1 td.dxvgBatchEditCell_Metropolis1
+{
+    padding: 0 2px;
+}
+.dxvgControl_Metropolis1 td.dxvgBatchEditModifiedCell_Metropolis1
+{
+    background: #d7f9c7;
+}
+.dxvgBatchEditDeletedItem_Metropolis1,
+.dxvgBatchEditNewItem_Metropolis1.dxvgBatchEditDeletedItem_Metropolis1
+{
+    background: #EFEFEF;
+}
+td.dxvgBatchEditDeletedItem_Metropolis1:not(.dxvgCommandColumn_Metropolis1)
+{
+    color: rgba(0,0,0,0.5);
+}
+.dxvgBatchEditDeletedItem_Metropolis1.dxvgBatchEditModifiedCell_Metropolis1
+{
+    background: #eefbe7 !important;
+}
+.dxvgBatchEditNewItem_Metropolis1
+{
+    background: #F0FAEA;
+}
+.dxvgControl_Metropolis1 .dxvgErrorCell
+{
+    padding-left: 5px;
+    width: 1px;
+}
+.dxvgControl_Metropolis1 .dxvgErrorCell img
+{
+    margin: -3px 0;
+}
+.dxvgStatusBar_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-right: 10px;
+}
+.dxvgControl_Metropolis1 td.dxvgBatchEditCell_Metropolis1 .dxichCellSys
+{
+    padding-left: 0;
+}
+.dxvgRecordError_Metropolis1
+{
+    background-color: #FFC8C8;
+    color: #FF0000;
+    padding: 6px 10px;
+    height: 100%;
+}
+.dxvgERV .dxvgRecord_Metropolis1
+{
+    display: none;
+}
+.dxvgEmptyRecord_Metropolis1
+{
+    display: none;
+    text-align: center;
+}
+.dxvgERV .dxvgEmptyRecord_Metropolis1
+{
+    display: table-cell;
+}
+/* LoadingPanel */
+.dxvgLoadingPanel_Metropolis1
+{
+    border: 1px solid #C3C3C3;
+    background-color: white;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+}
+.dxvgLoadingPanel_Metropolis1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+.dxvgLoadingPanel_Metropolis1 .dxlp-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+}
+.dxvgLoadingPanelStatusBar_Metropolis1 .dxlp-loadingImage
+{
+    background-image: url('../GridView/gvLoadingOnStatusBar.gif');
+    height: 16px;
+    width: 16px;
+}
+.dxvgLoadingPanelStatusBar_Metropolis1
+{
+    background-color: Transparent;
+}
+.dxvgLoadingPanelStatusBar_Metropolis1 td
+{
+    white-space: nowrap;
+    text-align: center;
+    padding: 0px 2px;
+}
+/* Search Panel */
+.dxvgSearchPanel_Metropolis1
+{
+    padding: 7px 4px 7px 6px;
+    border-bottom: 1px solid #c0c0c0;
+}
+.dxvgSearchPanel_Metropolis1 > table
+{
+    width: 70%;
+    max-width: 450px;
+}
+.dxvgControl_Metropolis1 .dxvgSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-left: 7px;
+    margin-right: 0;
+}
+*[dir="rtl"].dxvgControl_Metropolis1 .dxvgSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-left: 0;
+    margin-right: 7px;
+}
+.dxvgControl_Metropolis1 .dxvgHL
+{
+    background: #ffd83a;
+    color: #333333;
+    font-weight: bold;
+    font-style: normal;
+}
+/* TODO remove (replace to command button style) */
+.dxvgControl_Metropolis1 .dxvgSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    font-size: 0.9em;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+.dxvgControl_Metropolis1 .dxvgSearchPanel_Metropolis1 .dxbButton_Metropolis1 .dxb
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* Removes flicking in iOS Safari*/
+.dxvgTable_Metropolis1
+{
+    -webkit-tap-highlight-color: transparent;
+}
+.dxvgFocusedCell_Metropolis1
+{
+    box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+    -webkit-box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+    -moz-box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+}

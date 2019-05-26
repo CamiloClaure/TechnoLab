@@ -1,0 +1,494 @@
+.dxcvControl_Metropolis1,
+.dxcvDisabled_Metropolis1
+{
+    border: 1px Solid #c0c0c0;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    background-color: White;
+    color: #333333;
+    cursor: default;
+}
+.dxcvDisabled_Metropolis1
+{
+    color: #b8b8b8;
+}
+.dxcvControl_Metropolis1 a.dxeHyperlink:not([href]):not([onclick]):not(.dxbButtonSys)
+{
+    color: #333333;
+    text-decoration: none;
+}
+.dxcvControl_Metropolis1 a
+{
+    color: #1A5DA7;
+}
+.dxcvDisabled_Metropolis1 a
+{
+    color: #b8b8b8;
+}
+.dxcvLoadingPanelStatusBar_Metropolis1 .dxlp-loadingImage
+{
+    background-image: url('cvLoadingOnStatusBar.gif');
+    height: 16px;
+    width: 16px;
+}
+.dxcvLoadingPanel_Metropolis1
+{
+    border: 1px solid #C3C3C3;
+    background-color: white;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+}
+.dxcvLoadingPanel_Metropolis1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+.dxcvLoadingPanel_Metropolis1 .dxlp-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+}
+.dxcvLoadingPanelStatusBar_Metropolis1
+{
+    background-color: Transparent;
+}
+.dxcvLoadingPanelStatusBar_Metropolis1 td
+{
+    white-space: nowrap;
+    text-align: center;
+    padding: 0px 2px;
+}
+.dxcvTable_Metropolis1
+{
+    background-color: White;
+    border-width: 0;
+    border-collapse: separate !important;
+    overflow: hidden;
+    padding: 20px;
+}
+.dxcvHeader_Metropolis1
+{
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 4px 6px 5px;
+    border: 1px Solid #c0c0c0;
+    background-color: white;
+    overflow: hidden;
+    font-weight: normal;
+    text-align: left;
+}
+.dxcvHeader_Metropolis1 td
+{
+    white-space: nowrap;
+}
+.dxcvHeader_Metropolis1 a
+{
+    color: #1A5DA7;
+}
+.dxcvHeader_Metropolis1 a.dxcvCommandItem_Metropolis1
+{
+    margin: 0 3px 0 0;
+    color: #1A5DA7;
+}
+.dxcvPopupEditForm_Metropolis1
+{
+    padding: 4px;
+    margin: 0;
+}
+.dxcvCustomization_Metropolis1
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    min-width: 220px;
+}
+.dxcvTitlePanel_Metropolis1,
+.dxcvTable_Metropolis1 caption
+{
+    font-size: 1.25em;
+    font-weight: normal;
+    padding: 3px 3px 5px;
+    text-align: center;
+    color: #999999;
+    border-bottom: 1px Solid #c0c0c0;
+}
+.dxcvStatusBar_Metropolis1
+{
+    border-top: 1px Solid #c0c0c0;
+}
+.dxcvStatusBar_Metropolis1 tr.dxcv
+{
+    height: 20px;
+}
+.dxcvStatusBar_Metropolis1 tr.dxcv > td
+{
+    padding: 4px;
+}
+.dxcvStatusBar_Metropolis1 tr.dxcv span .dxbButtonSys:first-child
+{
+    margin-left: 20px;
+}
+a.dxcvCommandItem_Metropolis1
+{
+    margin: 0 3px 0 0;
+    color: #1A5DA7;
+}
+.dxbButton_Metropolis1[class~="dxcvCommandItem_Metropolis1"],
+.dxcvEditFormTable_Metropolis1 div.dxbButton_Metropolis1
+{
+    margin: 0px 2px -1px;
+}
+.dxbButton_Metropolis1[class~="dxcvCommandItem_Metropolis1"] .dxb
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dxcvPagerTopPanel_Metropolis1,
+.dxcvPagerBottomPanel_Metropolis1
+{
+    padding: 4px 0;
+}
+.dxcvPagerTopPanel_Metropolis1
+{
+    border-bottom: 1px Solid #c0c0c0;
+}
+.dxcvPagerBottomPanel_Metropolis1
+{
+    border-top: 1px solid #c0c0c0;
+}
+.dxcvControl_Metropolis1 .dxctToolbar_Metropolis1.dxm-main.dxcvCTTop
+{
+    border-bottom: 1px solid #c0c0c0;
+}
+.dxcvControl_Metropolis1 .dxctToolbar_Metropolis1.dxm-main.dxcvCTBottom
+{
+    border-top: 1px solid #c0c0c0;
+}
+.dxcvFilterBar_Metropolis1
+{
+    border-top: 1px Solid #c0c0c0;
+}
+.dxcvFilterBar_Metropolis1 a
+{
+    color: #1A5DA7;
+    text-decoration: underline;
+}
+.dxcvFilterBarCheckBoxCell_Metropolis1
+{
+    padding: 0 7px;
+}
+.dxcvFilterBarImageCell_Metropolis1
+{
+    padding: 0 1px 0 3px;
+    cursor: pointer;
+}
+.dxcvFilterBarExpressionCell_Metropolis1
+{
+    padding: 5px 5px 8px 0;
+    white-space: nowrap;
+}
+.dxcvFilterBarClearButtonCell_Metropolis1
+{
+    padding: 5px 6px 8px;
+}
+.dxcvFilterBuilderMainArea_Metropolis1
+{
+    background: white none;
+    padding: 6px 2px;
+}
+.dxcvFilterBuilderButtonArea_Metropolis1
+{
+    border-top: 1px solid #c0c0c0;
+    padding: 6px;
+    white-space: nowrap;
+}
+.dxcvControl_Metropolis1 .dxpLite_Metropolis1,
+.dxcvDisabled_Metropolis1 .dxpLite_Metropolis1
+{
+    padding-top: 4px;
+}
+.dxcvControl_Metropolis1 div[id$='DXEPLPC']
+{
+    height: 53px;
+}
+.dxcvControl_Metropolis1 .dxcvHFSD
+{
+    height: 1px;
+    margin: 2px 0;
+}
+.dxcvControl_Metropolis1 .dxcvHFDRC
+{
+    margin: 15px 15px 25px;
+}
+.dxcvControl_Metropolis1 .dxcvHFDRP
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 9px 0 6px;
+}
+.dxcvControl_Metropolis1 .dxcvHFDRP[id*="HFFDE"]
+{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.dxcvControl_Metropolis1 .dxcvHFDRP[id*="HFTDE"]
+{
+    margin-bottom: 25px;
+}
+/* Removes flicking in iOS Safari*/
+.dxcvTable_Metropolis1
+{
+    -webkit-tap-highlight-color: transparent;
+}
+.dxcvSearchPanel_Metropolis1
+{
+    padding: 7px 4px 7px 6px;
+    border-bottom: 1px solid #c0c0c0;
+}
+.dxcvSearchPanel_Metropolis1 > table
+{
+    width: 70%;
+    max-width: 450px;
+}
+.dxcvControl_Metropolis1 .dxcvSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-left: 7px;
+    margin-right: 0;
+}
+*[dir="rtl"].dxcvControl_Metropolis1 .dxcvSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-left: 0;
+    margin-right: 7px;
+}
+.dxcvControl_Metropolis1 .dxcvHL
+{
+    background: #ffd83a;
+    color: #333333;
+    font-weight: bold;
+    font-style: normal;
+}
+/* TODO remove (replace to command button style) */
+.dxcvControl_Metropolis1 .dxcvSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    font-size: 0.9em;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+.dxcvControl_Metropolis1 .dxcvSearchPanel_Metropolis1 .dxbButton_Metropolis1 .dxb
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dxcvCard_Metropolis1,
+.dxcvBreakpointsCard_Metropolis1,
+.dxcvFlowCard_Metropolis1,
+.dxcvEmptyCard_Metropolis1,
+.dxcvEmptyHiddenCard_Metropolis1
+{
+    width: 250px;
+    height: 180px;
+    vertical-align: top;
+}
+.dxcvCard_Metropolis1,
+.dxcvBreakpointsCard_Metropolis1,
+.dxcvFlowCard_Metropolis1,
+.dxcvEmptyCard_Metropolis1
+{
+    border: 1px solid #C0C0C0;
+    background-color: White;
+    color: #262626;
+    outline: none;
+}
+.dxcvEmptyCard_Metropolis1
+{
+    text-align: center;
+    vertical-align: middle;
+}
+.dxcvEmptyHiddenCard_Metropolis1
+{
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.dxcvGroupRow_Metropolis1
+{
+    padding-bottom: 1px;
+    font-weight: bold;
+}
+.dxcvGroupRow_Metropolis1 .dxcvGRB
+{
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+.dxcvGroupRow_Metropolis1,
+.dxcvFlowCard_Metropolis1,
+.dxcvBreakpointsCard_Metropolis1,
+div.dxcvEmptyCard_Metropolis1
+{
+    margin: 20px 0 0 20px;
+    overflow: hidden;
+}
+@media (max-width: 640px)
+{
+    .dxcvControl_Metropolis1 .dxcvTable_Metropolis1.dxcvBPT
+    {
+        padding: 0 8px 8px 0;
+    }
+    .dxcvBPT .dxcvBreakpointsCard_Metropolis1
+    {
+        margin: 8px 0 0 8px;
+    }
+}
+.dxcvFlowCard_Metropolis1,
+div.dxcvEmptyCard_Metropolis1
+{
+    display: inline-block;
+}
+.dxcvBreakpointsCard_Metropolis1
+{
+    width: auto;
+    display: block;
+}
+.dxcvSelectedCard_Metropolis1
+{
+    border-color: #C0C0C0;
+    outline: 3px solid #E0E0E0;
+}
+.dxcvFocusedCard_Metropolis1
+{
+    border-color: #1A5DA7;
+    outline: 3px solid #1A5DA7;
+}
+.dxcvCardHover_Metropolis1
+{
+    background-color: #F7F7F7;
+    border-color: #C0C0C0;
+    outline: none;
+}
+.dxcvCard_Metropolis1 .dxflCaption_Metropolis1,
+.dxcvBreakpointsCard_Metropolis1 .dxflCaption_Metropolis1,
+.dxcvFlowCard_Metropolis1 .dxflCaption_Metropolis1
+{
+    color: #7F7F7F;
+}
+.dxcvCard_Metropolis1 .dxflViewFormLayoutSys .dxflCommandItemSys,
+.dxcvBreakpointsCard_Metropolis1 .dxflViewFormLayoutSys .dxflCommandItemSys,
+.dxcvFlowCard_Metropolis1 .dxflViewFormLayoutSys .dxflCommandItemSys
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.dxcvCard_Metropolis1 .dxflViewFormLayoutSys
+{
+    color: inherit;
+}
+.dxcvHeaderPanel_Metropolis1
+{
+    border-bottom: 1px solid #c0c0c0;
+    padding: 2px 20px 8px 20px;
+}
+.dxcvHeaderPanel_Metropolis1 .dxcvHPGSC
+{
+    float: right;
+    margin-top: 12px;
+}
+div.dxcvHeader_Metropolis1
+{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+.dxcvSummaryPanel_Metropolis1
+{
+    border-top: 1px solid #c0c0c0;
+    padding: 8px 21px;
+}
+.dxcvSummaryItem_Metropolis1
+{
+    display: inline-block;
+    margin: 5px 8px 5px 0;
+}
+.dxcvControl_Metropolis1 .dxcvSeparator_Metropolis1,
+.dxcvControl_Metropolis1 .dxcvSeparator_Metropolis1 div
+{
+    width: 20px;
+    height: 20px;
+}
+.dxcvControl_Metropolis1 td.dxcvBatchEditCell_Metropolis1
+{
+    padding: 0;
+    outline-width: 0 !important;
+}
+.dxcvControl_Metropolis1 .dxcvBatchEditModifiedCell_Metropolis1
+{
+    background: #d7f9c7;
+    outline-style: solid;
+    outline-color: #d7f9c7;
+    outline-width: 2px;
+}
+.dxcvBatchEditDeletedItem_Metropolis1,
+.dxcvBatchEditDeletedItem_Metropolis1.dxcvBatchEditNewItem_Metropolis1
+{
+    background: #F8F8F8;
+}
+.dxcvBatchEditDeletedItem_Metropolis1 td:not(.dxcvCommandColumn_Metropolis1),
+.dxcvControl_Metropolis1 .dxcvBatchEditDeletedItem_Metropolis1 .dxflCaptionCell_Metropolis1 .dxflCaption_Metropolis1
+{
+    color: rgba(0,0,0,0.5) !important;
+}
+.dxcvBatchEditDeletedItem_Metropolis1 td.dxcvBatchEditModifiedCell_Metropolis1
+{
+    background-color: #eefbe7;
+    outline-style: none;
+}
+.dxcvBatchEditNewItem_Metropolis1
+{
+    background: #F0FAEA;
+}
+.dxcvControl_Metropolis1 .dxcvErrorCell
+{
+    padding-left: 5px;
+    width: 1px;
+}
+.dxcvControl_Metropolis1 .dxcvErrorCell img
+{
+    margin: -3px 0;
+}
+.dxcvStatusBar_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-right: 10px;
+}
+.dxcvControl_Metropolis1 td.dxcvBatchEditCell_Metropolis1 .dxichCellSys
+{
+    padding-left: 0;
+}
+.dxcvControl_Metropolis1 .dxcvEMBC
+{
+    background: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: -20px;
+}
+.dxcvCardError_Metropolis1
+{
+    background-color: #FFC8C8;
+    border-top: 1px solid #C0C0C0;
+    color: #FF0000;
+    padding: 6px 13px;
+}
+.dxcvFocusedCell_Metropolis1
+{
+    box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+    -webkit-box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+    -moz-box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+}
+.dxcvFocusedCell_Metropolis1 .dxcvBatchEditModifiedCell_Metropolis1:not(.dxcvBatchEditCell_Metropolis1)
+{
+    outline: none;
+    box-shadow: 2px 2px 0 #d7f9c7, 2px 0px 0 #d7f9c7;
+    -webkit-box-shadow: 2px 2px 0 #d7f9c7, 2px 0px 0 #d7f9c7;
+    -moz-box-shadow: 2px 2px 0 #d7f9c7, 2px 0px 0 #d7f9c7;
+}

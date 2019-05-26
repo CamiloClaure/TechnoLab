@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="538" height="18">
+<g transform="translate(18, 0)">
+  <style type="text/css" xmlns="http://www.w3.org/2000/svg">
+	  .st00 {fill-rule:evenodd;clip-rule:evenodd;fill:#1A5DA7;}
+  </style>
+  <g xmlns="http://www.w3.org/2000/svg">
+	  <rect x="1" y="1" fill="#C0C0C0" width="14" height="14" />
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg">
+	  <rect x="3" y="3" fill="#FFFFFF" width="10" height="10" />
+  </g>
+  <path class="st00" d="M4,7l2.5,3L12,4v3l-5.5,6L4,10V7z" xmlns="http://www.w3.org/2000/svg" />
+</g>
+
+<g transform="translate(0, 0)">
+  <style type="text/css" xmlns="http://www.w3.org/2000/svg">
+	  .st11 {opacity:0.5;fill-rule:evenodd;clip-rule:evenodd;fill:#1A5DA7;}
+  </style>
+  <g opacity="0.5" xmlns="http://www.w3.org/2000/svg">
+	  <rect x="1" y="1" fill="#C0C0C0" width="14" height="14" />
+  </g>
+  <g opacity="0.5" xmlns="http://www.w3.org/2000/svg">
+	  <rect x="3" y="3" fill="#FFFFFF" width="10" height="10" />
+  </g>
+  <path class="st11" d="M4,7l2.5,3L12,4v3l-5.5,6L4,10V7z" xmlns="http://www.w3.org/2000/svg" />
+</g>
+
+<g transform="translate(54, 0)">
+  <g xmlns="http://www.w3.org/2000/svg">
+	  <rect x="1" y="1" fill="#C0C0C0" width="14" height="14" />
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg">
+	  <rect x="3" y="3" fill="#FFFFFF" width="10" height="10" />
+  </g>
+  <rect x="4" y="4" fill="#1A5DA7" width="8" height="8" xmlns="http://www.w3.org/2000/svg" />
+</g>
+
+<g transform="translate(36, 0)">
+<style type="text/css" xmlns="http://www.w3.org/2000/svg">
+	.st23 {opacity:0.5;fill:#1A5DA7;}
+</style>
+<g opacity="0.5" xmlns="http://www.w3.org/2000/svg">
+	<rect x="1" y="1" fill="#C0C0C0" width="14" height="14" />
+</g>
+<g opacity="0.5" xmlns="http://www.w3.org/2000/svg">
+	<rect x="3" y="3" fill="#FFFFFF" width="10" height="10" />
+</g>
+<rect x="4" y="4" class="st23" width="8" height="8" xmlns="http://www.w3.org/2000/svg" />
+</g>
+
+<g transform="translate(90, 0)">
+  <g xmlns="http://www.w3.org/2000/svg">
+	  <rect x="1" y="1" fill="#C0C0C0" width="14" height="14" />
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg">
+	  <rect x="3" y="3" fill="#FFFFFF" width="10" height="10" />
+  </g>
+</g>
+
+<g transform="translate(72, 0)">
+  <g opacity="0.5" xmlns="http://www.w3.org/2000/svg">
+	  <rect x="1" y="1" fill="#C0C0C0" width="14" height="14" />
+  </g>
+  <g opacity="0.5" xmlns="http://www.w3.org/2000/svg">
+	  <rect x="3" y="3" fill="#FFFFFF" width="10" height="10" />
+  </g>
+</g>
+
+
+</svg>
+

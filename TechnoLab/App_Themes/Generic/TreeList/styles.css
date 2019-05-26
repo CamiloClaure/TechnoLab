@@ -1,0 +1,395 @@
+.dxtlControl_Metropolis1
+{
+    cursor: default;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+    border: 1px none #c0c0c0;
+}
+.dxtlControl_Metropolis1 caption
+{
+    background: #ACACAC none;
+    border-bottom: 0 solid #c0c0c0;
+    border: 1px solid #c0c0c0;
+    color: White;
+    font-size: 1.25em;
+    font-weight: normal;
+    padding: 3px 3px 5px;
+    text-align: center;
+}
+/* Indent cells */
+.dxtlIndent_Metropolis1,
+.dxtlIndentWithButton_Metropolis1
+{
+    vertical-align: top;
+    background: white none no-repeat top center;
+}
+.dxtlIndent_Metropolis1
+{
+    padding: 0 11px;
+}
+.dxtlIndentWithButton_Metropolis1
+{
+    padding: 5px 7px 6px;
+}
+.dxtlSelectionCell_Metropolis1
+{
+    border: 1px solid #cfcfcf;
+    padding: 3px 5px 5px 6px;
+}
+/* Tree-lines cells */
+/* Headers */
+.dxtlHeader_Metropolis1
+{
+    background-color: white;
+    border: 1px solid #c0c0c0;
+    padding: 4px 6px 5px;
+    font-weight: normal;
+}
+.dxtlHeader_Metropolis1 table.dxtl
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+.dxtlHeader_Metropolis1 td.dxtl
+{
+    padding: 0;
+}
+.dxtlHeader_Metropolis1,
+.dxtlHeader_Metropolis1 td.dxtl
+{
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+}
+/* Nodes */
+.dxtlNode_Metropolis1
+{
+    background: white none;
+}
+.dxtlAltNode_Metropolis1
+{
+    background-color: WhiteSmoke;
+}
+.dxtlSelectedNode_Metropolis1
+{
+    background: #e0e0e0 none;
+}
+.dxtlFocusedNode_Metropolis1
+{
+    background: #1A5DA7 none;
+    color: white;
+}
+.dxtlInlineEditNode_Metropolis1
+{
+    background: white none;
+}
+.dxtlEditFormDisplayNode_Metropolis1
+{
+    background: white none;
+}
+.dxtlNode_Metropolis1 td.dxtl,
+.dxtlAltNode_Metropolis1 td.dxtl,
+.dxtlSelectedNode_Metropolis1 td.dxtl,
+.dxtlFocusedNode_Metropolis1 td.dxtl,
+.dxtlEditFormDisplayNode_Metropolis1 td.dxtl,
+.dxtlCommandCell_Metropolis1
+{
+    padding: 3px 6px 4px;
+    border: 1px solid #cfcfcf;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.dxtlHeader_Metropolis1 .dxbButton_Metropolis1,
+.dxtlCommandCell_Metropolis1 .dxbButton_Metropolis1
+{
+    margin: 0 2px -1px;
+}
+.dxtlHeader_Metropolis1 .dxbButton_Metropolis1 .dxb,
+.dxtlCommandCel_Metropolis1 .dxbButton_Metropolis1 .dxb
+{
+    padding-top: 0;
+    padding-bottom: 2px;
+}
+.dxtlInlineEditNode_Metropolis1 td.dxtl
+{
+    border: 1px solid #cfcfcf;
+    padding: 1px;
+}
+/* Preview */
+.dxtlPreview_Metropolis1
+{
+    color: #7f7f7f;
+    padding: 14px;
+    border: 1px solid #cfcfcf;
+    overflow: hidden;
+}
+/* Footers */
+.dxtlGroupFooter_Metropolis1 td.dxtl,
+.dxtlFooter_Metropolis1 td.dxtl
+{
+    padding: 5px 6px 6px;
+    white-space: nowrap;
+    border: 1px solid #cfcfcf;
+    overflow: hidden;
+}
+.dxtlGroupFooter_Metropolis1 .dx-ar > br,
+.dxtlFooter_Metropolis1 .dx-ar > br
+{
+    float: none;
+}
+/* Pagers */
+.dxtlPagerTopPanel_Metropolis1
+{
+    border-bottom: 1px none #c0c0c0;
+    padding: 4px 0;
+}
+.dxtlPagerBottomPanel_Metropolis1
+{
+    border-top: 1px none #c0c0c0;
+    padding: 7px 0;
+}
+/* Editing */
+.dxtlEditForm_Metropolis1
+{
+    border: 1px solid #D3D3D3;
+    padding: 8px 10px 10px;
+}
+.dxtlEditFormCaption_Metropolis1,
+.dxtlEditFormEditCell_Metropolis1
+{
+    padding: 4px;
+}
+.dxtlEditFormCaption_Metropolis1
+{
+    padding-left: 10px;
+    white-space: nowrap;
+}
+.dxtlError_Metropolis1
+{
+    background: #FFC8C8 none;
+    color: #FF0000;
+    padding: 6px 10px;
+    border: 1px solid #cfcfcf;
+}
+.dxtlPopupEditForm_Metropolis1
+{
+    padding: 10px;
+    min-width: 300px;
+}
+/* Links */
+.dxtlControl_Metropolis1 a.dxeHyperlink:not([href]):not([onclick]):not(.dxbButtonSys)
+{
+    color: #333333;
+    text-decoration: none;
+}
+.dxtlControl_Metropolis1 a
+{
+    color: #1A5DA7;
+}
+.dxtlFocusedNode_Metropolis1 a
+{
+    color: White;
+}
+.dxtlSelectedNode_Metropolis1 a
+{
+    color: #1A5DA7;
+}
+.dxtlCommandCell_Metropolis1 a
+{
+    margin-right: 3px;
+}
+/* Customization window */
+.dxtlControl_Metropolis1 .dxpcLite_Metropolis1 .dxpc-content
+{
+    min-width: 220px;
+}
+/* Loading panel */
+.dxtlLoadingPanel_Metropolis1
+{
+    border: 1px solid #C3C3C3;
+    background-color: white;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+}
+.dxtlLoadingPanel_Metropolis1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+.dxtlLoadingPanel_Metropolis1 .dxlp-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+}
+/* Disabled */
+.dxtlDisabled_Metropolis1,
+.dxtlDisabled_Metropolis1 .dxtl
+{
+    color: #b8b8b8;
+    cursor: default;
+}
+/*batch*/
+.dxtlControl_Metropolis1 .dxtlBatchEditDeletedNode_Metropolis1,
+.dxtlControl_Metropolis1 .dxtlBatchEditNewNode_Metropolis1.dxtlBatchEditDeletedNode_Metropolis1,
+.dxtlControl_Metropolis1 .dxtlBatchEditDeletedNode_Metropolis1 .dxtlPreview_Metropolis1
+{
+    background: #EFEFEF;
+}
+.dxtlControl_Metropolis1 td.dxtlBatchEditCell_Metropolis1
+{
+    padding: 0 2px;
+}
+.dxtlControl_Metropolis1 td.dxtlBatchEditModifiedCell_Metropolis1
+{
+    background: #d7f9c7;
+}
+.dxtlControl_Metropolis1 td.dxtlBatchEditCell_Metropolis1 .dxichCellSys
+{
+    padding-left: 0;
+}
+.dxtlBatchEditDeletedNode_Metropolis1 > td:not(.dxtlCommandColumn)_Metropolis1
+{
+    color: rgba(0,0,0,0.5);
+}
+.dxtlBatchEditDeletedNode_Metropolis1 td.dxtlBatchEditModifiedCell_Metropolis1
+{
+    background: #eefbe7;
+}
+.dxtlControl_Metropolis1 .dxtlBatchEditNewNode_Metropolis1
+{
+    background: #F0FAEA;
+}
+.dxtlFocusedCell_Metropolis1
+{
+    box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+    -webkit-box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+    -moz-box-shadow: inset 2px 2px 0 #2292B1, inset -2px -2px 0 #2292B1;
+}
+.dxtlControl_Metropolis1 .dxtlErrorCell
+{
+    padding-left: 5px;
+    width: 1px;
+}
+.dxtlControl_Metropolis1 .dxtlErrorCell img
+{
+    margin: -3px 0;
+}
+/* Filtering */
+.dxtlFilterRow_Metropolis1
+{
+    background-color: transparent;
+}
+.dxtlFilterRow_Metropolis1 > td
+{
+    border-bottom: 1px Solid #c0c0c0;
+    border-right: 1px Solid #c0c0c0;
+    border-top-width: 0;
+    border-left-width: 0;
+    padding: 2px;
+    overflow: hidden;
+}
+.dxtlSearchPanel_Metropolis1
+{
+    padding: 7px;
+    background-color: transparent;
+    border: 1px solid #c0c0c0;
+    border-bottom-width: 0;
+}
+.dxtlSearchPanel_Metropolis1 > table
+{
+    width: 70%;
+    max-width: 450px;
+}
+*[dir="rtl"].dxtlControl_Metropolis1 .dxtlSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-left: 0;
+    margin-right: 7px;
+}
+/* TODO remove (replace to command button style) */
+.dxtlControl_Metropolis1 .dxtlSearchPanel_Metropolis1 .dxbButton_Metropolis1
+{
+    font-size: 0.9em;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+.dxtlControl_Metropolis1 .dxtlSearchPanel_Metropolis1 .dxbButton_Metropolis1 .dxb
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dxtlControl_Metropolis1 .dxbButton_Metropolis1
+{
+    margin-left: 7px;
+    margin-right: 0;
+}
+.dxtlFilterBar_Metropolis1
+{
+    border-top: 1px solid #c0c0c0;
+    background: transparent none;
+}
+.dxtlFilterBar_Metropolis1 a
+{
+    color: #394ea2;
+    text-decoration: underline;
+}
+.dxtlFilterBarCheckBoxCell_Metropolis1
+{
+    padding: 0 7px 0 3px;
+}
+.dxtlFilterBarImageCell_Metropolis1
+{
+    padding: 0 1px 0 3px;
+    cursor: pointer;
+}
+.dxtlFilterBarExpressionCell_Metropolis1
+{
+    padding: 5px 5px 8px 0;
+    white-space: nowrap;
+}
+.dxtlFilterBarClearButtonCell_Metropolis1
+{
+    padding: 5px 6px 8px;
+}
+dxtlFilterBuilderMainArea_Metropolis1
+{
+    background: white none;
+    padding: 6px 2px;
+}
+.dxtlFilterBuilderButtonArea_Metropolis1
+{
+    background: #ededed none;
+    border-top: 1px solid #c0c0c0;
+    padding: 6px;
+    white-space: nowrap;
+}
+.dxTreeList_HeaderFilterActive_Metropolis1
+{
+    background-color: #1A5DA7;
+}
+.dxtlControl_Metropolis1 .dxtlHFSD
+{
+    height: 1px;
+    margin: 2px 0;
+}
+.dxtlControl_Metropolis1 .dxtlHFDRC
+{
+    margin: 15px 15px 25px;
+}
+.dxtlControl_Metropolis1 .dxtlHFDRP
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 9px 0 6px;
+}
+.dxtlControl_Metropolis1 .dxtlHFDRP[id*="HFFDE"]
+{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.dxtlControl_Metropolis1 .dxtlHFDRP[id*="HFTDE"]
+{
+    margin-bottom: 25px;
+}

@@ -1,0 +1,146 @@
+﻿body {
+    background-color: #3B3E4B;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+}
+
+img {
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.captcha_textbox {
+    border-radius: 12px;
+    color: black
+}
+
+
+.content_center {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #66ffff;
+}
+
+.LogonContainer {
+    background-color: white;
+    color: white;
+    float: right;
+    width: 30%;
+    min-width: 300px;
+    min-height: 450px;
+    height: 50%;
+}
+
+.div_padding {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 48px;
+    padding-bottom: 8px
+}
+
+.shadow1 {
+    -moz-box-shadow: 2px 2px 2px 2px black;
+    -webkit-box-shadow: 2px 2px 2px 2px black;
+    box-shadow: 1px 1px 1px 1px black
+}
+
+
+.tittle_login {
+    font-family: Impact;
+    font-size: 32px;
+    color: #1f4e79;
+    position: relative;
+    top: 50%;
+    transform: translateY(25%);
+    height: 70px
+}
+
+
+.btnIngresar {
+    border: 0;
+    padding: 0;
+    background-color: #1f4e79;
+    color: #1f4e79;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LogonContainer .SignInButton {
+    width: 80%;
+    height: 60px;
+    color: white !important;
+    background-image: none !important;
+    background-color: !important;
+    border: 2px transparent !important;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.LogonContainer .AccountNameTextBox .dxic,
+.LogonContainer .UserPasswordTextBox .dxic {
+    padding-left: 50px !important;
+}
+
+.LogonContainer .AccountNameTextBox input,
+.LogonContainer .UserPasswordTextBox input {
+    font-size: 25px;
+    font-weight: 400;
+    background-color: transparent !important;
+}
+
+.LogonContainer .AccountNameTextBox,
+.LogonContainer .UserPasswordTextBox {
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    background-position: 7px 50% !important;
+}
+
+
+    .LogonContainer .UserPasswordTextBox .dxic {
+        padding-left: 50px !important;
+    }
+
+    .LogonContainer .AccountNameTextBox input,
+    .LogonContainer .UserPasswordTextBox input {
+        font-size: 25px;
+        font-weight: 400;
+        background-color: transparent !important;
+    }
+
+.LogonContainer .AccountNameTextBox,
+.LogonContainer .UserPasswordTextBox {
+    background-position: 7px 50% !important;
+}
+
+.LogonContainer .AccountNameError,
+.LogonContainer .ErrorLabel {
+    color: darkorange;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+
+.errorLabels {
+    color: black;
+}

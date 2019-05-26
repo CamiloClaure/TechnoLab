@@ -1,0 +1,2964 @@
+.dxeCalendarToday_Metropolis1 .dxe-apt-labels-container,
+.dxeCalendarSelected_Metropolis1 .dxe-apt-labels-container
+{
+    display: none;
+}
+.dxeCalendar_Metropolis1 .dxe-apt-labels-container
+{
+    height: 3px;
+    margin-bottom: -3px;
+    margin-left: -2px;
+    margin-right: -2px;
+}
+.dxeCalendar_Metropolis1 .dxe-apt-labels-container > div
+{
+    width: 3px;
+    height: 3px;
+    margin-top: 1px;
+    border-radius: inherit;
+}
+.dxeCalendar_Metropolis1 .dxe-more-labels-container > .dxe-h-line
+{
+    width: 3px;
+    top: 1px;
+}
+.dxeCalendar_Metropolis1 .dxe-more-labels-container > .dxe-v-line
+{
+    height: 3px;
+    left: 1px;
+}
+.dxeCalendar_Metropolis1 .dxe-more-labels-container > div.dxe-h-line,
+.dxeCalendar_Metropolis1 .dxe-more-labels-container > div.dxe-v-line
+{
+    background-color: #666666;
+}
+.dxeCalendar_Metropolis1 .dxe-apt-labels-container > div
+{
+    margin-top: 0px;
+}
+/* -- ValidationSummary -- */
+.dxvsValidationSummary_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: Red;
+}
+.dxvsValidationSummary_Metropolis1 td.dxvsRC_Metropolis1
+{
+    vertical-align: top;
+    padding: 2px 5px 4px 6px;
+}
+.dxvsValidationSummary_Metropolis1 table.dxvsHT_Metropolis1
+{
+    width: 100%;
+}
+.dxvsValidationSummary_Metropolis1 td.dxvsH_Metropolis1
+{
+    padding: 2px 0;
+}
+.dxvsValidationSummary_Metropolis1 a.dxvsHL_Metropolis1,
+.dxvsValidationSummary_Metropolis1 a.dxvsHL_Metropolis1:visited
+{
+    color: red;
+}
+.dxvsValidationSummary_Metropolis1 a.dxvsHL_Metropolis1
+{
+    text-decoration: none;
+    border-bottom: 1px dashed #f70;
+}
+.dxvsValidationSummary_Metropolis1 a.dxvsHL_Metropolis1:hover
+{
+    color: #f70;
+}
+.dxvsValidationSummary_Metropolis1 td.dxvsETC_Metropolis1
+{
+    padding: 2px 0;
+}
+.dxvsValidationSummary_Metropolis1 li.dxvsE_Metropolis1
+{
+    padding: 2px 0;
+}
+/* TrackBar */
+.dxeTrackBar_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    visibility: hidden;
+}
+.dxeDisabled_Metropolis1 .dxeTBHSys a,
+.dxeDisabled_Metropolis1 .dxeTBVSys a
+{
+    cursor: default;
+}
+.dxeTBBarHighlight_Metropolis1
+{
+    font-size: 0;
+}
+.dxeTBScale_Metropolis1,
+.dxeTBTrack_Metropolis1,
+.dxeTBBarHighlight_Metropolis1
+{
+    cursor: pointer;
+}
+.dxeTBScale_Metropolis1
+{
+    z-index: 1;
+}
+.dxeTBSecondaryDH_Metropolis1, .dxeTBMainDH_Metropolis1
+{
+    z-index: 4;
+}
+.dxeTrackBar_Metropolis1.dxeTBHSys
+{
+    width: 170px;
+    height: 41px;
+}
+.dxeTrackBar_Metropolis1.dxeTBVSys
+{
+    height: 170px;
+    width: 41px;
+}
+.dxeTrackBar_Metropolis1.dxeTBBScaleSys.dxeTBVSys
+{
+    width: 59px;
+}
+.dxeTrackBar_Metropolis1.dxeTBBScaleSys.dxeTBHSys
+{
+    height: 59px;
+}
+.dxeTBTrack_Metropolis1
+{
+    z-index: 2;
+    position: absolute;
+}
+.dxeTBHSys .dxeTBTrack_Metropolis1
+{
+    background: url('edtTrackBarTrackH.gif');
+}
+.dxeTBVSys .dxeTBTrack_Metropolis1
+{
+    background: url('edtTrackBarTrackV.gif');
+}
+.dxeTBHSys .dxeTBTrack_Metropolis1
+{
+    height: 10px;
+}
+.dxeTBHSys .dxeTBBarHighlight_Metropolis1
+{
+    top: 3px;
+    height: 4px;
+}
+.dxeTBVSys .dxeTBTrack_Metropolis1
+{
+    width: 10px;
+}
+.dxeTBVSys .dxeTBBarHighlight_Metropolis1
+{
+    left: 3px;
+    width: 4px;
+}
+.dxeTBHSys .dxeTBMainDH_Metropolis1, .dxeTBHSys .dxeTBSecondaryDH_Metropolis1
+{
+    top: -1px;
+    width: 7px;
+    height: 12px;
+}
+.dxeTBVSys .dxeTBMainDH_Metropolis1, .dxeTBVSys .dxeTBSecondaryDH_Metropolis1
+{
+    left: -1px;
+    width: 12px;
+    height: 7px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBTrack_Metropolis1, .dxeTBVSys .dxeTBTrack_Metropolis1
+{
+    left: 6px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBTrack_Metropolis1
+{
+    right: 6px;
+    left: auto;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBTrack_Metropolis1
+{
+    bottom: 6px;
+    top: auto;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBTrack_Metropolis1, .dxeTBHSys .dxeTBTrack_Metropolis1
+{
+    top: 6px;
+}
+.dxeTBBarHighlight_Metropolis1
+{
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: 3;
+}
+.dxeTBHSys .dxeTBBarHighlight_Metropolis1
+{
+    background: #1A5DA7;
+}
+.dxeTBVSys .dxeTBBarHighlight_Metropolis1
+{
+    background: #1A5DA7;
+}
+.dxeTBRBLabel_Metropolis1, .dxeTBLTLabel_Metropolis1
+{
+    text-align: center;
+    color: #999999;
+    cursor: default;
+}
+.dxeTBSmallTickSys .dxeTBRBLabel_Metropolis1, .dxeTBSmallTickSys .dxeTBLTLabel_Metropolis1,
+.dxeTBLargeTickSys .dxeTBRBLabel_Metropolis1, .dxeTBLargeTickSys .dxeTBLTLabel_Metropolis1
+{
+    position: absolute;
+}
+.dxeTBHSys .dxeTBRBLabel_Metropolis1, .dxeTBHSys .dxeTBLTLabel_Metropolis1
+{
+    width: 100%;
+}
+.dxeTBVSys .dxeTBRBLabel_Metropolis1,
+.dxeTBVSys .dxeTBLTLabel_Metropolis1
+{
+    padding-top: 2px;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_Metropolis1
+{
+    margin-left: -4px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBRBLabel_Metropolis1,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLTLabel_Metropolis1
+{
+    right: 0px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBLTLabel_Metropolis1,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBRBLabel_Metropolis1
+{
+    left: 0px;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBRBLabel_Metropolis1,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLTLabel_Metropolis1
+{
+    bottom: 0px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBLTLabel_Metropolis1,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_Metropolis1
+{
+    top: 0px;
+}
+.dxeTBItem_Metropolis1
+{
+    color: #8c8c8c;
+}
+.dxeTBHSys .dxeTBItem_Metropolis1 .dxeTBRBLabel_Metropolis1,
+.dxeTBHSys .dxeTBItem_Metropolis1 .dxeTBLTLabel_Metropolis1
+{
+    display: inline-block;
+    margin-left: 0px !important;
+}
+.dxeTBHSys .dxeTBRBScaleSys
+.dxeTBItem_Metropolis1 .dxeTBRBLabel_Metropolis1
+{
+    padding-top: 12px;
+}
+.dxeTBHSys .dxeTBLTScaleSys
+.dxeTBItem_Metropolis1 .dxeTBLTLabel_Metropolis1
+{
+    margin-top: 8px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_Metropolis1 .dxeTBRBLabel_Metropolis1
+{
+    margin-left: 5px;
+}
+.dxeTBSelectedItem_Metropolis1 .dxeTBRBLabel_Metropolis1,
+.dxeTBSelectedItem_Metropolis1 .dxeTBLTLabel_Metropolis1,
+.dxeTBSelectedTick_Metropolis1 .dxeTBRBLabel_Metropolis1,
+.dxeTBSelectedTick_Metropolis1 .dxeTBLTLabel_Metropolis1
+{
+    color: #1A5DA7;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBItem_Metropolis1
+{
+    text-align: left;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_Metropolis1
+{
+    text-align: right;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_Metropolis1
+{
+    text-align: center;
+}
+.dxeTBHSys .dxeTBItem_Metropolis1
+{
+    background-image: url('edtTrackBarLargeTickH.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBItem_Metropolis1
+{
+    background-image: url('edtTrackBarDoubleSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBItem_Metropolis1
+{
+    background-image: url('edtTrackBarLargeTickV.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_Metropolis1
+{
+    background-image: url('edtTrackBarDoubleSmallTickV.gif');
+}
+.dxeTBHSys .dxeTBLargeTick_Metropolis1
+{
+    background-image: url('edtTrackBarLargeTickH.gif');
+}
+.dxeTBVSys .dxeTBLargeTick_Metropolis1
+{
+    background-image: url('edtTrackBarLargeTickV.gif');
+}
+.dxeTBHSys .dxeTBSmallTick_Metropolis1
+{
+    background-image: url('edtTrackBarSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBSmallTick_Metropolis1
+{
+    background-image: url('edtTrackBarSmallTickV.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLargeTick_Metropolis1
+{
+    background-image: url('edtTrackBarDoubleLargeTickH.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLargeTick_Metropolis1
+{
+    background-image: url('edtTrackBarDoubleLargeTickV.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBSmallTick_Metropolis1
+{
+    background-image: url('edtTrackBarDoubleSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBSmallTick_Metropolis1
+{
+    background-image: url('edtTrackBarDoubleSmallTickV.gif');
+}
+.dxeTBVSys .dxeTBIncBtn_Metropolis1, .dxeTBVSys .dxeReversedDirectionSys .dxeTBDecBtn_Metropolis1
+{
+    bottom: 0px;
+    top: auto;
+}
+.dxeTBVSys .dxeTBDecBtn_Metropolis1, .dxeTBVSys .dxeReversedDirectionSys .dxeTBIncBtn_Metropolis1
+{
+    top: 0px;
+    bottom: auto;
+}
+.dxeTBHSys .dxeTBDecBtn_Metropolis1, .dxeTBHSys .dxeReversedDirectionSys .dxeTBIncBtn_Metropolis1
+{
+    left: 0px;
+    right: auto;
+}
+.dxeTBHSys .dxeTBIncBtn_Metropolis1, .dxeTBHSys .dxeReversedDirectionSys .dxeTBDecBtn_Metropolis1
+{
+    right: 0px;
+    left: auto;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBDecBtn_Metropolis1,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBIncBtn_Metropolis1
+{
+    margin-left: -10px;
+    left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBDecBtn_Metropolis1,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBIncBtn_Metropolis1
+{
+    margin-top: -10px;
+    top: 50%;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBTrack_Metropolis1
+{
+    margin-left: -4px;
+    left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBTrack_Metropolis1
+{
+    margin-top: -5px;
+    top: 50%;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBDecBtn_Metropolis1,
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBIncBtn_Metropolis1
+{
+    right: 0px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBDecBtn_Metropolis1,
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBIncBtn_Metropolis1
+{
+    bottom: 0px;
+}
+.dxeHelpText_Metropolis1,
+.dxeTBValueToolTip_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+div.dxeHelpText_Metropolis1,
+.dxeTBValueToolTip_Metropolis1
+{
+    padding: 3px 8px 4px 8px;
+    display: inline;
+    position: absolute;
+    background: white;
+    z-index: 41998;
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #c0c0c0;
+}
+td.dxeHelpText_Metropolis1
+{
+    visibility: visible;
+    color: #9F9F9F;
+}
+td.dxeHelpText_Metropolis1 span
+{
+    font-size: 0.91em;
+}
+td.dxeHelpText_Metropolis1.dxeHHelpTextSys
+{
+    padding: 0 6px;
+}
+td.dxeHelpText_Metropolis1.dxeVHelpTextSys
+{
+    padding: 2px 0;
+}
+/* Loading */
+.dxlpLoadingPanel_Metropolis1,
+.dxlpLoadingPanelWithContent_Metropolis1
+{
+    border: 1px solid #C3C3C3;
+    background-color: white;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+}
+.dxlpLoadingPanel_Metropolis1 td.dx,
+.dxlpLoadingPanelWithContent_Metropolis1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+.dxcaLoadingPanel_Metropolis1 .dxlp-loadingImage,
+.dxeImage_Metropolis1.dxe-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+}
+.dxeButtonEditSys .dxic .dxeLoadingDiv_Metropolis1
+{
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Metropolis1
+{
+    background-color: transparent !important;
+    font-size: 0;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Metropolis1 td.dx
+{
+    padding: 0px !important;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Metropolis1 td.dx > span
+{
+    display: none;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Metropolis1 td.dx > img
+{
+    height: 15px;
+    width: auto;
+    vertical-align: middle;
+}
+.dxeBase_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+}
+/* InternalCheckBox */
+.dxeIRBFocused_Metropolis1
+{
+    outline: 1px dotted #1A5DA7;
+}
+.dxgvCommandColumn_Metropolis1 .dxeIRadioButton_Metropolis1
+{
+    border-radius: 50%;
+}
+.dxeBase_Metropolis1 .dxichCellSys,
+.dxeBase_Metropolis1.dxichCellSys
+{
+    padding: 2px 3px 1px;
+}
+.dxeBase_Metropolis1 .dxichTextCellSys
+{
+    padding: 1px 0 1px;
+}
+/* -- ErrorFrame -- */
+.dxeErrorCell_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: Red;
+    border-color: black;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.dxeErrorCell_Metropolis1.dxeNoBorderTop,
+.dxeErrorCell_Metropolis1.dxeNoBorderBottom
+{
+    padding-right: 0;
+    padding-left: 0;
+}
+.dxFirefox .dxeErrorCell_Metropolis1.dxeNoBorderBottom
+{
+    padding-bottom: 2px;
+}
+.dxeErrorCell_Metropolis1.dxeNoBorderBottom
+{
+    padding-bottom: 3px;
+}
+.dxeErrorCell_Metropolis1.dxeNoBorderTop td img
+{
+    margin-top: 2px;
+}
+.dxeErrorCell_Metropolis1.dxeNoBorderTop
+{
+    padding-top: 2px;
+}
+.dxeErrorFrameWithoutError_Metropolis1
+{
+    border: 1px solid Red;
+}
+.dxeErrorFrameWithoutError_Metropolis1 .dxeControlsCell_Metropolis1,
+.dxeErrorFrameWithoutError_Metropolis1.dxeControlsCell_Metropolis1
+{
+    padding: 2px;
+}
+.dxeEditArea_Metropolis1
+{
+    border: 1px solid #A0A0A0;
+}
+.dxeEditArea_Metropolis1,
+body input.dxeEditArea_Metropolis1
+{
+    color: #333333;
+}
+input[type="text"].dxeEditArea_Metropolis1,
+input[type="password"].dxeEditArea_Metropolis1
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dxFirefox input[type="text"].dxeEditArea_Metropolis1,
+.dxFirefox input[type="password"].dxeEditArea_Metropolis1
+{
+    margin-top: 0;
+    margin-bottom: -1px;
+}
+noindex:-o-prefocus,
+input[type="text"].dxeEditArea_Metropolis1,
+input[type="password"].dxeEditArea_Metropolis1
+{
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+/* -- Binary Image -- */
+.dxeBinaryImageButtonPanel_Metropolis1
+{
+    height: 36px;
+}
+.dxeBinaryImageButton_Metropolis1
+{
+    margin: 0 6px;
+}
+/* -- Buttons -- */
+.dxeButtonEditButton_Metropolis1,
+.dxeCalendarButton_Metropolis1,
+.dxeSpinIncButton_Metropolis1,
+.dxeSpinDecButton_Metropolis1,
+.dxeSpinLargeIncButton_Metropolis1,
+.dxeSpinLargeDecButton_Metropolis1,
+.dxeColorEditButton_Metropolis1
+{
+    background-color: white;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+.dxeButtonEditButton_Metropolis1
+{
+    padding: 0px 2px 0px 3px;
+}
+.dxeSpinIncButton_Metropolis1
+{
+    padding: 2px 2px 2px 3px;
+}
+.dxeSpinDecButton_Metropolis1
+{
+    padding: 3px 2px 2px 3px;
+}
+.dxeSpinLargeIncButton_Metropolis1
+{
+    padding: 0px 5px 0px 6px;
+}
+.dxeSpinLargeDecButton_Metropolis1
+{
+    padding: 0px 6px 0px 5px;
+}
+.dxeCalendarButton_Metropolis1,
+.dxeColorEditButton_Metropolis1
+{
+    border: 1px solid #c0c0c0;
+    padding: 3px 11px 4px;
+    min-width: 37px;
+    text-align: center;
+    white-space: nowrap;
+}
+.dxeCalendarButton_Metropolis1.dxeButtonDisabled_Metropolis1,
+.dxeColorEditButton_Metropolis1.dxeButtonDisabled_Metropolis1
+{
+    color: #bdbdbd;
+}
+.dxeButtonEditButton_Metropolis1.dxeButtonEditClearButton_Metropolis1,
+.dxeButtonEditButton_Metropolis1.dxeButtonEditClearButton_Metropolis1:hover
+{
+    background: none;
+    border-width: 0;
+    line-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dxeButtonEditClearButton_Metropolis1 img
+{
+    vertical-align: baseline;
+}
+/* -- Pressed -- */
+.dxeCalendarButtonPressed_Metropolis1,
+.dxeButtonEditButtonPressed_Metropolis1,
+.dxeSpinIncButtonPressed_Metropolis1,
+.dxeSpinDecButtonPressed_Metropolis1,
+.dxeSpinLargeIncButtonPressed_Metropolis1,
+.dxeSpinLargeDecButtonPressed_Metropolis1,
+.dxeColorEditButton_Metropolis1:active
+{
+    background-color: #c0c0c0;
+    color: white;
+}
+/* -- Hover -- */
+.dxeCalendarButtonHover_Metropolis1,
+.dxeButtonEditButtonHover_Metropolis1,
+.dxeSpinIncButtonHover_Metropolis1,
+.dxeSpinDecButtonHover_Metropolis1,
+.dxeSpinLargeIncButtonHover_Metropolis1,
+.dxeSpinLargeDecButtonHover_Metropolis1,
+.dxeColorEditButton_Metropolis1:hover
+{
+    background-color: #1A5DA7;
+    color: white;
+}
+.dxeCalendarButtonHover_Metropolis1,
+.dxeColorEditButton_Metropolis1:hover
+{
+    border-color: #1A5DA7;
+}
+.dxeButtonEdit_Metropolis1
+{
+    background-color: white;
+    border: 1px solid #c0c0c0;
+    width: 170px;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.dxeButtonEdit_Metropolis1 .dxeEditArea_Metropolis1
+{
+    background-color: white;
+}
+.dxeButtonEdit_Metropolis1 .dxeEditArea_Metropolis1,
+.dxeButtonEdit_Metropolis1 td.dxic
+{
+    width: 100%;
+}
+.dxeButtonEdit_Metropolis1 .dxeIIC img
+{
+    padding-left: 3px;
+}
+.dxeTextBox_Metropolis1
+{
+    background-color: white;
+    border: 1px solid #c0c0c0;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxeTextBox_Metropolis1 .dxeEditArea_Metropolis1
+{
+    background-color: white;
+}
+.dxeRadioButtonList_Metropolis1, .dxeCheckBoxList_Metropolis1
+{
+    border: 1px Solid #c0c0c0;
+}
+.dxeCheckBoxList_Metropolis1 .dxe > table,
+.dxeRadioButtonList_Metropolis1 .dxe > table
+{
+    width: 100%;
+}
+.dxeRadioButtonList_Metropolis1,
+.dxeCheckBoxList_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxeRadioButtonList_Metropolis1 td.dxe,
+.dxeCheckBoxList_Metropolis1 td.dxe
+{
+    padding: 7px 5px 6px 11px;
+}
+.dxeRadioButtonList_Metropolis1[dir='rtl'] td.dxe,
+.dxeCheckBoxList_Metropolis1[dir='rtl'] td.dxe
+{
+    padding: 7px 11px 6px 5px;
+}
+/* -- Memo -- */
+.dxeMemo_Metropolis1
+{
+    background-color: white;
+    border: 1px solid #c0c0c0;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxeMemoEditArea_Metropolis1
+{
+    background-color: white;
+    outline: none;
+}
+/* -- Hyperlink -- */
+.dxeHyperlink_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #1A5DA7;
+}
+/* -- ListBox -- */
+.dxeListBox_Metropolis1
+{
+    background-color: white;
+    width: 70px;
+    height: 109px;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+    border: 1px solid #c0c0c0;
+}
+.dxeListBox_Metropolis1 div.dxlbd
+{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    height: 107px;
+}
+.dxeListBoxFilter_Metropolis1
+{
+    padding: 6px;
+    border-bottom: 1px solid #c0c0c0;
+}
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBFEButtonSys,
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBShowFilterBtnSys
+{
+    background: none;
+    border: none;
+}
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBFEButtonSys
+{
+    background-color: transparent;
+}
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBShowFilterBtnSys
+{
+    background-color: white;
+}
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBFEButtonSys.dxeButtonEditButtonHover_Metropolis1,
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBShowFilterBtnSys.dxbButtonHover_Metropolis1
+{
+    background-color: #e0e0e0;
+}
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBFEButtonSys img
+{
+    margin-bottom: -2px;
+}
+.dxeListBox_Metropolis1 .dxeListBoxFilter_Metropolis1 .dxeLBShowFilterBtnSys img
+{
+    margin-top: 2px;
+}
+.dxeListBox_Metropolis1 > tbody > tr > td > .dxeListBoxSelectAll_Metropolis1
+{
+    padding: 2px 0 4px 3px;
+    border-bottom: 1px solid #c0c0c0;
+    cursor: default;
+    white-space: nowrap;
+}
+.dxeListBox_Metropolis1 > tbody > tr > td > .dxeListBoxSelectAllHover_Metropolis1
+{
+    background-color: #e0e0e0;
+    color: #333333;
+}
+*[dir="rtl"].dxeListBox_Metropolis1 > tbody > tr > td > .dxeListBoxSelectAll_Metropolis1
+{
+    padding: 2px 3px 4px 0;
+}
+.dxeListBox_Metropolis1 > tbody > tr > td > .dxeListBoxSelectAll_Metropolis1 .dxichCellSys
+{
+    padding-left: 3px;
+    padding-right: 4px;
+}
+*[dir="rtl"].dxeListBox_Metropolis1 > tbody > tr > td > .dxeListBoxSelectAll_Metropolis1 .dxichCellSys
+{
+    padding-left: 4px;
+    padding-right: 2px;
+}
+.dxeListBox_Metropolis1 .dxeHCC .dxeListBoxSelectAll_Metropolis1 .dxichSys,
+.dxeListBox_Metropolis1 .dxeHCCR .dxeListBoxSelectAll_Metropolis1 .dxichSys
+{
+    margin: 0;
+}
+.dxeListBox_Metropolis1 .dxeC input[type="checkbox"]
+{
+    margin-left: 4px !important;
+    margin-right: 3px !important;
+}
+*[dir="rtl"].dxeListBox_Metropolis1 .dxeCR input[type="checkbox"]
+{
+    margin-left: 3px !important;
+    margin-right: 4px !important;
+}
+.dxeListBox_Metropolis1 > tbody > tr > td > .dxeListBoxSelectAll_Metropolis1 input[type="checkbox"]
+{
+    margin-left: 5px;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+*[dir="rtl"].dxeListBox_Metropolis1 > tbody > tr > td > .dxeListBoxSelectAll_Metropolis1 input[type="checkbox"]
+{
+    margin-left: 6px;
+    margin-right: 4px;
+}
+.dxeDisabled_Metropolis1 .dxeListBoxSelectAll_Metropolis1 .dxeBase_Metropolis1
+{
+    color: #c0c0c0;
+}
+.dxeListBoxItemRow_Metropolis1
+{
+    cursor: default;
+}
+.dxeListBoxItem_Metropolis1
+{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 3px 2px 4px 3px;
+    white-space: nowrap;
+    text-align: left;
+}
+.dxeListBoxItem_Metropolis1 em
+{
+    background: #CFCFCF none repeat 0 0;
+    color: #333333;
+    font-weight: bold;
+    font-style: normal;
+}
+.dxeListBox_Metropolis1 td.dxeI,
+.dxeListBox_Metropolis1 td.dxeIM,
+.dxeListBox_Metropolis1 .dxeHIC,
+.dxeListBox_Metropolis1 td.dxeFTM,
+.dxeListBox_Metropolis1 td.dxeTM,
+.dxeListBox_Metropolis1 td.dxeC,
+.dxeListBox_Metropolis1 td.dxeCM,
+.dxeListBox_Metropolis1 td.dxeHCC,
+.dxeListBox_Metropolis1 td.dxeMI,
+.dxeListBox_Metropolis1 td.dxeMIM
+{
+    border-right-width: 0 !important;
+}
+.dxeListBox_Metropolis1 td.dxeIR,
+.dxeListBox_Metropolis1 td.dxeIMR,
+.dxeListBox_Metropolis1 .dxeHICR,
+.dxeListBox_Metropolis1 td.dxeFTMR,
+.dxeListBox_Metropolis1 td.dxeTMR,
+.dxeListBox_Metropolis1 td.dxeCR,
+.dxeListBox_Metropolis1 td.dxeCMR,
+.dxeListBox_Metropolis1 td.dxeHCCR,
+.dxeListBox_Metropolis1 td.dxeMIR,
+.dxeListBox_Metropolis1 td.dxeMIMR
+{
+    border-left-width: 0 !important;
+}
+.dxeListBox_Metropolis1 td.dxeCM,
+.dxeListBox_Metropolis1 td.dxeHCC,
+.dxeListBox_Metropolis1 td.dxeCMR,
+.dxeListBox_Metropolis1 td.dxeHCCR
+{
+    width: 29px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dxeListBox_Metropolis1 .dxeListBoxEllipsis td.dxeC,
+.dxeListBox_Metropolis1 .dxeListBoxEllipsis td.dxeCR
+{
+    width: 21px;
+}
+.dxeListBox_Metropolis1 td.dxeIM,
+.dxeListBox_Metropolis1 td.dxeIMR
+{
+    width: 0;
+}
+.dxeListBox_Metropolis1 td.dxeC > span,
+.dxeListBox_Metropolis1 td.dxeCM > span
+{
+    margin: 2px 2px 2px 3px;
+}
+.dxeListBox_Metropolis1 td.dxeCR > span,
+.dxeListBox_Metropolis1 td.dxeCMR > span
+{
+    margin: 2px 3px 2px 2px;
+}
+.dxeListBox_Metropolis1 td.dxeC
+{
+    padding-right: 3px !important;
+}
+.dxeListBox_Metropolis1 td.dxeCR
+{
+    padding-left: 3px !important;
+}
+.dxeListBox_Metropolis1 td.dxeT
+{
+    width: 100%;
+    padding-left: 0 !important;
+}
+.dxeListBox_Metropolis1 td.dxeTR
+{
+    width: 100%;
+    padding-right: 0 !important;
+}
+.dxeListBox_Metropolis1 td.dxeT,
+.dxeListBox_Metropolis1 td.dxeMI
+{
+    border-left-width: 0 !important;
+}
+.dxeListBox_Metropolis1 td.dxeTR,
+.dxeListBox_Metropolis1 td.dxeMIR
+{
+    border-right-width: 0 !important;
+}
+.dxeListBox_Metropolis1 td.dxeFTM,
+.dxeListBox_Metropolis1 td.dxeTM,
+.dxeListBox_Metropolis1 td.dxeLTM,
+.dxeListBox_Metropolis1 .dxeHFC,
+.dxeListBox_Metropolis1 .dxeHC,
+.dxeListBox_Metropolis1 .dxeHLC,
+.dxeListBox_Metropolis1 td.dxeFTMR,
+.dxeListBox_Metropolis1 td.dxeTMR,
+.dxeListBox_Metropolis1 td.dxeLTMR,
+.dxeListBox_Metropolis1 .dxeHFCR,
+.dxeListBox_Metropolis1 .dxeHCR,
+.dxeListBox_Metropolis1 .dxeHLCR
+{
+    overflow: hidden;
+}
+.dxeListBox_Metropolis1 td.dxeFTM.dxeLTM
+{
+    border-left-width: 0 !important;
+}
+.dxeListBox_Metropolis1 td.dxeFTM,
+.dxeListBox_Metropolis1 td.dxeTM,
+.dxeListBox_Metropolis1 .dxeHFC,
+.dxeListBox_Metropolis1 .dxeHC
+{
+    padding-right: 6px !important;
+}
+.dxeListBox_Metropolis1 td.dxeFTMR,
+.dxeListBox_Metropolis1 td.dxeTMR,
+.dxeListBox_Metropolis1 .dxeHFCR,
+.dxeListBox_Metropolis1 .dxeHCR
+{
+    padding-left: 6px !important;
+}
+.dxeListBox_Metropolis1 td.dxeLTM,
+.dxeListBox_Metropolis1 td.dxeTM,
+.dxeListBox_Metropolis1 .dxeHC,
+.dxeListBox_Metropolis1 .dxeHLC
+{
+    padding-left: 6px !important;
+}
+.dxeListBox_Metropolis1 td.dxeLTMR,
+.dxeListBox_Metropolis1 td.dxeTMR,
+.dxeListBox_Metropolis1 .dxeHCR,
+.dxeListBox_Metropolis1 .dxeHLCR
+{
+    padding-right: 6px !important;
+}
+.dxeListBoxItemRow_Metropolis1.dx-ar > .dxeListBoxItem_Metropolis1,
+.dxeListBoxItemRow_Metropolis1.dx-al > .dxeListBoxItem_Metropolis1
+{
+    float: inherit;
+}
+/*Grid lines*/
+.dxeListBox_Metropolis1 td.dxeLTM,
+.dxeListBox_Metropolis1 td.dxeTM,
+.dxeListBox_Metropolis1 td.dxeMIM
+{
+    border-left: 1px solid #cfcfcf !important;
+}
+.dxeListBox_Metropolis1 td.dxeLTMR,
+.dxeListBox_Metropolis1 td.dxeTMR,
+.dxeListBox_Metropolis1 td.dxeMIMR
+{
+    border-right: 1px solid #cfcfcf !important;
+}
+.dxeListBox_Metropolis1 td.dxeIM,
+.dxeListBox_Metropolis1 td.dxeFTM,
+.dxeListBox_Metropolis1 td.dxeTM,
+.dxeListBox_Metropolis1 td.dxeLTM,
+.dxeListBox_Metropolis1 td.dxeCM,
+.dxeListBox_Metropolis1 td.dxeMIM,
+.dxeListBox_Metropolis1 td.dxeIMR,
+.dxeListBox_Metropolis1 td.dxeFTMR,
+.dxeListBox_Metropolis1 td.dxeTMR,
+.dxeListBox_Metropolis1 td.dxeLTMR,
+.dxeListBox_Metropolis1 td.dxeCMR,
+.dxeListBox_Metropolis1 td.dxeMIMR
+{
+    border-bottom: 1px solid #cfcfcf;
+}
+.dxeListBoxItemSelected_Metropolis1
+{
+    color: White;
+    background-color: #1A5DA7;
+}
+.dxeDisabled_Metropolis1.dxeListBox_Metropolis1 .dxeListBoxItemSelected_Metropolis1
+{
+    background-color: #f0f0f0;
+}
+.dxeListBoxItemHover_Metropolis1
+{
+    background-color: #e0e0e0;
+    color: #333333;
+}
+.dxeListBoxWithCustAppearanceSys .dxeListBoxItemSelected_Metropolis1
+{
+    color: White !important;
+    background-color: #1A5DA7 !important;
+}
+.dxeListBoxWithCustAppearanceSys.dxeDisabled_Metropolis1.dxeListBox_Metropolis1 .dxeListBoxItemSelected_Metropolis1
+{
+    background-color: #f0f0f0 !important;
+    color: #c0c0c0 !important;
+}
+.dxeListBoxWithCustAppearanceSys .dxeListBoxItemHover_Metropolis1
+{
+    background-color: #e0e0e0 !important;
+    color: #333333 !important;
+}
+.dxeListBoxItemHover_Metropolis1 em,
+.dxeListBoxItemSelected_Metropolis1 em
+{
+    background-image: none;
+}
+/*Header*/
+.dxeListBox_Metropolis1 .dxeHD
+{
+    border-bottom: 1px solid #c0c0c0;
+    color: #8d8d8d;
+}
+.dxeListBox_Metropolis1 .dxeHC,
+.dxeListBox_Metropolis1 .dxeHLC,
+.dxeListBox_Metropolis1 td.dxeHMIC
+{
+    border-left: 1px solid #c0c0c0;
+}
+.dxeListBox_Metropolis1 .dxeHCR,
+.dxeListBox_Metropolis1 .dxeHLCR,
+.dxeListBox_Metropolis1 td.dxeHMICR
+{
+    border-right: 1px solid #A0A0A0;
+    text-align: right;
+}
+.dxeListBox_Metropolis1 .dxeHCC
+{
+    border-left: 1px solid #c0c0c0;
+}
+.dxeListBox_Metropolis1 .dxeHICR,
+.dxeListBox_Metropolis1 .dxeHFCR,
+.dxeListBox_Metropolis1 .dxeHCCR
+{
+    border-right: 1px solid #dcdcdc;
+    text-align: right;
+}
+.dxeListBox_Metropolis1 .dxeHFC,
+.dxeListBox_Metropolis1 .dxeHC,
+.dxeListBox_Metropolis1 .dxeHMIC
+{
+    border-right-width: 0;
+}
+.dxeListBox_Metropolis1 .dxeHFCR,
+.dxeListBox_Metropolis1 .dxeHCR,
+.dxeListBox_Metropolis1 .dxeHMICR
+{
+    border-left-width: 0;
+    text-align: right;
+}
+.dxeListBox_Metropolis1 .dxeHLC
+{
+    border-right: 1px solid #dcdcdc;
+}
+.dxeListBox_Metropolis1 .dxeHLCR
+{
+    border-left: 1px solid #dcdcdc;
+    text-align: right;
+}
+/* -- Calendar -- */
+.dxeCalendarFastNavItem_Metropolis1
+{
+    background-color: #ebebeb;
+    outline: 1px white solid;
+}
+.dxChrome .dxeCalendarFastNavItem_Metropolis1
+{
+    outline-style: auto;
+}
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarFastNavItemSelected_Metropolis1),
+.dxeCalendarFastNavMonth_Metropolis1.dxeCalendarFastNavMonthHover_Metropolis1,
+.dxeCalendarFastNavYear_Metropolis1.dxeCalendarFastNavYearHover_Metropolis1
+{
+    background-color: #527BA7;
+    color: white;
+}
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemSelected_Metropolis1,
+.dxeCalendarFastNavMonth_Metropolis1.dxeCalendarFastNavMonthSelected_Metropolis1,
+.dxeCalendarFastNavYear_Metropolis1.dxeCalendarFastNavYearSelected_Metropolis1
+{
+    background-color: #1A5DA7;
+    color: white;
+}
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemSelected_Metropolis1,
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemOtherPeriod_Metropolis1.dxeCalendarFastNavItemSelected_Metropolis1
+{
+    color: white;
+}
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarToday_Metropolis1
+{
+    box-shadow: inset 0 0 0 2px #b8b8b8;
+}
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemSelected_Metropolis1.dxeCalendarToday_Metropolis1
+{
+    box-shadow: inset 0 0 0 2px #103864;
+}
+.dxeDayInRange.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemSelected_Metropolis1
+{
+    background-color: #527BA7;
+    color: white;
+}
+.dxeDayInRange.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemSelected_Metropolis1.dxeCalendarToday_Metropolis1,
+.dxeCalendarToday_Metropolis1.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarFastNavItemSelected_Metropolis1)
+{
+    box-shadow: inset 0 0 0 2px #1A5DA7;
+}
+.dxeCalendarDay_Metropolis1.dxeCalendarHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarSelected_Metropolis1)
+{
+    background-color: #527BA7;
+    color: white;
+}
+.dxeCalendarDay_Metropolis1.dxeCalendarSelected_Metropolis1
+{
+    background-color: #1A5DA7;
+    color: white;
+}
+.dxeCalendarDay_Metropolis1.dxeCalendarToday_Metropolis1
+{
+    box-shadow: inset 0 0 0 1px #b8b8b8;
+}
+.dxeCalendarDay_Metropolis1.dxeCalendarSelected_Metropolis1.dxeCalendarToday_Metropolis1
+{
+    box-shadow: inset 0 0 0 1px #103864;
+}
+.dxeDayInRange.dxeCalendarSelected_Metropolis1
+{
+    background-color: #527BA7;
+    color: white;
+}
+.dxeDayInRange.dxeCalendarSelected_Metropolis1.dxeCalendarToday_Metropolis1,
+.dxeCalendarToday_Metropolis1.dxeCalendarDay_Metropolis1.dxeCalendarHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarSelected_Metropolis1)
+{
+    box-shadow: inset 0 0 0 1px #1A5DA7;
+}
+.dxeCalendar_Metropolis1
+{
+    background-color: White;
+    color: #333333;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    cursor: default;
+}
+.dxeCalendar_Metropolis1.dxeFocused_Metropolis1
+{
+    border: none;
+}
+.dxeCalendar_Metropolis1 td.dxMonthGrid_Metropolis1
+{
+    padding: 8px 20px;
+}
+.dxeCalendar_Metropolis1 td.dxMonthGrid,
+.dxeCalendar_Metropolis1 td.dxMonthGridRtl,
+.dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers,
+.dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbersRtl
+{
+    min-width: 244px;
+    padding: 30px 30px 10px;
+}
+.dxeCalendarDayHeader_Metropolis1
+{
+    padding: 2px 4px 5px;
+    font-size: 1.08em;
+    text-transform: uppercase;
+}
+.dxeCalendarWeekNumber_Metropolis1
+{
+    font-size: 0.75em;
+    text-align: right;
+    padding: 6px 8px 6px 4px;
+    color: #bfbfbf;
+}
+.dxeCalendarDay_Metropolis1
+{
+    padding: 4px 6px;
+    text-align: center;
+}
+.dxeCalendarWeekend_Metropolis1
+{
+    color: #7AA71A;
+}
+.dxeCalendarOtherMonth_Metropolis1,
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemOtherPeriod_Metropolis1
+{
+    opacity: 0.15;
+}
+.dxeCalendarOutOfRange_Metropolis1,
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarOutOfRange_Metropolis1
+{
+    color: #d0d0d0;
+}
+.dxeCalendarDayDisabled_Metropolis1,
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarDayDisabled_Metropolis1
+{
+    opacity: 1.0;
+    background-color: #fcfcfc;
+    color: #ececec !important;
+}
+.dxeCalendarSelected_Metropolis1.dxeCalendarOtherMonth_Metropolis1,
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemSelected_Metropolis1.dxeCalendarFastNavItemOtherPeriod_Metropolis1,
+.dxeCalendarDay_Metropolis1.dxeCalendarHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarSelected_Metropolis1),
+.dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarFastNavItemSelected_Metropolis1)
+{
+    opacity: 1.0;
+}
+.dxeCalendarSelected_Metropolis1.dxeDisabled_Metropolis1
+{
+    background-color: #ffd5a6;
+}
+.dxeCalendarHeader_Metropolis1
+{
+    color: #1A5DA7;
+    padding: 4px 7px;
+    font-size: 1.5em;
+    padding: 4px 17px;
+}
+.dxeCalendarHeader_Metropolis1 td.dxe
+{
+    text-align: center;
+    cursor: pointer;
+}
+.dxeCalendarHeader_Metropolis1 .dxeCHS
+{
+    min-width: 10px;
+}
+.dxeCalendarHeader_Metropolis1 span
+{
+    padding: 0 16px;
+    white-space: nowrap !important;
+}
+.dxeCalendarFooter_Metropolis1
+{
+    padding: 8px 0px;
+    border-bottom: 2px solid #c0c0c0;
+    text-align: center;
+}
+.dxeCalendarFooter_Metropolis1 > button + button
+{
+    margin-left: 12px;
+}
+.dxeCalendar_Metropolis1.dxeFocused_Metropolis1 .dxeCalendarFooter_Metropolis1
+{
+    border-color: #1A5DA7;
+}
+.dxeCalendarFastNav_Metropolis1
+{
+    color: Black;
+    background: White none;
+    border-top: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    padding: 12px 8px;
+}
+.dxFastNavGrid .dxeCalendarFastNav_Metropolis1
+{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+.dxeCalendar_Metropolis1 .dxYCVisibleByDefault
+{
+    width: 260px;
+    height: 200px;
+}
+.dxeCalendarFastNavMonthArea_Metropolis1
+{
+    padding: 0px 9px;
+}
+.dxeCalendarFastNavItemArea_Metropolis1
+{
+    padding: 9px;
+}
+.dxeCalendarFastNavYearArea_Metropolis1
+{
+    padding-top: 8px;
+}
+.dxeCalendarFastNavHeader_Metropolis1
+{
+    color: #666666;
+    padding: 4px 17px;
+    text-align: center;
+    cursor: pointer;
+}
+.dxeCalendarFastNavHeader_Metropolis1 > table > tbody > tr > td:last-child
+{
+    padding: 0 24px 0 0;
+}
+*[dir="rtl"].dxeCalendar .dxeCalendarFastNavHeader_Metropolis1 > table > tbody > tr > td:last-child
+{
+    padding: 0 0 0 24px;
+}
+.dxeCalendarFastNavFooter_Metropolis1
+{
+    color: Black;
+    padding: 8px 0px;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    background-color: white;
+}
+.dxeCalendarFastNavFooter_Metropolis1 .dxeCFNFS
+{
+    min-width: 11px;
+    *width: 11px;
+}
+.dxeCalendarFastNavItem_Metropolis1,
+.dxeCalendarFastNavMonth_Metropolis1,
+.dxeCalendarFastNavYear_Metropolis1
+{
+    color: #333333;
+    padding: 3px 5px;
+    text-align: center;
+}
+.dxeCalendarFastNavMonth_Metropolis1,
+.dxeCalendarFastNavYear_Metropolis1
+{
+    cursor: pointer;
+}
+.dxeCalendarFastNavItem_Metropolis1
+{
+    cursor: default;
+}
+.dxeCalendarFastNavItem_Metropolis1:empty
+{
+    pointer-events: none;
+}
+.dxeCalendarFastNavMonth_Metropolis1
+{
+    padding: 6px;
+}
+.dxeCalendarFastNavItem_Metropolis1:before,
+.dxeCalendarFastNavItem_Metropolis1:after
+{
+    content: "";
+    display: block;
+}
+.dxeCalendarFastNavItem_Metropolis1:before
+{
+    padding-top: 6px;
+}
+.dxeCalendarFastNavItem_Metropolis1:after
+{
+    padding-bottom: 6px;
+}
+.dxeDateEditTimeEditCell_Metropolis1
+{
+    padding: 13px 41px 15px;
+    width: 90px;
+}
+.dxeDateEditClockCell_Metropolis1
+{
+    padding: 37px 31px 0;
+}
+.dxeCalendarFooter_Metropolis1.dxeDETSF
+{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.dxeCalendarHeader_Metropolis1.dxeDETSH
+{
+    display: none;
+}
+.dxpcDropDown_Metropolis1 .dxeCalendar_Metropolis1
+{
+    border: 1px solid #c0c0c0;
+}
+div.dxeCalendarDETS.dxeCalendar_Metropolis1
+{
+    max-width: 506px;
+}
+div.dxeCalendarDETS.dxeCalendarVerticalDETS .dxeCalendarFooter_Metropolis1 td:not(.dxeCalendarButton_Metropolis1)
+{
+    min-width: 4px;
+}
+/* Disabled */
+.dxeDisabled_Metropolis1,
+.dxeDisabled_Metropolis1 td.dxe
+{
+    color: #c0c0c0;
+    cursor: default;
+}
+.dxeEditArea_Metropolis1.dxeDisabled_Metropolis1
+{
+    color: #c0c0c0;
+}
+a.dxeDisabled_Metropolis1:hover
+{
+    color: #acacac;
+}
+.dxeButtonDisabled_Metropolis1
+{
+    border-color: #e9e9e9;
+    color: #808080;
+    cursor: default;
+}
+/* -- Button -- */
+.dxbButton_Metropolis1
+{
+    color: #333333;
+    border: 1px solid #c0c0c0;
+    background-color: white;
+    padding: 1px;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxbButton_Metropolis1.dxbDisabled_Metropolis1
+{
+    border-color: #e9e9e9;
+    color: #b8b8b8;
+    cursor: default;
+}
+.dxbButtonHover_Metropolis1
+{
+    color: white;
+    background-color: #1A5DA7;
+    border: 1px solid #1A5DA7;
+}
+.dxbButtonChecked_Metropolis1
+{
+    color: #333333;
+    background-color: #C0C0C0;
+}
+.dxbButtonPressed_Metropolis1
+{
+    color: white;
+    background-color: #C0C0C0;
+}
+.dxbButton_Metropolis1 div.dxb
+{
+	padding: 3px 8px 4px;
+	background: #1A5DA7;
+	color: #FFFFFF;
+}
+.dxbButton_Metropolis1 div.dxbf
+{
+    padding: 2px 7px 3px;
+    border: 1px dotted #333333;
+}
+/* Button Link */
+a.dxbButton_Metropolis1
+{
+    color: #1A5DA7;
+    text-decoration: underline;
+}
+/* Disabled */
+.dxbDisabled_Metropolis1,
+a.dxbButton_Metropolis1.dxbDisabled_Metropolis1
+{
+    color: #C3C3C3;
+    cursor: default;
+    text-decoration: none;
+}
+.dxbButton_Metropolis1.dxb-secondary
+{
+    background: #fe870c;
+    border-color: transparent;
+    color: #ffffff;
+}
+.dxbButton_Metropolis1.dxb-secondary.dxbButtonHover_Metropolis1, .dxbButton_Metropolis1.dxb-secondary.dxbButtonPressed_Metropolis1
+{
+    background: #fea03f;
+    border-color: transparent;
+}
+.dxbButton_Metropolis1.dxb-secondary.dxbDisabled_Metropolis1
+{
+    background: rgba(254,135,12,0.5);
+    border-color: transparent;
+    color: rgba(255,255,255,0.5);
+}
+.dxbButton_Metropolis1.dxb-outline
+{
+    background: #ffffff;
+    border-color: #fe870c;
+    color: #fe870c;
+}
+.dxbButton_Metropolis1.dxb-outline.dxbButtonHover_Metropolis1, .dxbButton_Metropolis1.dxb-outline.dxbButtonPressed_Metropolis1
+{
+    background: #e6e6e6;
+    border-color: #fe870c;
+}
+.dxbButton_Metropolis1.dxb-outline.dxbDisabled_Metropolis1
+{
+    background: rgba(255,255,255,0.5);
+    border-color: rgba(254,135,12,0.5);
+    color: rgba(254,135,12,0.5);
+}
+.dxbButton_Metropolis1.dxb-danger
+{
+    background: #e81123;
+    border-color: transparent;
+    color: #ffffff;
+}
+.dxbButton_Metropolis1.dxb-danger.dxbButtonHover_Metropolis1, .dxbButton_Metropolis1.dxb-danger.dxbButtonPressed_Metropolis1
+{
+    background: #f13b4b;
+    border-color: transparent;
+}
+.dxbButton_Metropolis1.dxb-danger.dxbDisabled_Metropolis1
+{
+    background: rgba(232,17,35,0.5);
+    border-color: transparent;
+    color: rgba(255,255,255,0.5);
+}
+/* -- FilterControl -- */
+.dxfcControl_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: Black;
+    padding: 0 1em;
+}
+.dxfcTable_Metropolis1
+{
+    border-collapse: separate !important;
+}
+.dxfcTable_Metropolis1 td.dxfc
+{
+    padding: 0 0 0 3px;
+}
+.dxfcTable_Metropolis1 td.dxfc > table
+{
+    margin: 1px 0 -1px;
+}
+a.dxfcPropertyName_Metropolis1
+{
+    white-space: nowrap !important;
+    color: #1086d4 !important;
+}
+a.dxfcGroupType_Metropolis1
+{
+    white-space: nowrap !important;
+    padding: 0 3px !important;
+    color: #828D16 !important;
+}
+a.dxfcOperation_Metropolis1
+{
+    white-space: nowrap !important;
+    color: #6fb111 !important;
+}
+a.dxfcValue_Metropolis1
+{
+    white-space: nowrap !important;
+    color: Gray !important;
+}
+.dxeMaskHint_Metropolis1
+{
+    background: #ffffe1 none;
+    border: 1px solid black;
+    padding: 2px 5px 3px;
+    color: Black;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxfcControl_Metropolis1 ul.dxfc-tree,
+.dxfcControl_Metropolis1 .dxfc-tree ul
+{
+    list-style-type: none;
+    margin: 0;
+    overflow-y: hidden;
+    padding: 0;
+}
+.dxfcControl_Metropolis1 .dxfc-tree
+{
+    width: 100%;
+}
+.dxfcControl_Metropolis1 .dxfc-subnd
+{
+    margin-left: 22px;
+}
+.dxfcControl_Metropolis1.dxfcRtl .dxfc-subnd
+{
+    margin-left: 0;
+    margin-right: 22px;
+}
+.dxfcControl_Metropolis1 .dxfc > li > table
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.dxfcControl_Metropolis1 .dxfc-elb
+{
+    float: left;
+    height: 21px;
+    vertical-align: top;
+    width: 26px;
+}
+.dxfcControl_Metropolis1.dxfcRtl .dxEditors_fcremove_Metropolis1
+{
+    margin-right: 2px;
+}
+.dxfcControl_Metropolis1 .dxfc-clr
+{
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td
+{
+    vertical-align: top;
+}
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td.dxfc-editorCell
+{
+    vertical-align: middle;
+}
+.dxEditors_fcremove_Metropolis1, .dxEditors_fcadd_Metropolis1
+{
+    margin-top: 6px;
+}
+.dxfcControl_Metropolis1 .dxfc-nd
+{
+    cursor: pointer;
+    display: block;
+    float: left;
+    outline: 0 none;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > a,
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > span,
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > img,
+.dxfcControl_Metropolis1 .dxfc-editor
+{
+    vertical-align: middle;
+}
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > a,
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > td,
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > span
+{
+    padding: 0 0.1ex;
+}
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > a,
+.dxfcControl_Metropolis1 .dxfc-nd > tbody > tr > td > span
+{
+    line-height: 24px;
+}
+.dxfcControl_Metropolis1 .dxfc-ln
+{
+    vertical-align: top;
+}
+.dxfcControl_Metropolis1 .dxfc-memo textarea
+{
+    height: 80px;
+    overflow: auto;
+}
+.dxfcControl_Metropolis1 .dxfc-validationSummary
+{
+    padding: 2px 5px 4px 6px !important;
+    list-style-type: none;
+    margin: 0;
+}
+.dxfcControl_Metropolis1 .dxfc-validationSummary li
+{
+    padding: 2px 0;
+}
+.dxfcControl_Metropolis1 .dxfc-validationSummary li a
+{
+    color: red;
+    text-decoration: none;
+    border-bottom: 1px dashed #f70;
+}
+.dxfcControl_Metropolis1 .dxfc-validationSummary li a:hover
+{
+    color: #f70;
+}
+/* -- ProgressBar -- */
+.dxeProgressBar_Metropolis1
+{
+    background-color: #e0e0e0;
+    color: #333333;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    height: 23px;
+}
+.dxeProgressBar_Metropolis1 .dxePBMainCell,
+.dxeProgressBar_Metropolis1 td.dxe
+{
+    padding: 0;
+}
+.dxeProgressBarIndicator_Metropolis1
+{
+    background-color: #1A5DA7;
+}
+/* -- DropDownWindow -- */
+.dxpcDropDown_Metropolis1,
+.dxeDropDownWindow_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxeDropDownWindow_Metropolis1
+{
+    background-color: white;
+    border: 1px solid #c0c0c0;
+}
+/*----------------- ColorTable -----------------*/
+.dxeColorIndicator_Metropolis1
+{
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin-left: 3px;
+}
+.dxeItemPicker_Metropolis1
+{
+    background-color: #ffffff;
+    border: 1px solid #c0c0c0;
+}
+.dxeColorTable_Metropolis1 td.dx,
+.dxeItemPicker_Metropolis1 td.dx
+{
+    padding: 4px;
+}
+.dxeColorTableCell_Metropolis1,
+.dxeItemPickerCell_Metropolis1,
+.dxeACICell_Metropolis1
+{
+    padding: 3px;
+    cursor: pointer;
+}
+.dxeColorTableCellDiv_Metropolis1,
+.dxeACICellDiv_Metropolis1
+{
+    border: 1px solid #c0c0c0;
+    width: 12px;
+    height: 12px;
+    font-size: 0;
+}
+.dxeColorTableCellSelected_Metropolis1,
+.dxeACICellSelected_Metropolis1
+{
+    padding: 0px !important;
+    background-color: #CBCBCB;
+    border: 3px solid #1A5DA7;
+}
+.dxeColorTableCellSelected_Metropolis1 .dxeColorTableCellDiv_Metropolis1,
+.dxeACICellSelected_Metropolis1 .dxeACICellDiv_Metropolis1
+{
+    border: 1px solid white;
+}
+.dxeColorTableCellHover_Metropolis1,
+.dxeItemPickerCellHover_Metropolis1,
+.dxeAutomaticColorItemCellHover_Metropolis1,
+.dxeAutomaticColorItem_Metropolis1:hover > div
+{
+    padding: 0px !important;
+    background-color: #F2F2F2;
+    border: 3px solid #E0E0E0;
+}
+/* -- Invalid Style -- */
+/* -- Focused Style -- */
+.dxeFocused_Metropolis1
+{
+    border: 1px solid #1A5DA7;
+}
+.dxeFocused_Metropolis1.dxeTrackBar_Metropolis1
+{
+    border: 0px;
+}
+/* -- Null Text Style -- */
+.dxeNullText_Metropolis1 .dxeEditArea_Metropolis1,
+.dxeNullText_Metropolis1 .dxeMemoEditArea_Metropolis1
+{
+    color: #818181;
+}
+.dxeNullText_Metropolis1 input:-webkit-autofill
+{
+    -webkit-text-fill-color: #818181;
+}
+.dxeTextBox_Metropolis1 .dxeFNTextSys,
+.dxeButtonEdit_Metropolis1 .dxeFNTextSys,
+.dxeMemo_Metropolis1 .dxeFNTextSys
+{
+    color: #818181;
+}
+/* -- Captcha -- */
+.dxcaControl_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxcaRefreshButton_Metropolis1
+{
+    text-decoration: none;
+    color: #1e3695;
+}
+.dxcaDisabledRefreshButton_Metropolis1
+{
+    color: #acacac;
+}
+.dxcaRefreshButtonCell_Metropolis1
+{
+    padding-left: 4px;
+    border-bottom: 2px solid #e0e0e0;
+}
+.dxcaTextBoxCellNoIndent_Metropolis1 .dxeErrorCell_Metropolis1
+{
+    padding-left: 0px;
+    padding-top: 4px;
+    color: Red;
+}
+.dxcaTextBoxLabel_Metropolis1
+{
+    padding-bottom: 4px;
+    display: block;
+}
+.dxcaLoadingPanel_Metropolis1
+{
+    background-color: white;
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+}
+.dxcaLoadingPanel_Metropolis1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 2px;
+}
+.dxcaLoadingPanel_Metropolis1 .dxlp-loadingImage
+{
+    margin: 0px;
+}
+.dxpcLite_Metropolis1 .dxHFBPS
+{
+    width: 6px;
+}
+.dxeTextBox_Metropolis1,
+.dxeButtonEdit_Metropolis1,
+.dxeIRadioButton_Metropolis1,
+.dxeRadioButtonList_Metropolis1,
+.dxeCheckBoxList_Metropolis1
+{
+    cursor: default;
+}
+.dxFirefox .dxeTextBox_Metropolis1 td.dxic,
+.dxFirefox .dxeButtonEdit_Metropolis1 td.dxic,
+.dxFirefox .dxeButtonEdit_Metropolis1[cellspacing="0"] td.dxic,
+.dxeTextBox_Metropolis1 td.dxic,
+.dxeButtonEdit_Metropolis1 td.dxic,
+.dxeButtonEdit_Metropolis1[cellspacing="0"] td.dxic
+{
+    padding: 1px 3px 2px 3px;
+}
+/* Removes flicking in iOS Safari*/
+.dxeTrackBar_Metropolis1,
+.dxeIRadioButton_Metropolis1,
+.dxeButtonEdit_Metropolis1,
+.dxeTextBox_Metropolis1,
+.dxeRadioButtonList_Metropolis1,
+.dxeCheckBoxList_Metropolis1,
+.dxeMemo_Metropolis1,
+.dxeListBox_Metropolis1,
+.dxeCalendar_Metropolis1,
+.dxeColorTable_Metropolis1
+{
+    -webkit-tap-highlight-color: transparent;
+}
+/* Layout Control */
+.dxeLayoutConrtol_Metropolis1
+{
+    display: table;
+}
+.dxeLyGroupCell_Metropolis1
+{
+    padding: 5px;
+}
+.dxeLyCaptionCell_Metropolis1
+{
+    padding: 6px;
+}
+.dxeLyEditorCell_Metropolis1
+{
+    padding: 5px;
+}
+.dxeLyCaptionCell_Metropolis1
+{
+    color: #004184;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.dxeLyEditorCell_Metropolis1
+{
+    width: 0;
+}
+.dxeLyGroupBox_Metropolis1
+{
+    border: 1px Solid #9F9F9F;
+    border-radius: 4px;
+    padding: 10px;
+}
+.dxeLyGroupBoxCaption_Metropolis1 > span
+{
+    background-color: White;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.dxeLyGroupBoxCaption_Metropolis1
+{
+    position: relative;
+    margin-top: -21px;
+}
+.dxeLyGroup_Metropolis1
+{
+    width: 100%;
+}
+.dxeLayoutConrtol_Metropolis1 .dxeLyVATSys > label
+{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: block;
+}
+.dxeLyEditorCell_Metropolis1 > .dxeMemoSys
+{
+    margin-top: 3px;
+}
+.dxeLyEditorCell_Metropolis1 > label.dxeBase_Metropolis1
+{
+    display: block;
+    white-space: nowrap;
+}
+/* ASPxCololrEdit */
+.dxcpParametersCell_Metropolis1 input
+{
+    padding: 2px 0px 1px 5px;
+}
+.dxcpParametersCellSys .dxcpWebColorInput_Metropolis1
+{
+    float: right;
+    margin-top: 40px;
+}
+.dxcpColorParameterMainDiv_Metropolis1
+{
+    padding: 0px 0 4px 9px;
+    width: 90px;
+    text-align: right;
+}
+.dxeCustomColorButton_Metropolis1
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 3px 7px;
+    cursor: pointer;
+}
+.dxeCustomColorButtonHover_Metropolis1
+{
+    border-color: #1A5DA7;
+    background-color: #1A5DA7;
+    color: white;
+}
+.dxeAutomaticColorItem_Metropolis1
+{
+    padding: 4px 4px 0px 4px;
+}
+.dxeAutomaticColorItem_Metropolis1 > span
+{
+    margin: 0px 5px;
+    line-height: 20px;
+}
+.dxcpCurrentColor_Metropolis1,
+.dxcpSavedColor_Metropolis1
+{
+    height: 35px;
+}
+.dxcpCurrentAndSaved_Metropolis1
+{
+    width: 65px;
+    margin: 34px 0px 0px auto;
+    cursor: pointer;
+}
+.dxeColorTablesMainDiv_Metropolis1,
+.dxeColorSelectorMainDiv_Metropolis1
+{
+    background-color: #FFFFFF;
+}
+.dxeColorSelectorMainDiv_Metropolis1
+{
+    padding: 7px;
+}
+.dxcpColorArea_Metropolis1,
+.dxcpHueAreaImage_Metropolis1,
+.dxcpCurrentAndSaved_Metropolis1,
+.dxeColorTablesMainDiv_Metropolis1,
+.dxeColorSelectorMainDiv_Metropolis1,
+.dxcpParametersCell_Metropolis1 input
+{
+    border: 1px solid #c0c0c0;
+}
+.dxeButtonsPanelDiv_Metropolis1
+{
+    margin-top: 15px;
+    text-align: right;
+}
+.dxeButtonsPanelDiv_Metropolis1 input
+{
+    min-width: 60px;
+    margin-left: 10px;
+}
+/* -- ASPxTokenBox -- */
+input.dxeTokenBoxInput_Metropolis1[type="text"]
+{
+    display: inline-block;
+    float: left;
+    width: 30px;
+    outline: none;
+    margin: 0 0 1px 2px;
+    padding-bottom: 1px;
+}
+.dxeToken_Metropolis1
+{
+    display: inline-block;
+    color: #ffffff;
+    float: left;
+    min-width: 30px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+.dxeTokenText_Metropolis1, .dxeTokenRemoveButton_Metropolis1
+{
+    display: block;
+    float: left;
+}
+.dxeTokenText_Metropolis1
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px 2px 0px 4px;
+}
+.dxeTokenRemoveButton_Metropolis1
+{
+    cursor: pointer;
+    margin-top: 1px;
+}
+.dxeToken_Metropolis1
+{
+    background: #1A5DA7;
+}
+.dxFirefox .dxeButtonEdit_Metropolis1 td.dxictb,
+.dxeButtonEdit_Metropolis1 td.dxictb
+{
+    padding: 0px;
+}
+.dxFirefox input.dxeTokenBoxInput_Metropolis1[type="text"]
+{
+    padding-bottom: 0;
+    margin-bottom: 1px;
+}
+.dxFirefox .dxeToken_Metropolis1
+{
+    padding-bottom: 0px;
+}
+.dxeTokenBox.dxeDisabled_Metropolis1 .dxictb
+{
+    cursor: default;
+}
+/* ASPxPictureEdit */
+.dxpePreviewContainer_Metropolis1
+{
+    position: relative;
+}
+.dxpeCommandPanel_Metropolis1
+{
+    background-color: #333333;
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    height: 32px;
+    position: absolute;
+}
+.dxpeBottomCommandPanel_Metropolis1
+{
+    width: 100%;
+    bottom: 0;
+}
+.dxpeTopCommandPanel_Metropolis1
+{
+    width: 100%;
+    top: 0;
+}
+.dxpeCommandPanelDeleteButton_Metropolis1,
+.dxpeCommandPanelOpenDialogButton_Metropolis1
+{
+    cursor: pointer;
+    display: inline-block;
+}
+.dxpeCommandPanelButtonsWrapper_Metropolis1
+{
+    position: absolute;
+}
+.dxpeCommandPanelButtonsWrapperLeft_Metropolis1
+{
+    left: 0;
+}
+.dxpeCommandPanelButtonsWrapperCenter_Metropolis1
+{
+    left: 50%;
+    margin-left: -32px;
+}
+.dxpeCommandPanelButtonsWrapperRight_Metropolis1
+{
+    right: 0;
+}
+.dxpeDropZone_Metropolis1
+{
+    background-color: gray;
+}
+.dxpePlaceHolder_Metropolis1
+{
+    background-color: lightgray;
+    z-index: -1;
+}
+.dxpeTextPanelContainer_Metropolis1
+{
+    height: 100%;
+    font-size: 200%;
+    text-align: center;
+    width: 100%;
+}
+.dxpeTextPanel_Metropolis1
+{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/* Editor caption */
+.dxeCaptionCell_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333;
+    white-space: nowrap;
+    line-height: 16px;
+    height: 100%;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeTextEditCTypeSys
+{
+    padding-top: 2px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeCheckBoxCTypeSys
+{
+    padding-top: 2px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeRadioButtonCTypeSys
+{
+    padding-top: 3px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeCheckBoxListCTypeSys
+{
+    padding-top: 10px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeRadioButtonListCTypeSys
+{
+    padding-top: 10px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeListBoxCTypeSys
+{
+    padding-top: 5px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeTrackBarCTypeSys
+{
+    padding-top: 2px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeProgressBarCTypeSys
+{
+    padding-top: 3px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeMemoCTypeSys
+{
+    padding-top: 4px;
+}
+.dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeCustomCTypeSys
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/* Chrome */
+.dxWebKitFamily .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeCheckBoxCTypeSys
+{
+    padding-top: 3px;
+}
+.dxWebKitFamily .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeRadioButtonCTypeSys
+{
+    padding-top: 4px;
+}
+.dxWebKitFamily .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeCheckBoxListCTypeSys
+{
+    padding-top: 11px;
+}
+.dxWebKitFamily .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeRadioButtonListCTypeSys
+{
+    padding-top: 11px;
+}
+/* Opera */
+noindex:-o-prefocus, body:first-of-type .dxeTextEditCTypeSys.dxeCaptionVATSys.dxeCaptionCell_Metropolis1
+{
+    padding-top: 3px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeCheckBoxCTypeSys
+{
+    padding-top: 3px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeRadioButtonCTypeSys
+{
+    padding-top: 4px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeCheckBoxListCTypeSys
+{
+    padding-top: 11px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Metropolis1.dxeCaptionVATSys.dxeRadioButtonListCTypeSys
+{
+    padding-top: 11px;
+}
+/* Firefox */
+.dxFirefox .dxeMemoCTypeSys.dxeCaptionVATSys.dxeCaptionCell_Metropolis1
+{
+    padding-top: 3px;
+}
+.dxeRequiredMark_Metropolis1
+{
+    color: green;
+    font-style: normal;
+}
+.dxeOptionalMark_Metropolis1
+{
+    color: gray;
+    font-style: normal;
+}
+/* Out of range warning*/
+.dxeOutOfRWarn_Metropolis1
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    padding: 3px 8px 4px 8px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: red;
+    border-radius: 3px;
+    z-index: 41998;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #A8A8A8;
+}
+.dxeOutOfRWarnRight_Metropolis1
+{
+    margin-left: 10px;
+    margin-top: -2px;
+}
+.dxeOutOfRWarnBottom_Metropolis1
+{
+    margin-top: 10px;
+}
+.dxpcDropDown_Metropolis1 .dxdd-header
+{
+    padding: 16px 0 12px 0;
+    border-bottom: 1px solid #ebebeb;
+    background: white;
+}
+.dxpcDropDown_Metropolis1 .dxdd-header .dxdd-caption
+{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.67;
+    letter-spacing: normal;
+    color: #444444;
+}
+.dxpcDropDown_Metropolis1 .dxdd-header .dxbButton_Metropolis1
+{
+    padding: 0 14px;
+}
+.dxpcDropDown_Metropolis1 .dxdd-header .dxdd-caption:first-child
+{
+    padding-left: 24px;
+    text-align: left;
+}
+.dxpcDropDown_Metropolis1 .dxdd-header .dxdd-caption:last-child
+{
+    padding-right: 24px;
+}
+.dxpcDropDown_Metropolis1 .dxdd-cal .dxdd-caption:first-child
+{
+    padding-left: 16px;
+}
+.dxpcDropDown_Metropolis1 .dxpc-mainDiv
+{
+    background-color: #ffffff;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 + .dxpcModalBackLite_Metropolis1,
+.dxmodalSys.dxdd-root + .dxpcModalBackLite_Metropolis1
+{
+    background-color: #777777;
+    opacity: 0.7;
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1
+{
+    /* ComboBox Styles */
+    /* Calendar Styles */
+    /* ComboBox + Calendar */
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxeDropDownWindow_Metropolis1
+{
+    border: none;
+    background: transparent;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-shadow
+{
+    box-shadow: 0px 4px 16px 0 rgba(0,0,0,0.32);
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-header
+{
+    background: transparent;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv
+{
+    border-radius: 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv:not(.dxdd-cal):not(.dxdd-dde):not(.dxdd-sp) .dxpc-content
+{
+    padding-bottom: 32px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input
+{
+    margin-top: 20px;
+    margin: 20px 24px 0 24px;
+    border: solid 2px #1A5DA7;
+    height: 50px;
+    padding: 0 23px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input > input
+{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 0.67;
+    letter-spacing: normal;
+    color: #1A5DA7;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input .dxdd-clearbutton, .dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input .dxdd-clearbutton:hover
+{
+    right: 17px;
+    height: 20px;
+    background: none;
+    border-width: 0;
+    line-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input .dxeFNTextSys
+{
+    color: #bdbdbd;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-help
+{
+    color: #999999;
+    padding: 16px 24px 24px 24px;
+    font-size: 0.91em;
+    margin-bottom: -32px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-info
+{
+    margin: 10px 24px 15px 24px;
+    font-size: 14px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-list .dxeListBox_Metropolis1
+{
+    margin: 18px 24px 0 24px;
+    width: calc(100% - 48px) !important;
+    border-color: #ebebeb;
+    color: #999999;
+    background-color: #fafafa;
+    min-width: 250px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-list .dxeListBox_Metropolis1 .dxeListBoxItemHover_Metropolis1
+{
+    background: rgba(0,0,0,0.08);
+    color: #999999;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-list .dxeListBox_Metropolis1 .dxlbd
+{
+    width: 100% !important;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-list .dxeListBox_Metropolis1 .dxeListBoxItem_Metropolis1
+{
+    padding: 8px 10px 7px 23px;
+    border: none;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-list .dxdd-input:not(.dxdd-readonly) ~ .dxeListBox_Metropolis1
+{
+    margin-top: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1
+{
+    border: none;
+    background-color: transparent;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarHeader_Metropolis1
+{
+    background-color: transparent;
+    color: #666666;
+    border-bottom: 1px solid #ebebeb;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarFooter_Metropolis1
+{
+    text-align: center;
+    padding: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarFooter_Metropolis1 button
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeDateEditTimeEditCell_Metropolis1
+{
+    padding: 20px 16px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 ~ .dxdd-help
+{
+    padding: 16px 12px 16px 12px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDETS.dxeCalendar_Metropolis1 .dxeCalendarFooter_Metropolis1
+{
+    border-bottom: 1px solid #ebebeb;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1
+{
+    background-color: White;
+    color: #484848;
+    font-weight: normal;
+    font: 12px "Segoe UI", Helvetica, "Droid Sans", Tahoma, Geneva, sans-serif;
+    cursor: default;
+    border: 1px solid #D9D9D9;
+    border-collapse: separate;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFooter_Metropolis1
+{
+    border-top: 1px solid #EAEAEA;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:first-child
+{
+    font-size: 0.75em;
+    text-align: right;
+    padding: 15px 9px 15px 10px;
+    color: #A1A1A1;
+    background-color: #F1F1F1;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:nth-child(2)
+{
+    border-left: 6px solid transparent;
+    background-clip: padding-box;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table
+{
+    padding-right: 5px;
+    padding-bottom: 23px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGrid > table
+{
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-bottom: 23px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGrid_Metropolis1
+{
+    padding: 8px 20px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbersRtl
+{
+    min-width: 244px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDayHeader_Metropolis1
+{
+    padding: 20px 4px 10px;
+    font-size: 0.86em;
+    text-transform: uppercase;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarWeekNumber_Metropolis1
+{
+    font-size: 0.75em;
+    text-align: right;
+    padding: 15px 9px 15px 10px;
+    color: #A1A1A1;
+    background-color: #F1F1F1;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGrid > table > tbody > tr:last-child > td
+{
+    padding-bottom: 12px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarWeekNumber_Metropolis1
+{
+    box-shadow: 0 23px #F1F1F1;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxIE.dxBrowserVersion-10 .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxIE.dxBrowserVersion-10 .dxeCalendar_Metropolis1 td.dxMonthGrid > table > tbody > tr:last-child > td
+{
+    background-repeat: no-repeat;
+    background-position: center -5px;
+    background-size: 40px 58px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td:first-child
+{
+    padding-bottom: 12px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarWeekend_Metropolis1
+{
+    color: #7AA71A;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarOtherMonth_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemOtherPeriod_Metropolis1
+{
+    opacity: 0.3;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarOutOfRange_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1.dxeCalendarOutOfRange_Metropolis1
+{
+    color: #d0d0d0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDayDisabled_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1.dxeCalendarDayDisabled_Metropolis1
+{
+    opacity: 1.0;
+    background-color: #fcfcfc;
+    color: #ececec !important;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDay_Metropolis1
+{
+    padding: 12px;
+    text-align: center;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarSelected_Metropolis1.dxeDayInRange,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDay_Metropolis1.dxeCalendarHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarSelected_Metropolis1)
+{
+    color: #484848;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarSelected_Metropolis1
+{
+    color: white;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarSelected_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarHover_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDay_Metropolis1.dxeCalendarToday_Metropolis1
+{
+    background-repeat: no-repeat;
+    background-position: center 3px;
+    background-size: 40px 40px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:nth-child(2).dxeCalendarSelected_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:nth-child(2).dxeCalendarToday_Metropolis1
+{
+    background-position: center 3px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGrid > table > tbody > tr > td:nth-child(1).dxeCalendarSelected_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGrid > table > tbody > tr > td:nth-child(1).dxeCalendarToday_Metropolis1
+{
+    background-position: center 2px !important;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarWeekNumber_Metropolis1 + .dxeCalendarSelected_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarWeekNumber_Metropolis1 + .dxeCalendarToday_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarSelected_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarToday_Metropolis1
+{
+    background-position: center 3px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDay_Metropolis1.dxeCalendarHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarSelected_Metropolis1),
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1.dxeCalendarFastNavItemHover_Metropolis1:not(.dxeCalendarOutOfRange_Metropolis1):not(.dxeCalendarDayDisabled_Metropolis1):not(.dxeCalendarFastNavItemSelected_Metropolis1),
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarSelected_Metropolis1.dxeCalendarOtherMonth_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItemSelected_Metropolis1.dxeCalendarFastNavItemOtherPeriod_Metropolis1
+{
+    opacity: 1.0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarSelected_Metropolis1.dxeDisabled_Metropolis1
+{
+    background-color: #ffd5a6;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarHeader_Metropolis1
+{
+    background-color: #009688;
+    color: white;
+    font-size: 1.15em;
+    padding: 8px 8px 8px 8px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarHeader_Metropolis1 td.dxe
+{
+    text-align: center;
+    cursor: pointer;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarHeader_Metropolis1 .dxeCHS
+{
+    min-width: 10px;
+    *width: 10px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarHeader_Metropolis1 span
+{
+    padding: 0 16px;
+    white-space: nowrap !important;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFooter_Metropolis1
+{
+    padding: 8px 0;
+    text-align: right;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFooter_Metropolis1 > button + button
+{
+    margin-left: 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarFooter_Metropolis1.dx-ac > *
+{
+    margin: 0 0 0 auto;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1:not([dir='rtl']) .dxeCalendarFooter_Metropolis1
+{
+    padding-right: 13px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1[dir='rtl'] .dxeCalendarFooter_Metropolis1
+{
+    padding-left: 13px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1.dxeFocused_Metropolis1 .dxeCalendarFooter_Metropolis1
+{
+    border-color: #009688;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNav_Metropolis1
+{
+    color: Black;
+    background: White none;
+    border-top: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    padding: 12px 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxFastNavGrid .dxeCalendarFastNav_Metropolis1
+{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxYCVisibleByDefault
+{
+    width: 260px;
+    height: 200px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavMonthArea_Metropolis1
+{
+    padding: 0px 9px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItemArea_Metropolis1
+{
+    padding: 9px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavYearArea_Metropolis1
+{
+    padding-top: 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavHeader_Metropolis1
+{
+    color: #666666;
+    background-color: #F1F1F1;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavHeader_Metropolis1 > table > tbody > tr > td:last-child
+{
+    padding: 0 12px 0 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal *[dir="rtl"].dxeCalendar .dxeCalendarFastNavHeader_Metropolis1 > table > tbody > tr > td:last-child
+{
+    padding: 0 0 0 12px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavFooter_Metropolis1
+{
+    color: Black;
+    padding: 8px 0px;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    background-color: white;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavFooter_Metropolis1 .dxeCFNFS
+{
+    min-width: 11px;
+    *width: 11px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavMonth_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavYear_Metropolis1
+{
+    color: #484848;
+    padding: 3px 5px;
+    text-align: center;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavMonth_Metropolis1,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavYear_Metropolis1
+{
+    cursor: pointer;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1
+{
+    cursor: default;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1:empty
+{
+    pointer-events: none;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavMonth_Metropolis1
+{
+    padding: 6px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1:before,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1:after
+{
+    content: "";
+    display: block;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1:before
+{
+    padding-top: 6px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFastNavItem_Metropolis1:after
+{
+    padding-bottom: 6px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeDateEditTimeEditCell_Metropolis1
+{
+    padding: 37px 74px 20px 93px;
+    width: 90px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeDateEditClockCell_Metropolis1
+{
+    padding: 37px 48px 0 65px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendarFooter_Metropolis1.dxeDETSF
+{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1
+{
+    -webkit-tap-highlight-color: transparent;
+    border: none;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 td.dxMonthGridWithWeekNumbers
+{
+    padding: 0;
+    background: none;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarHeader_Metropolis1, .dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarFooter_Metropolis1
+{
+    background: none;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarDayHeader_Metropolis1
+{
+    border-bottom: none;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarHeader_Metropolis1 td.dxe
+{
+    color: #666666;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarButton_Metropolis1
+{
+    background: white;
+    box-shadow: none;
+    border: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #484848;
+    padding: 8px 11px 7px 11px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarButton_Metropolis1.dxeCalendarButtonHover_Metropolis1
+{
+    color: #000000 !important;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarButton_Metropolis1.dxeButtonDisabled_Metropolis1
+{
+    opacity: 0.73;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarButtonPressed_Metropolis1
+{
+    background: #009688;
+    color: white;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Metropolis1 .dxeCalendarButtonHover_Metropolis1
+{
+    color: #009688 !important;
+    background: #DDD;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-sp .dxScrollPicker_Metropolis1 .dxsp-wgroup
+{
+    padding: 12px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-sp .dxScrollPicker_Metropolis1 .dxsp-wheel + .dxsp-wheel
+{
+    margin-left: 4px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-dde .dxdd-help,
+.dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxpc-mainDiv.dxdd-cal .dxdd-help
+{
+    margin-bottom: 0;
+}
+.dxeNullText_Metropolis1 + .dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input .dxeEditArea_Metropolis1,
+.dxFirefox .dxeNullText_Metropolis1 + .dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input .dxeEditArea_Metropolis1
+{
+    color: #bdbdbd;
+}
+.dxeNullText_Metropolis1 + .dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input input:-webkit-autofill,
+.dxFirefox .dxeNullText_Metropolis1 + .dxmodalSys.dxdd-root .dxpcDropDown_Metropolis1 .dxdd-input input:-webkit-autofill
+{
+    -webkit-text-fill-color: #bdbdbd;
+}
+.dxdd-root .dxdd-header > .dxbButtonSys.dxbDisabled_Metropolis1
+{
+    opacity: 0.4;
+}
+.dxScrollPicker_Metropolis1 .dxsp-wgroup
+{
+    padding: 16px 24px 24px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-wgroup + .dxsp-wgroup
+{
+    border-top: 1px solid #ebebeb;
+}
+.dxScrollPicker_Metropolis1 .dxsp-wheel + .dxsp-wheel
+{
+    margin-left: 16px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-caption
+{
+    text-align: center;
+    font-size: 12px;
+    color: rgba(153,153,153,0.5);
+    margin-bottom: 16px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-wheel-hover .dxsp-frame,
+.dxScrollPicker_Metropolis1 .dxsp-wheel-touch .dxsp-frame
+{
+    border-color: #1A5DA7;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item-focused
+{
+    height: 51px;
+    font-size: 18px;
+    padding-top: 17px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item
+{
+    color: #333;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item-focused
+{
+    height: 51px;
+    font-size: 18px;
+    font-style: normal;
+    padding-top: 17px;
+    color: #1A5DA7;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item-prev
+{
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item-prev + .dxsp-item-prev
+{
+    padding-bottom: 12px;
+    padding-top: 8px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item-focused + .dxsp-item
+{
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item-focused + .dxsp-item + .dxsp-item
+{
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-item-focused + .dxsp-item + .dxsp-item + .dxsp-item
+{
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+.dxScrollPicker_Metropolis1 .dxsp-list::after,
+.dxScrollPicker_Metropolis1 .dxsp-list::before
+{
+    height: 75px !important;
+    line-height: 75px;
+}
