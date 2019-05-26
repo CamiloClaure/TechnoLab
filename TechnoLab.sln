@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnoLab", "TechnoLab\TechnoLab.csproj", "{A9C8F5D9-AC79-485B-8F5A-4725C4B32A72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clsGeneric", "clsGeneric\clsGeneric.csproj", "{5C86B88D-1DDF-4553-BF64-EA7173C2FB1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A9C8F5D9-AC79-485B-8F5A-4725C4B32A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9C8F5D9-AC79-485B-8F5A-4725C4B32A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9C8F5D9-AC79-485B-8F5A-4725C4B32A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C86B88D-1DDF-4553-BF64-EA7173C2FB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C86B88D-1DDF-4553-BF64-EA7173C2FB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C86B88D-1DDF-4553-BF64-EA7173C2FB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C86B88D-1DDF-4553-BF64-EA7173C2FB1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
