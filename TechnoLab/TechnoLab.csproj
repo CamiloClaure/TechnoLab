@@ -134,6 +134,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Presentacion\MasterPage.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Presentacion\frmPrincipal.aspx" />
     <Content Include="Presentacion\frmReservas.aspx" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="Presentacion\frmReservas.aspx.designer.cs">
       <DependentUpon>frmReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

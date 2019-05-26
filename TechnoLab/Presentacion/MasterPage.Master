@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="TechnoLab.Presentacion.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/jquery.min.js")%>"> </script>
+    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bootstrap.min.js")%>"> </script>
+   <%-- <script type="text/javascript" src="<%=Page.ResolveUrl("~/Script/General/Script.js")%>"> </script>
+    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Script/General/jsGeneral.js")%>"> </script>
+   --%> 
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <dx:ASPxPanel runat="server" ID="HeaderPanel" ClientInstanceName="headerPanel" BackColor="#1A5DA7" 
+                        Height="50px" FixedPosition="WindowTop" FixedPositionOverlap="true" CssClass="app-header">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+
+                       <div class="left-block">
+                        <dx:ASPxMenu runat="server" ID="LeftAreaMenu" ClientInstanceName="leftAreaMenu" Height="50px"
+                            ItemAutoWidth="false" ItemWrap="false" SeparatorWidth="0" EnableHotTrack="false"
+                            Width="100%" CssClass="header-menu" SyncSelectionMode="None">
+                            <ItemStyle VerticalAlign="Middle" CssClass="item" />
+                            <Items>
+                                <dx:MenuItem Text="" Name="ToggleLeftPanel" GroupName="LeftPanel">
+                                    <ItemStyle CssClass="toggle-item vertically-aligned" CheckedStyle-CssClass="checked selected" />
+                                    <Image Url="../Img/Btn/menu.svg" Height="45px" Width="45px" />
+                                </dx:MenuItem>
+                             <%--   <dx:MenuItem Text="" Name="Back">
+                                    <ItemStyle CssClass="toggle-item vertically-aligned" />
+                                    <Image Url="../Img/Btn/back.svg" Height="18px" Width="18px" />
+                                </dx:MenuItem>--%>
+                              <%--  <dx:MenuItem Text="" ItemStyle-CssClass="image-item vertically-aligned" NavigateUrl="~/">
+                                    <Image SpriteProperties-CssClass="header-logo" />
+                                </dx:MenuItem>--%>
+                            </Items>
+                            <ClientSideEvents ItemClick="onLeftMenuItemClick" />
+                        </dx:ASPxMenu>
+                    </div>
+
+                         <div class ="right" style ="margin-right :70px">
+
+                            <img src="../Img/imgMasterPage/usuariocabecera.png"  style ="margin:8px 2px 0 0;" />
+                            <dx:ASPxLabel ID="dlblNombreUsuario" runat="server" Text="LOREM IPSU" CssClass ="cWhite tSize-15 vaTop line-height-35" ></dx:ASPxLabel>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+      
+                            <img src="../Img/imgMasterPage/calendarclock.png"  style ="margin:8px 2px 0 0;" width="24" height="24" />
+                            <dx:ASPxLabel ID="dlblFecha" runat="server" Text="LOREM IPSU" CssClass ="cWhite tSize-15 vaTop line-height-35" ></dx:ASPxLabel>
+                           <%--    &nbsp;&nbsp;&nbsp;&nbsp;
+                               <img src="../Img/imgMasterPage/icono-herramienta001.png"  style ="margin:8px 2px 0 0;" width="24" height="24" />          
+                                <dx:ASPxLabel ID="dlblCargo" runat="server" Text="LOREM IPSU" CssClass ="cWhite tSize-15 vaTop line-height-35" ></dx:ASPxLabel>--%>
+                        </div>
+
+               <%--   <dx:BootstrapMenu ID="BootstrapMenu1" runat="server">
+                            <Items>
+                                <dx:BootstrapMenuItem Text="Usuarios" >
+
+                                </dx:BootstrapMenuItem>
+                                <dx:BootstrapMenuItem Text="Ayudas" >
+
+                                </dx:BootstrapMenuItem>
+                            </Items>
+                    </dx:BootstrapMenu>--%>
+       
+                    <div class="dx-clear"></div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+
+        <dx:ASPxPanel runat="server" ID="LeftPanel" ClientInstanceName="leftPanel" BackColor="#3C72AE"
+            Collapsible="true"  FixedPosition="WindowLeft" Width="272px" 
+            CssClass="left-panel" Paddings-Padding="0" Styles-ExpandBar-CssClass="expand-bar">
+            <SettingsAdaptivity CollapseAtWindowInnerWidth="960" />
+            <SettingsCollapsing ExpandButton-Visible="false" ExpandEffect="PopupToRight" AnimationType="Slide" />
+            <PanelCollection>
+                <dx:PanelContent>
+                         <br />
+                    <table class="tableCenter">
+                                <tr>  
+                                    <td>
+                                        <dx:BootstrapButton ID="dbtnCerrarSesion" runat="server" Width="180px" Text="Cerrar Sesión"  
+                                                                AutoPostBack="true"  OnClick="dbtnCerrarSesion_Click">
+
+                                        </dx:BootstrapButton>
+                                    </td>
+                                </tr>
+                            </table>
+                    <br />
+                  <dx:ASPxTreeView ID="dtvwMenuOpciones"  runat="server" EnableClientSideAPI="true"  EnableTheming="true" 
+                                AllowSelectNode="True" Target="contentUrl" EnableViewState="true" EncodeHtml="False"  
+                                    Styles-Disabled-ForeColor="White" Font-Bold="true" ForeColor="White" Styles-Node-ForeColor="White"
+                                Images-NodeImage-Width="32" Font-Names="Arial" Font-Size="Medium" Height="100%" >
+                  </dx:ASPxTreeView>
+                </dx:PanelContent>
+            </PanelCollection>
+            <ClientSideEvents Init="onLeftPanelInit" Collapsed="onLeftPanelCollapsed" />
+        </dx:ASPxPanel>
+
+
+
+                    
+      <dx:ASPxSplitter ID="dpltPane" ClientInstanceName="splitter" FullscreenMode="true"  runat="server"   >
+           <Panes>
+          
+                                <dx:SplitterPane Name="ContentUrlPane"  Collapsed="false" ScrollBars="Auto" 
+                                    ContentUrlIFrameName="contentUrl" >
+                                    <ContentCollection>
+                                        <dx:SplitterContentControl runat="server"  >
+                                            <asp:ContentPlaceHolder ID="chpBody" runat="server" EnableViewState="true">
+                                            </asp:ContentPlaceHolder>
+                                        </dx:SplitterContentControl>
+                                    </ContentCollection>
+                                </dx:SplitterPane>
+              </Panes>
+      </dx:ASPxSplitter>
+
+
+         
+
+
+
+            </asp:ContentPlaceHolder>
+
+
+            <dx:ASPxLoadingPanel ID="dlplLoading" ClientInstanceName="dlplLoadingInst"
+                                 Text="Cargando ..." Modal="true" runat="server">
+            </dx:ASPxLoadingPanel>
+
+              <uc1:wucMensaje runat="server" ID="wucMensaje" />
+
+
+
+        </div>
+    </form>
+
+</body>
+</html>
