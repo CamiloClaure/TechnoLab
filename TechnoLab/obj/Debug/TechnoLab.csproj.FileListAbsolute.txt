@@ -309,6 +309,7 @@ C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\roslyn\VBCSCompiler.exe.conf
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Antlr3.Runtime.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\clsGeneric.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.Bootstrap.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Microsoft.AspNet.FriendlyUrls.dll
@@ -322,6 +323,9 @@ C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Newtonsoft.Json.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\System.Web.Optimization.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\WebGrease.dll
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Dapper.Contrib.dll
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\MySql.Data.dll
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Dapper.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Data.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.ASPxRichEdit.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.ASPxSpreadsheet.v18.2.dll
@@ -332,6 +336,7 @@ C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Printing.v18.2.Co
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.Resources.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Office.v18.2.Core.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.RichEdit.v18.2.Core.dll
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Google.Protobuf.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.ASPxSpellChecker.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.SpellChecker.v18.2.Core.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.XtraCharts.v18.2.dll
@@ -342,6 +347,7 @@ C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Images.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Pdf.v18.2.Core.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Xpo.v18.2.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.CodeParser.v18.2.dll
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\clsGeneric.pdb
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.Bootstrap.v18.2.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.v18.2.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\System.Web.Optimization.xml
@@ -351,6 +357,9 @@ C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Microsoft.AspNet.FriendlyUrl
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Dapper.Contrib.xml
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\MySql.Data.xml
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Dapper.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Data.v18.2.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.ASPxRichEdit.v18.2.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.ASPxSpreadsheet.v18.2.xml
@@ -360,6 +369,7 @@ C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.XtraScheduler.v18
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Printing.v18.2.Core.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Office.v18.2.Core.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.RichEdit.v18.2.Core.xml
+C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\Google.Protobuf.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.Web.ASPxSpellChecker.v18.2.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.SpellChecker.v18.2.Core.xml
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\bin\DevExpress.XtraCharts.v18.2.xml

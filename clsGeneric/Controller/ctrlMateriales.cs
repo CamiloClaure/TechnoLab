@@ -10,22 +10,21 @@ namespace clsGeneric.Controller
 {
     public class ctrlMateriales : clsResult, IDisposable
     {
-        public MaterialesForm mtdGetMateriales()
+        public List<materialesform> mtdGetMateriales()
         {
             try
             {
-                MaterialesForm luResult = null;
-
-                using (dMateriales luData = new dMateriales())
+                List<materialesform> luResult = null;
+                dMateriales luDato = new dMateriales(4);
+                using (luDato)
                 {
-                    luResult = luData.mtdGetCliente();
+                    luResult = luDato.mtdGetMateriales();
                 }
-                mtdRespOK();
+
                 return luResult;
             }
             catch (Exception ex)
             {
-                mtdRespError(ex.ToString());
                 return null;
             }
         }

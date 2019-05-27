@@ -16,10 +16,11 @@ namespace TechnoLab.Presentacion
             {
                 using (ctrlMateriales luCtrl = new ctrlMateriales())
                 {
-                    Session["idAllClientes"] = luCtrl.GetClientes();
+                    Session["Materiales"] = luCtrl.mtdGetMateriales();
 
                 }
-
+                dgrvMateriales.DataSource = Session["Materiales"];
+                dgrvMateriales.DataBind();
             }
         }
     }

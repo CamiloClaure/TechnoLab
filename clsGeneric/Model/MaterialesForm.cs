@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Dapper.Contrib.Extensions;
 namespace clsGeneric.Model
 {
-    [Table("MaterialesForm")]
-    public class MaterialesForm
+    [Table("materialesform")]
+    public class materialesform
     {
         [Key]
         public int idMaterial { get; set; }

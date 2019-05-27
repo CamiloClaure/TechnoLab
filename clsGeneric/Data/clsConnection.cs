@@ -18,7 +18,7 @@ namespace clsGeneric.Data
         public clsConnection()
         {
             string lsConexion = ConfigurationManager.ConnectionStrings[gsConnectionName].ConnectionString;
-            guDb = new MySqlConnection(lsConexion);
+            this.guDb = new MySqlConnection(lsConexion);
         }
 
         public void mtdAbrir()
