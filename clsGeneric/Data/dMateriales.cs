@@ -1,4 +1,5 @@
 ﻿using clsGeneric.Model;
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +11,38 @@ namespace clsGeneric.Data
     public class dMateriales : clsResult, IDisposable
     {
         public clsConnection guConnection;
+        int tmp = 0;
 
         public dMateriales()
         {
+            this.guConnection = new clsConnection(); 
+        }
+
+        public dMateriales(int t)
+        {
+            this.tmp = t;
             guConnection = new clsConnection();
         }
 
-        public MaterialesForm mtdGetMateriales()
+        public List<materialesform> mtdGetMateriales()
         {
-            MaterialesForm luResult = null;
             try
             {
+
+                List<materialesform> luResult = null;
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Get<MaterialesForm>();
+                    luResult = guConnection.guDb.Query<materialesform>(@"Select * from materialesform").ToList();
                     guConnection.mtdCerrar();
                 }
+                return luResult;
+
             }
             catch (Exception ex)
             {
-                mtdRespError(ex.ToString());
+                return null;
             }
-            return luResult;
         }
 
         #region IDisposable Support

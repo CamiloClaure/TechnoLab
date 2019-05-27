@@ -9,11 +9,13 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"  />
+    <link href="~/Content/Layout.css" rel="stylesheet" type="text/css"  />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <dx:BootstrapGridView runat="server" KeyFieldName="idMaterial" EnableRowsCache="False">
+            <dx:BootstrapGridView ID="dgrvMateriales" runat="server" KeyFieldName="idMaterial" EnableRowsCache="False">
                 <SettingsDataSecurity AllowEdit="true" AllowDelete="true" AllowInsert="true" />
                 <Columns>
                     <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButtonInHeader="true" />
