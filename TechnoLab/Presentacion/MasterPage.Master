@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="TechnoLab.Presentacion.MasterPage" %>
+<%@ Register Assembly="DevExpress.Web.Bootstrap.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.Bootstrap" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<!DOCTYPE html>
+
+<html>
+    <head runat="server">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="~/Css/General/stsGeneral.css?<%=DateTime.Now.Ticks.ToString()%>" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"  />
+    <link href="~/Content/Layout.css" rel="stylesheet" type="text/css"  />
+    <link href="~/Content/FixedPosition.css" rel="stylesheet" type="text/css"  />
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/jquery.min.js")%>"> </script>
+    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bootstrap.min.js")%>"> </script>
+     <div>
+         <form runat="server">
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            
+                   <dx:ASPxPanel id="TopPanel" runat="server" fixedposition="WindowTop" Visible="true" fixedpositionoverlap="true" CssClass="topPanel">
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                    <div class="panelContent">This is ASPxPanel control with FixedPosition=WindowTop</div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel id="LeftPanel" runat="server" fixedposition="WindowLeft" fixedpositionoverlap="true" CssClass="leftPanel">
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                    <div class="panelContent">This is ASPxPanel control with FixedPosition = WindowLeft</div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxCallbackPanel id="BottomPanel" runat="server" fixedposition="WindowBottom" CssClass="bottomPanel">
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                    <div class="panelContent" >This is ASPxPanel control with FixedPosition = WindowBottom</div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxCallbackPanel>
+
+                    
+      <dx:ASPxSplitter ID="dpltPane" ClientInstanceName="splitter" FullscreenMode="true"  runat="server"   >
+           <Panes>
+          
+                                <dx:SplitterPane Name="ContentUrlPane"  Collapsed="false" ScrollBars="Auto" 
+                                    ContentUrlIFrameName="contentUrl" >
+                                    <ContentCollection>
+                                        <dx:SplitterContentControl runat="server"  >
+                                             <asp:ContentPlaceHolder ID="chpBody" runat="server" EnableViewState="true">
+                                            </asp:ContentPlaceHolder>
+                                        </dx:SplitterContentControl>
+                                    </ContentCollection>
+                                </dx:SplitterPane>
+              </Panes>
+      </dx:ASPxSplitter>
+
+
+         
+            </asp:ContentPlaceHolder>
+
+
+
+          
+
+            <dx:ASPxLoadingPanel ID="dlplLoading" ClientInstanceName="dlplLoadingInst"
+                                 Text="Cargando ..." Modal="true" runat="server">
+            </dx:ASPxLoadingPanel>
+
+             
+
+             </form>
+        </div>
+</body>
+</html>

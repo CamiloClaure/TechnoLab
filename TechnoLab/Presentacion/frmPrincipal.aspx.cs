@@ -7,11 +7,21 @@ using System.Web.UI.WebControls;
 
 namespace TechnoLab.Presentacion
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class frmPrincipal : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnReservas_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Presentacion/frmReservation.aspx", false);
         }
     }
 }
