@@ -25,16 +25,16 @@ namespace clsGeneric.Data
             guConnection = new clsConnection();
         }
 
-        public List<materialesform> mtdGetMateriales()
+        public List<Materiales> mtdGetMateriales()
         {
             try
             {
 
-                List<materialesform> luResult = null;
+                List<Materiales> luResult = null;
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Query<materialesform>(@"Select * from materialesform").ToList();
+                    luResult = guConnection.guDb.Query<Materiales>(@"Select * from materialesform").ToList();
                     guConnection.mtdCerrar();
                 }
                 return luResult;
@@ -46,7 +46,7 @@ namespace clsGeneric.Data
             }
         }
 
-        public void mtdGuardarMaterial(materialesform luNew)
+        public void mtdGuardarMaterial(Materiales luNew)
         {
 
             try
@@ -54,10 +54,10 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    materialesform luResult = guConnection.guDb.Get<materialesform>(luNew.idMaterial);
+                    Materiales luResult = guConnection.guDb.Get<Materiales>(luNew.idMaterial);
                     if (luResult == null)
                     {
-                        guConnection.guDb.Insert<materialesform>(luNew);
+                        guConnection.guDb.Insert<Materiales>(luNew);
                         //   mtdTokenResetPassword(prdUsuario.UsuarioId);
                         mtdRespOK();
 

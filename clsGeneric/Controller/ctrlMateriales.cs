@@ -10,11 +10,11 @@ namespace clsGeneric.Controller
 {
     public class ctrlMateriales : clsResult, IDisposable
     {
-        public List<materialesform> mtdGetMateriales()
+        public List<Materiales> mtdGetMateriales()
         {
             try
             {
-                List<materialesform> luResult = null;
+                List<Materiales> luResult = null;
                 dMateriales luDato = new dMateriales(4);
                 using (luDato)
                 {
@@ -29,7 +29,7 @@ namespace clsGeneric.Controller
             }
         }
 
-        public void MtdGuardarMaterial(materialesform newTipo)
+        public void MtdGuardarMaterial(Materiales newTipo)
         {
             try
             {

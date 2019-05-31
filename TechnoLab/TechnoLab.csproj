@@ -263,7 +263,7 @@
     <Content Include="Imagenes\svgMostrar.png" />
     <Content Include="Imagenes\svgMostrar.svg" />
     <Content Include="Presentacion\frmPrincipal.aspx" />
-    <Content Include="Presentacion\frmReservas.aspx" />
+    <Content Include="Presentacion\frmMaterial.aspx" />
     <Content Include="Presentacion\frmReservation.aspx" />
     <Content Include="Presentacion\MasterPage.Master" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin" />
@@ -477,12 +477,12 @@
     <Compile Include="Presentacion\frmPrincipal.aspx.designer.cs">
       <DependentUpon>frmPrincipal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmReservas.aspx.cs">
-      <DependentUpon>frmReservas.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmMaterial.aspx.cs">
+      <DependentUpon>frmMaterial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmReservas.aspx.designer.cs">
-      <DependentUpon>frmReservas.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmMaterial.aspx.designer.cs">
+      <DependentUpon>frmMaterial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmReservation.aspx.cs">
       <DependentUpon>frmReservation.aspx</DependentUpon>

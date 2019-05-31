@@ -70,7 +70,7 @@
     <Compile Include="Data\clsConnection.cs" />
     <Compile Include="Data\clsResult.cs" />
     <Compile Include="Data\dMateriales.cs" />
-    <Compile Include="Model\materialesform.cs" />
+    <Compile Include="Model\Materiales.cs" />
     <Compile Include="Model\stcResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
