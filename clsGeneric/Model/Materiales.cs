@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Dapper.Contrib.Extensions;
 namespace clsGeneric.Model
 {
-    [Table("materialesform")]
+    [Table("material")]
     public class Materiales
     {
         [Key]
@@ -18,5 +18,8 @@ namespace clsGeneric.Model
         public string Estado { get; set; }
         public string Ubicacion { get; set; }
         public int CodCategoria { get; set; }
+        public int Cantidad { get; set; }
+        public bool Activo { get; set; }
+
     }
 }

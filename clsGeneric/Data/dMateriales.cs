@@ -54,13 +54,37 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    Materiales luResult = guConnection.guDb.Get<Materiales>(luNew.idMaterial);
+                    DynamicParameters luParameters = new DynamicParameters();
+                    luParameters.Add("@CodMaterial", luNew.CodMaterial);
+                    Materiales luResult = guConnection.guDb.Query<Materiales>(@"Select * From material u where u.CodMaterial=@CodMaterial", luParameters).FirstOrDefault();
                     if (luResult == null)
                     {
                         guConnection.guDb.Insert<Materiales>(luNew);
                         //   mtdTokenResetPassword(prdUsuario.UsuarioId);
                         mtdRespOK();
 
+                    }
+                    else
+                    {
+                        if (!(bool)luResult.Activo)
+                        {
+                            luResult.CodMaterial = luNew.CodMaterial;
+                            luResult.Descripcion = luNew.Descripcion;
+                            luResult.Nombre = luNew.Nombre;
+                            luResult.FechaCompra = luNew.FechaCompra;
+                            luResult.Estado = luNew.Estado;
+                            luResult.Ubicacion = luNew.Ubicacion;
+                            luResult.CodCategoria = luNew.CodCategoria;
+                            luResult.Cantidad = luNew.Cantidad;
+                            luResult.Activo = true;
+
+                            guConnection.guDb.Update<Materiales>(luResult);
+                            mtdRespOK();
+                        }
+                        else
+                        {
+                            mtdRespNOK("El Tipo de Entidad ya existe");
+                        }
                     }
                     guConnection.mtdCerrar();
                 }

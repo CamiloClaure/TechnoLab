@@ -25,13 +25,15 @@
                 <Columns>
                     <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButton="true"/>
                     <dx:BootstrapGridViewDataColumn FieldName="Codigo" Visible="false"/>
-                    <dx:BootstrapGridViewDataColumn FieldName="CodMaterial" Caption="Codigo"/>
-                    <dx:BootstrapGridViewDataColumn FieldName="Descripcion" Caption="Descripcion" />
-                    <dx:BootstrapGridViewDataColumn FieldName="Nombre" Caption="Nombre"/>
+                    <dx:BootstrapGridViewTextColumn FieldName="CodMaterial" Caption="Codigo"/>
+                    <dx:BootstrapGridViewTextColumn FieldName="Descripcion" Caption="Descripcion" />
+                    <dx:BootstrapGridViewTextColumn FieldName="Nombre" Caption="Nombre"/>
                     <dx:BootstrapGridViewDateColumn FieldName="FechaCompra" Caption="Fecha de Compra"/>
-                    <dx:BootstrapGridViewDataColumn FieldName="Estado" Caption="Estado"/>
-                    <dx:BootstrapGridViewDataColumn FieldName="Ubicacion" Caption="Ubicacion"/>
-                    <dx:BootstrapGridViewDataColumn FieldName="CodCategoria" Caption="Categoria"/>
+                    <dx:BootstrapGridViewTextColumn FieldName="Estado" Caption="Estado"/>
+                    <dx:BootstrapGridViewTextColumn FieldName="Ubicacion" Caption="Ubicacion"/>
+                    <dx:BootstrapGridViewTextColumn FieldName="CodCategoria" Caption="Categoria"/>
+                     <dx:BootstrapGridViewTextColumn FieldName="Cantidad" Caption="Cantidad"/>
+                    <dx:BootstrapGridViewTextColumn FieldName="Activo" Visible="false"/>
                 </Columns>
             </dx:BootstrapGridView>
         </div>
