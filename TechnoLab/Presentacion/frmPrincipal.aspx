@@ -13,7 +13,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <dx:ASPxButton runat="server" ID="btnReservas" OnClick="btnReservas_Click"></dx:ASPxButton>
+    
    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="chpBody" runat="server">
