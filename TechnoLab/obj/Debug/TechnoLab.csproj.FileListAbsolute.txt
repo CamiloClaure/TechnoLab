@@ -451,3 +451,13 @@ C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\obj\Debug\TechnoLab.csproj.CoreC
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\obj\Debug\TechnoLab.csproj.CopyComplete
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\obj\Debug\TechnoLab.dll
 C:\Users\marce\Source\Repos\TechnoLab\TechnoLab\obj\Debug\TechnoLab.pdb
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\clsGeneric.dll
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\Dapper.Contrib.dll
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\MySql.Data.dll
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\Dapper.dll
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\Google.Protobuf.dll
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\clsGeneric.pdb
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\Dapper.Contrib.xml
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\MySql.Data.xml
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\Dapper.xml
+C:\Users\Camilo\source\repos\TechnoLab2\TechnoLab\bin\Google.Protobuf.xml

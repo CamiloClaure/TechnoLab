@@ -16,7 +16,7 @@ namespace TechnoLab
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Presentacion/frmReservas.aspx", false);
+            Response.Redirect("Presentacion/frmPrincipal.aspx", false);
         }
     }
 }
