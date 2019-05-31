@@ -34,7 +34,7 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Query<Materiales>(@"Select * from materialesform").ToList();
+                    luResult = guConnection.guDb.Query<Materiales>(@"Select * from material where Activo = 1").ToList();
                     guConnection.mtdCerrar();
                 }
                 return luResult;
@@ -95,6 +95,72 @@ namespace clsGeneric.Data
             }
         }
 
+        public void mtdActualizarMaterial(Materiales lunew)
+        {
+
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    Materiales luResult = guConnection.guDb.Get<Materiales>(lunew.Codigo);
+
+                    if (luResult != null)
+                    {
+                        luResult.CodMaterial = lunew.CodMaterial;
+                        luResult.Descripcion = lunew.Descripcion;
+                        luResult.Nombre = lunew.Nombre;
+                        luResult.FechaCompra = lunew.FechaCompra;
+                        luResult.Estado = lunew.Estado;
+                        luResult.Ubicacion = lunew.Ubicacion;
+                        luResult.CodCategoria = lunew.CodCategoria;
+                        luResult.Cantidad = lunew.Cantidad;
+                        luResult.Activo = true;
+                        guConnection.guDb.Update<Materiales>(luResult);
+
+                        guConnection.mtdCerrar();
+
+                        mtdRespOK();
+                    }
+                    else mtdRespNOK("No se encontró el Nivel para actualizar");
+                }
+            }
+            catch (Exception ex)
+            {
+                mtdRespError(ex.ToString());
+            }
+        }
+
+        public void mtdBajaMaterial(int luId)
+        {
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    DynamicParameters luParameters = new DynamicParameters();
+                    luParameters.Add("@Codigo", luId);
+                    Materiales luResult = guConnection.guDb.Query<Materiales>(@"Select * From material u where u.Codigo=@Codigo", luParameters).FirstOrDefault();
+
+                    if (luResult != null)
+                    {
+                        luResult.Activo = false;
+
+                        guConnection.guDb.Update<Materiales>(luResult);
+
+                        guConnection.mtdCerrar();
+
+                        mtdRespOK();
+                    }
+                    else mtdRespNOK("No se encontró el Nivel para Eliminar");
+                }
+                //  mtdRespNOK("No se encontró el Nivel para actualizar");
+            }
+            catch (Exception ex)
+            {
+                mtdRespError(ex.ToString());
+            }
+        }
         #region IDisposable Support
         // some fields that require cleanup
         private bool disposed = false; // to detect redundant calls

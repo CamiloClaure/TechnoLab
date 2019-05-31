@@ -18,9 +18,13 @@
     <div class="container m-3"> 
     <form id="form1" runat="server">
         <div>
-            <dx:BootstrapGridView ID="dgrvMateriales" runat="server" KeyFieldName="Codigo" EnableRowsCache="False" 
+            <br />
+            <br />
+            <br />
+            <dx:BootstrapGridView ID="dgrvMateriales" runat="server" KeyFieldName="Codigo" 
                 OnRowInserting="dgrvMateriales_RowInserting"
-                OnRowUpdating="dgrvMateriales_RowUpdating">
+                OnRowUpdating="dgrvMateriales_RowUpdating"
+                OnRowDeleting="dgrvMateriales_RowDeleting">
                 <SettingsDataSecurity AllowEdit="true" AllowDelete="true" AllowInsert="true"/>
                 <Columns>
                     <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButton="true"/>

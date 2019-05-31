@@ -20,11 +20,11 @@
     <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/jquery.min.js")%>"> </script>
     <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bootstrap.min.js")%>"> </script>
      <div>
-         <form runat="server">
-                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         <form id="form1" runat="server">
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
 
-            
-                   <dx:ASPxPanel id="TopPanel" runat="server" fixedposition="WindowTop" Visible="true" fixedpositionoverlap="true" CssClass="topPanel">
+                           <dx:ASPxPanel id="TopPanel" runat="server" fixedposition="WindowTop" Visible="true" fixedpositionoverlap="true" CssClass="topPanel">
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                     <div class="panelContent">This is ASPxPanel control with FixedPosition=WindowTop</div>
@@ -34,23 +34,28 @@
         <dx:ASPxPanel id="LeftPanel" runat="server" fixedposition="WindowLeft" fixedpositionoverlap="true" CssClass="leftPanel">
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-                    <div class="panelContent">This is ASPxPanel control with FixedPosition = WindowLeft</div>
+                    <div class="panelContent">
+                         <dx:ASPxTreeView ID="dtvwMenuOpciones"  runat="server" EnableClientSideAPI="true"  EnableTheming="true" 
+                                AllowSelectNode="True" Target="contentUrl" EnableViewState="true" EncodeHtml="False"  
+                                    Styles-Disabled-ForeColor="White" Font-Bold="true" ForeColor="White" Styles-Node-ForeColor="White"
+                                Images-NodeImage-Width="32" Font-Names="Arial" Font-Size="Medium" Height="100%" >
+                             <Nodes>
+                                 <dx:BootstrapTreeViewNode 
+                                    NavigateUrl="~/Presentacion/frmMaterial.aspx" 
+                                    Text="Reservar"
+                                    Target="contentUrl" 
+                                    Expanded="True"/>
+                             </Nodes>
+                  </dx:ASPxTreeView>
+                    </div>
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxCallbackPanel id="BottomPanel" runat="server" fixedposition="WindowBottom" CssClass="bottomPanel">
-            <PanelCollection>
-                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-                    <div class="panelContent" >This is ASPxPanel control with FixedPosition = WindowBottom</div>
-                </dx:PanelContent>
-            </PanelCollection>
-        </dx:ASPxCallbackPanel>
-
                     
-      <dx:ASPxSplitter ID="dpltPane" ClientInstanceName="splitter" FullscreenMode="true"  runat="server"   >
+      <dx:ASPxSplitter ID="dpltPane" ClientInstanceName="splitter" FullscreenMode="true"  runat="server">
            <Panes>
           
-                                <dx:SplitterPane Name="ContentUrlPane"  Collapsed="false" ScrollBars="Auto" 
+                                <dx:SplitterPane Name="ContentUrlPane" ContentUrl="~/Presentacion/frmBienvenida.aspx"  Collapsed="false" ScrollBars="Auto" 
                                     ContentUrlIFrameName="contentUrl" >
                                     <ContentCollection>
                                         <dx:SplitterContentControl runat="server"  >
@@ -62,14 +67,7 @@
               </Panes>
       </dx:ASPxSplitter>
 
-
-         
-            </asp:ContentPlaceHolder>
-
-
-
-          
-
+            
             <dx:ASPxLoadingPanel ID="dlplLoading" ClientInstanceName="dlplLoadingInst"
                                  Text="Cargando ..." Modal="true" runat="server">
             </dx:ASPxLoadingPanel>

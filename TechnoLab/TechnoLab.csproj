@@ -262,6 +262,7 @@
     <Content Include="Imagenes\svgEliminar.svg" />
     <Content Include="Imagenes\svgMostrar.png" />
     <Content Include="Imagenes\svgMostrar.svg" />
+    <Content Include="Presentacion\frmBienvenida.aspx" />
     <Content Include="Presentacion\frmPrincipal.aspx" />
     <Content Include="Presentacion\frmMaterial.aspx" />
     <Content Include="Presentacion\frmReservation.aspx" />
@@ -469,6 +470,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmBienvenida.aspx.cs">
+      <DependentUpon>frmBienvenida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmBienvenida.aspx.designer.cs">
+      <DependentUpon>frmBienvenida.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmPrincipal.aspx.cs">
       <DependentUpon>frmPrincipal.aspx</DependentUpon>

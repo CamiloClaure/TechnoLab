@@ -46,6 +46,26 @@ namespace clsGeneric.Controller
             }
         }
 
+        public void mtdActualizarMaterial(Materiales luId)
+        {
+            dMateriales luMaterial = new dMateriales();
+            using (luMaterial)
+            {
+                luMaterial.mtdActualizarMaterial(luId);
+                this.prdResult = luMaterial.prdResult;
+            }
+        }
+
+        public void mtdBajaMaterial(int luId)
+        {
+            dMateriales luMaterial = new dMateriales();
+            using (luMaterial)
+            {
+                luMaterial.mtdBajaMaterial(luId);
+                this.prdResult = luMaterial.prdResult;
+            }
+        }
+
         #region IDisposable Support
         // some fields that require cleanup
         private bool disposed = false; // to detect redundant calls

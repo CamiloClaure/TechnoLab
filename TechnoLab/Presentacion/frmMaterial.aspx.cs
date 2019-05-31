@@ -57,32 +57,70 @@ namespace TechnoLab.Presentacion
 
         protected void dgrvMateriales_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e)
         {
-            //try
-            //{
-            //    materialesform luNewMaterial = new materialesform();
-            //    ctrlMateriales luMaterial = new ctrlMateriales();
+            try
+            {
+                Materiales lunewMaterial = new Materiales();
+                ctrlMateriales luMaterial = new ctrlMateriales();
 
-            //    luNewMaterial.idMaterial = (int)e.Keys["EntidadId"];
+                lunewMaterial.Codigo = (int)e.Keys["Codigo"];
 
 
-            //    luNewMaterial.nombre = e.NewValues["nombre"].ToString();
-            //    luNewMaterial.fechaCompra = DateTime.Now;
-            //    luNewMaterial.estado = true;
-            //    //luMaterial.mtdActualizarMaterial(luNewMaterial);
+                lunewMaterial.CodMaterial = e.NewValues["CodMaterial"].ToString();
+                lunewMaterial.Descripcion = e.NewValues["Descripcion"].ToString();
+                lunewMaterial.Nombre = e.NewValues["Nombre"].ToString();
+                lunewMaterial.FechaCompra = DateTime.Now;
+                lunewMaterial.Estado = e.NewValues["Estado"].ToString();
+                lunewMaterial.Ubicacion = e.NewValues["Ubicacion"].ToString();
+                lunewMaterial.CodCategoria = (int)e.NewValues["CodCategoria"];
+                lunewMaterial.Cantidad = (int)e.NewValues["Cantidad"];
+                lunewMaterial.Activo = true;
+                luMaterial.mtdActualizarMaterial(lunewMaterial);
 
-            //    if (!luMaterial.isSuccess())
-            //    {
-            //        throw new Exception(luMaterial.mtdGetMessageToUser());
-            //    }
-            //    else
-            //    {
-            //        Session["UserSession"] = luMaterial.mtdGetMateriales();
-            //    }
-            //}
-            //catch
-            //{
+                if (!luMaterial.isSuccess())
+                {
+                    throw new Exception(luMaterial.mtdGetMessageToUser());
+                }
+                else
+                {
+                    Session["Materiales"] = luMaterial.mtdGetMateriales();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("dgrvEntidades_RowUpdating-->" + ex.ToString());
+            }
+            e.Cancel = true;
+            ((BootstrapGridView)sender).CancelEdit();
+            dgrvMateriales.DataSource = Session["Materiales"];
+            ((BootstrapGridView)sender).DataBind();
+        }
 
-            //}
+        protected void dgrvMateriales_RowDeleting(object sender, DevExpress.Web.Data.ASPxDataDeletingEventArgs e)
+        {
+            try
+            {
+                Materiales luNewMaterial = new Materiales();
+                int luId = (int)e.Keys["Codigo"];
+                ctrlMateriales luMaterial = new ctrlMateriales();
+                luNewMaterial.Codigo = luId;
+                luMaterial.mtdBajaMaterial(luId);
+                if (!luMaterial.isSuccess())
+                {
+                    throw new Exception(message: luMaterial.prdResult.prdMessage);
+                }
+                else
+                {
+                    Session["Materiales"] = luMaterial.mtdGetMateriales();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("dgrvEntidades_RowDeleting-->" + ex.ToString());
+            }
+            e.Cancel = true;
+            ((BootstrapGridView)sender).CancelEdit();
+            dgrvMateriales.DataSource = Session["Materiales"];
+            ((BootstrapGridView)sender).DataBind();
         }
     }
 }
