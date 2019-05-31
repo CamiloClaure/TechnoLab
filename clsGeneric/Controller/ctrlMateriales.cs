@@ -29,6 +29,23 @@ namespace clsGeneric.Controller
             }
         }
 
+        public void MtdGuardarMaterial(materialesform newTipo)
+        {
+            try
+            {
+                dMateriales luMaterial = new dMateriales();
+                using (luMaterial)
+                {
+                    luMaterial.mtdGuardarMaterial(newTipo);
+                    this.prdResult = luMaterial.prdResult;
+                }
+            }
+            catch (Exception ex)
+            {
+                mtdRespError(ex.ToString());
+            }
+        }
+
         #region IDisposable Support
         // some fields that require cleanup
         private bool disposed = false; // to detect redundant calls

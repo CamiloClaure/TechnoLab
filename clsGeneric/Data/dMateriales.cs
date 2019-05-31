@@ -1,5 +1,6 @@
 ﻿using clsGeneric.Model;
 using Dapper;
+using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,31 @@ namespace clsGeneric.Data
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+
+        public void mtdGuardarMaterial(materialesform luNew)
+        {
+
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    materialesform luResult = guConnection.guDb.Get<materialesform>(luNew.idMaterial);
+                    if (luResult == null)
+                    {
+                        guConnection.guDb.Insert<materialesform>(luNew);
+                        //   mtdTokenResetPassword(prdUsuario.UsuarioId);
+                        mtdRespOK();
+
+                    }
+                    guConnection.mtdCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                mtdRespError(ex.ToString());
             }
         }
 

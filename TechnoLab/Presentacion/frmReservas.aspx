@@ -13,19 +13,29 @@
     <link href="~/Content/Layout.css" rel="stylesheet" type="text/css"  />
 </head>
 <body>
+    <br />
+    <br />
+    <div class="container m-3"> 
     <form id="form1" runat="server">
         <div>
-            <dx:BootstrapGridView ID="dgrvMateriales" runat="server" KeyFieldName="idMaterial" EnableRowsCache="False">
-                <SettingsDataSecurity AllowEdit="true" AllowDelete="true" AllowInsert="true" />
+            <dx:BootstrapGridView ID="dgrvMateriales" runat="server" KeyFieldName="idMaterial" 
+                OnRowInserting="dgrvMateriales_RowInserting"
+                OnRowUpdating="dgrvMateriales_RowUpdating">
+                
+           <SettingsEditing Mode="EditForm"></SettingsEditing>
+                <SettingsDataSecurity AllowEdit="true" AllowDelete="true" AllowInsert="true"/>
                 <Columns>
-                    <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButtonInHeader="true" />
+                    <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButton="true"/>
                     <dx:BootstrapGridViewDataColumn FieldName="idMaterial" Visible="false"/>
-                    <dx:BootstrapGridViewDataColumn FieldName="nombre" Caption="Nombre" />
-                    <dx:BootstrapGridViewDataColumn FieldName="fechaCompra" Caption="Fecha de Compra"/>
-                    <dx:BootstrapGridViewDateColumn FieldName="estado" Visible="false" />
+                    <dx:BootstrapGridViewDataColumn FieldName="nombre" Caption="Nombre"/>
+                    <dx:BootstrapGridViewDateColumn FieldName="fechaCompra" Caption="Fecha de Compra" />
+                    <dx:BootstrapGridViewDateColumn FieldName="estado" Caption="Estado"/>
+                    <dx:BootstrapGridViewDataColumn FieldName="Cantidad" Caption="Cantidad"/>
+                    <dx:BootstrapGridViewDataColumn FieldName="Ubicacion" Caption="Ubicacion"/>
                 </Columns>
             </dx:BootstrapGridView>
         </div>
     </form>
+        </div>
 </body>
 </html>
