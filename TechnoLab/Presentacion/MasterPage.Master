@@ -1,6 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="TechnoLab.Presentacion.MasterPage" %>
 <%@ Register Assembly="DevExpress.Web.Bootstrap.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.Bootstrap" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Src="~/ctrlUsuario/wucReservas.ascx" TagPrefix="uc1" TagName="wucReservas" %>
 <!DOCTYPE html>
 
 <html>
@@ -17,12 +18,13 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/jquery.min.js")%>"> </script>
-    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bootstrap.min.js")%>"> </script>
+    <script type="text/javascript" src="<%=Page.ResolveClientUrl("Scripts/jquery.min.js")%>"> </script>
+    <script type="text/javascript" src="<%=Page.ResolveClientUrl("Scripts/bootstrap.min.js")%>"> </script>
+   
      <div>
          <form id="form1" runat="server">
              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+             </asp:ContentPlaceHolder>
 
                            <dx:ASPxPanel id="TopPanel" runat="server" fixedposition="WindowTop" Visible="true" fixedpositionoverlap="true" CssClass="topPanel">
             <PanelCollection>
@@ -31,21 +33,29 @@
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxPanel id="LeftPanel" runat="server" fixedposition="WindowLeft" fixedpositionoverlap="true" CssClass="leftPanel">
+        <dx:ASPxPanel id="LeftPanel" runat="server" fixedposition="WindowLeft" BackColor="#1f4e79" fixedpositionoverlap="true" CssClass="leftPanel">
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                     <div class="panelContent">
                          <dx:ASPxTreeView ID="dtvwMenuOpciones"  runat="server" EnableClientSideAPI="true"  EnableTheming="true" 
-                                AllowSelectNode="True" Target="contentUrl" EnableViewState="true" EncodeHtml="False"  
+                                AllowSelectNode="True" Target="_self" EnableViewState="true" EncodeHtml="False"  
                                     Styles-Disabled-ForeColor="White" Font-Bold="true" ForeColor="White" Styles-Node-ForeColor="White"
-                                Images-NodeImage-Width="32" Font-Names="Arial" Font-Size="Medium" Height="100%" >
+                                Images-NodeImage-Width="32" BackColor="#1f4e79" Styles-Elbow-HoverStyle-BackColor="White"
+                             Styles-Elbow-HoverStyle-ForeColor="#1f4e79" Font-Names="Arial" Font-Size="Medium" Height="100%" >
                              <Nodes>
                                  <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmMaterial.aspx" 
+                                    NavigateUrl="~/Presentacion/frmReservas.aspx" 
+                                    Text="Chelo"
+                                 
+                                    Expanded="True"/>
+                                  
+                                 <dx:BootstrapTreeViewNode 
+                                    NavigateUrl="~/Presentacion/frmPrueba.aspx" 
                                     Text="Reservar"
-                                    Target="contentUrl" 
+                                  
                                     Expanded="True"/>
                              </Nodes>
+
                   </dx:ASPxTreeView>
                     </div>
                 </dx:PanelContent>
@@ -66,7 +76,7 @@
                                 </dx:SplitterPane>
               </Panes>
       </dx:ASPxSplitter>
-
+            
             
             <dx:ASPxLoadingPanel ID="dlplLoading" ClientInstanceName="dlplLoadingInst"
                                  Text="Cargando ..." Modal="true" runat="server">

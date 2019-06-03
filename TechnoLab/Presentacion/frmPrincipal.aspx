@@ -13,8 +13,13 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+       <div>
+        Principal 2
+    </div>
    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="chpBody" runat="server">
+       <div>
+        Principal
+    </div>
 </asp:Content>

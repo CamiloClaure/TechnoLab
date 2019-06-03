@@ -236,6 +236,8 @@
     <Content Include="Css\General\estiloInicio.css" />
     <Content Include="Css\General\login.css" />
     <Content Include="Css\General\stsGeneral.css" />
+    <Content Include="ctrlUsuario\General\wucConfirmarProcesoResponsive.ascx" />
+    <Content Include="ctrlUsuario\wucReservas.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -248,6 +250,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Imagenes\cuentas.png" />
     <Content Include="Imagenes\emiLogo.png" />
     <Content Include="Imagenes\iconoEmi.ico" />
     <Content Include="Imagenes\logo20.png" />
@@ -264,8 +267,9 @@
     <Content Include="Imagenes\svgMostrar.svg" />
     <Content Include="Presentacion\frmBienvenida.aspx" />
     <Content Include="Presentacion\frmPrincipal.aspx" />
-    <Content Include="Presentacion\frmMaterial.aspx" />
-    <Content Include="Presentacion\frmReservation.aspx" />
+    <Content Include="Presentacion\frmPrueba.aspx" />
+    <Content Include="Presentacion\frmReservas.aspx" />
+    <Content Include="Presentacion\frmReservasEstudiante.aspx" />
     <Content Include="Presentacion\MasterPage.Master" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin.bak" />
@@ -436,6 +440,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Script\jsReservas.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -461,6 +466,20 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ctrlUsuario\General\wucConfirmarProcesoResponsive.ascx.cs">
+      <DependentUpon>wucConfirmarProcesoResponsive.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrlUsuario\General\wucConfirmarProcesoResponsive.ascx.designer.cs">
+      <DependentUpon>wucConfirmarProcesoResponsive.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlUsuario\wucReservas.ascx.cs">
+      <DependentUpon>wucReservas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrlUsuario\wucReservas.ascx.designer.cs">
+      <DependentUpon>wucReservas.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -485,19 +504,26 @@
     <Compile Include="Presentacion\frmPrincipal.aspx.designer.cs">
       <DependentUpon>frmPrincipal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmMaterial.aspx.cs">
-      <DependentUpon>frmMaterial.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmPrueba.aspx.cs">
+      <DependentUpon>frmPrueba.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmMaterial.aspx.designer.cs">
-      <DependentUpon>frmMaterial.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmPrueba.aspx.designer.cs">
+      <DependentUpon>frmPrueba.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmReservation.aspx.cs">
-      <DependentUpon>frmReservation.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmReservas.aspx.cs">
+      <DependentUpon>frmReservas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmReservation.aspx.designer.cs">
-      <DependentUpon>frmReservation.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmReservas.aspx.designer.cs">
+      <DependentUpon>frmReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmReservasEstudiante.aspx.cs">
+      <DependentUpon>frmReservasEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReservasEstudiante.aspx.designer.cs">
+      <DependentUpon>frmReservasEstudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
