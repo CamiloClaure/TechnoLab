@@ -13,6 +13,8 @@ namespace clsGeneric.Model
         public int idMaterial { get; set; }
         public string nombre { get; set; }
         public DateTime fechaCompra { get; set; }
-        public bool estado { get; set; }
+        public string estado { get; set; }
+        public int Cantidad { get; set; }
+        public string Ubicacion { get; set; }
     }
 }

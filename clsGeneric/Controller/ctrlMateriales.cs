@@ -10,11 +10,11 @@ namespace clsGeneric.Controller
 {
     public class ctrlMateriales : clsResult, IDisposable
     {
-        public List<materialesform> mtdGetMateriales()
+        public List<Materiales> mtdGetMateriales()
         {
             try
             {
-                List<materialesform> luResult = null;
+                List<Materiales> luResult = null;
                 dMateriales luDato = new dMateriales(4);
                 using (luDato)
                 {
@@ -26,6 +26,43 @@ namespace clsGeneric.Controller
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+
+        public void MtdGuardarMaterial(Materiales newTipo)
+        {
+            try
+            {
+                dMateriales luMaterial = new dMateriales();
+                using (luMaterial)
+                {
+                    luMaterial.mtdGuardarMaterial(newTipo);
+                    this.prdResult = luMaterial.prdResult;
+                }
+            }
+            catch (Exception ex)
+            {
+                mtdRespError(ex.ToString());
+            }
+        }
+
+        public void mtdActualizarMaterial(Materiales luId)
+        {
+            dMateriales luMaterial = new dMateriales();
+            using (luMaterial)
+            {
+                luMaterial.mtdActualizarMaterial(luId);
+                this.prdResult = luMaterial.prdResult;
+            }
+        }
+
+        public void mtdBajaMaterial(int luId)
+        {
+            dMateriales luMaterial = new dMateriales();
+            using (luMaterial)
+            {
+                luMaterial.mtdBajaMaterial(luId);
+                this.prdResult = luMaterial.prdResult;
             }
         }
 
