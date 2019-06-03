@@ -67,10 +67,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Controller\ctrlMateriales.cs" />
+    <Compile Include="Controller\ctrlReservas.cs" />
     <Compile Include="Data\clsConnection.cs" />
     <Compile Include="Data\clsResult.cs" />
     <Compile Include="Data\dMateriales.cs" />
+    <Compile Include="Data\dReservas.cs" />
     <Compile Include="Model\Materiales.cs" />
+    <Compile Include="Model\Reservas.cs" />
     <Compile Include="Model\stcResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
