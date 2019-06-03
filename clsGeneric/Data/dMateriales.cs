@@ -160,6 +160,32 @@ namespace clsGeneric.Data
                 mtdRespError(ex.ToString());
             }
         }
+
+        public List<stcComboS> mtdGetTipoCategoria()
+        {
+            try
+            {
+
+                List<stcComboS> luResult = null;
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    luResult = guConnection.guDb.Query<stcComboS>(@"Select  
+                                                                        Id prdId,
+                                                                         Descripcion prdDescripcion
+                                                                    From categoria").ToList();
+                    guConnection.mtdCerrar();
+                }
+                return luResult;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+
         #region IDisposable Support
         // some fields that require cleanup
         private bool disposed = false; // to detect redundant calls

@@ -29,6 +29,44 @@ namespace clsGeneric.Controller
             }
         }
 
+        public List<Reservas> mtdGetAprobados()
+        {
+            try
+            {
+                List<Reservas> luResult = null;
+                dReservas luDato = new dReservas();
+                using (luDato)
+                {
+                    luResult = luDato.mtdGetAprobados();
+                }
+
+                return luResult;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<Reservas> mtdGetDevuelto()
+        {
+            try
+            {
+                List<Reservas> luResult = null;
+                dReservas luDato = new dReservas();
+                using (luDato)
+                {
+                    luResult = luDato.mtdGetDevuelto();
+                }
+
+                return luResult;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public void mtdActualizarReserva(Reservas luId)
         {
             dReservas luReserva = new dReservas();
@@ -38,6 +76,63 @@ namespace clsGeneric.Controller
                 this.prdResult = luReserva.prdResult;
             }
         }
+
+        public List<stcComboS> mtdGetTipoUsuario()
+        {
+            try
+            {
+                List<stcComboS> luResult = null;
+                dReservas luReservas = new dReservas();
+                using (luReservas)
+                {
+                    luResult = luReservas.mtdGetTipoUsuario();
+                }
+                mtdRespOK();
+                return luResult;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public List<stcComboS> mtdGetTipoMateria()
+        {
+            try
+            {
+                List<stcComboS> luResult = null;
+                dReservas luReservas = new dReservas();
+                using (luReservas)
+                {
+                    luResult = luReservas.mtdGetTipoMateria();
+                }
+                mtdRespOK();
+                return luResult;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<stcComboS> mtdGetTipoEstado()
+        {
+            try
+            {
+                List<stcComboS> luResult = null;
+                dReservas luReservas = new dReservas();
+                using (luReservas)
+                {
+                    luResult = luReservas.mtdGetTipoEstado();
+                }
+                mtdRespOK();
+                return luResult;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
 
         #region IDisposable Support
         // some fields that require cleanup

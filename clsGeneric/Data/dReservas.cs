@@ -33,7 +33,47 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = 'Pendiente'").ToList();
+                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = 1").ToList();
+                    guConnection.mtdCerrar();
+                }
+                return luResult;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<Reservas> mtdGetAprobados()
+        {
+            try
+            {
+                List<Reservas> luResult = null;
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = 2").ToList();
+                    guConnection.mtdCerrar();
+                }
+                return luResult;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<Reservas> mtdGetDevuelto()
+        {
+            try
+            {
+                List<Reservas> luResult = null;
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = 4").ToList();
                     guConnection.mtdCerrar();
                 }
                 return luResult;
@@ -70,6 +110,78 @@ namespace clsGeneric.Data
             catch (Exception ex)
             {
                 mtdRespError(ex.ToString());
+            }
+        }
+
+        public List<stcComboS> mtdGetTipoUsuario()
+        {
+            try
+            {
+
+                List<stcComboS> luResult = null;
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    luResult = guConnection.guDb.Query<stcComboS>(@"Select  
+                                                                        Codigo prdId,
+                                                                         Nombre prdDescripcion
+                                                                    From usuario").ToList();
+                    guConnection.mtdCerrar();
+                }
+                return luResult;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<stcComboS> mtdGetTipoMateria()
+        {
+            try
+            {
+
+                List<stcComboS> luResult = null;
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    luResult = guConnection.guDb.Query<stcComboS>(@"Select  
+                                                                        Id prdId,
+                                                                         Nombre prdDescripcion
+                                                                    From materia").ToList();
+                    guConnection.mtdCerrar();
+                }
+                return luResult;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<stcComboS> mtdGetTipoEstado()
+        {
+            try
+            {
+
+                List<stcComboS> luResult = null;
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    luResult = guConnection.guDb.Query<stcComboS>(@"Select  
+                                                                        idEstado prdId,
+                                                                         Descripcion prdDescripcion
+                                                                    From consestado").ToList();
+                    guConnection.mtdCerrar();
+                }
+                return luResult;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
 

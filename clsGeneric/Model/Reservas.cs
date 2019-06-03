@@ -17,6 +17,6 @@ namespace clsGeneric.Model
         public string IdEstudiante { get; set; }
         public int CodReserva { get; set; }
         public int IdMateria { get; set; }
-        public string Estado { get; set; }
+        public int Estado { get; set; }
     }
 }

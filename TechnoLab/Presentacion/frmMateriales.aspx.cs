@@ -12,18 +12,23 @@ namespace TechnoLab.Presentacion
 {
     public partial class frmMateriales : System.Web.UI.Page
     {
+        public string prdEndCallbackJS = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack && !IsCallback)
+            using (ctrlMateriales luCtrl = new ctrlMateriales())
             {
-                using (ctrlMateriales luCtrl = new ctrlMateriales())
-                {
-                    Session["Materiales"] = luCtrl.mtdGetMateriales();
-
-                }
+                Session["Materiales"] = luCtrl.mtdGetMateriales();
+                Session["Categoria"] = luCtrl.mtdGetTipoCategoria();
                 dgrvMateriales.DataSource = Session["Materiales"];
+                if (prdEndCallbackJS.Length > 0)
+                {
+                    dgrvMateriales.ClientSideEvents.EndCallback = "function (s,e){ " + prdEndCallbackJS + "}";
+                }
+            ((BootstrapGridViewComboBoxColumn)dgrvMateriales.Columns["CodCategoria"]).PropertiesComboBox.DataSource = Session["Categoria"];
                 dgrvMateriales.DataBind();
             }
+
+           
         }
 
         protected void dgrvMateriales_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)

@@ -16,6 +16,7 @@
                 OnRowInserting="dgrvMateriales_RowInserting"
                 OnRowUpdating="dgrvMateriales_RowUpdating"
                 OnRowDeleting="dgrvMateriales_RowDeleting">
+                <SettingsSearchPanel Visible="true" ShowApplyButton="true" />
                 <SettingsDataSecurity AllowEdit="true" AllowDelete="true" AllowInsert="true"/>
                 <Columns>
                     <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButton="true"/>
@@ -26,7 +27,8 @@
                     <dx:BootstrapGridViewDateColumn FieldName="FechaCompra" Caption="Fecha de Compra"/>
                     <dx:BootstrapGridViewTextColumn FieldName="Estado" Caption="Estado"/>
                     <dx:BootstrapGridViewTextColumn FieldName="Ubicacion" Caption="Ubicacion"/>
-                    <dx:BootstrapGridViewTextColumn FieldName="CodCategoria" Caption="Categoria"/>
+                    <dx:BootstrapGridViewComboBoxColumn FieldName="CodCategoria" Caption="Categoria"
+                         PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>
                      <dx:BootstrapGridViewTextColumn FieldName="Cantidad" Caption="Cantidad"/>
                     <dx:BootstrapGridViewTextColumn FieldName="Activo" Visible="false"/>
                 </Columns>

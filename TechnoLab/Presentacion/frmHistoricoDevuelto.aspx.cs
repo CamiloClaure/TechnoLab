@@ -10,30 +10,30 @@ using System.Web.UI.WebControls;
 
 namespace TechnoLab.Presentacion
 {
-    public partial class frmReservasAdm : System.Web.UI.Page
+    public partial class frmHistoricoDevuelto : System.Web.UI.Page
     {
         public string prdEndCallbackJS = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             using (ctrlReservas luCtrl = new ctrlReservas())
             {
-                Session["Reservas"] = luCtrl.mtdGetReservas();
+                Session["Reservas"] = luCtrl.mtdGetDevuelto();
                 Session["Usuario"] = luCtrl.mtdGetTipoUsuario();
                 Session["Materia"] = luCtrl.mtdGetTipoMateria();
                 Session["Estado"] = luCtrl.mtdGetTipoEstado();
-                dgrvReservasAdm.DataSource = Session["Reservas"];
+                dgrvHistorialDevuelto.DataSource = Session["Reservas"];
                 if (prdEndCallbackJS.Length > 0)
                 {
-                    dgrvReservasAdm.ClientSideEvents.EndCallback = "function (s,e){ " + prdEndCallbackJS + "}";
+                    dgrvHistorialDevuelto.ClientSideEvents.EndCallback = "function (s,e){ " + prdEndCallbackJS + "}";
                 }
-                ((BootstrapGridViewComboBoxColumn)dgrvReservasAdm.Columns["IdEstudiante"]).PropertiesComboBox.DataSource = Session["Usuario"];
-                ((BootstrapGridViewComboBoxColumn)dgrvReservasAdm.Columns["IdMateria"]).PropertiesComboBox.DataSource = Session["Materia"];
-                ((BootstrapGridViewComboBoxColumn)dgrvReservasAdm.Columns["Estado"]).PropertiesComboBox.DataSource = Session["Estado"];
-                dgrvReservasAdm.DataBind();
+                ((BootstrapGridViewComboBoxColumn)dgrvHistorialDevuelto.Columns["IdEstudiante"]).PropertiesComboBox.DataSource = Session["Usuario"];
+                ((BootstrapGridViewComboBoxColumn)dgrvHistorialDevuelto.Columns["IdMateria"]).PropertiesComboBox.DataSource = Session["Materia"];
+                ((BootstrapGridViewComboBoxColumn)dgrvHistorialDevuelto.Columns["Estado"]).PropertiesComboBox.DataSource = Session["Estado"];
+                dgrvHistorialDevuelto.DataBind();
             }
         }
 
-        protected void dgrvReservasAdm_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e)
+        protected void dgrvHistorialApro_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace TechnoLab.Presentacion
                 }
                 else
                 {
-                    Session["Reservas"] = luReserva.mtdGetReservas();
+                    Session["Reservas"] = luReserva.mtdGetAprobados();
                 }
             }
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace TechnoLab.Presentacion
             }
             e.Cancel = true;
             ((BootstrapGridView)sender).CancelEdit();
-            dgrvReservasAdm.DataSource = Session["Reservas"];
+            dgrvHistorialDevuelto.DataSource = Session["Reservas"];
             ((BootstrapGridView)sender).DataBind();
         }
     }

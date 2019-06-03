@@ -1,18 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/MasterPage.Master" AutoEventWireup="true" CodeBehind="frmReservasAdm.aspx.cs" Inherits="TechnoLab.Presentacion.frmReservasAdm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/MasterPage.Master" AutoEventWireup="true" CodeBehind="frmHistorialAprobado.aspx.cs" Inherits="TechnoLab.Presentacion.frmHistorialAprovado" %>
 <%@ Register Assembly="DevExpress.Web.Bootstrap.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.Bootstrap" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+     <br />
     <br />
     <div class="container m-3">
             <div>
                 <br />
                 <br />
                 <br />
-                <dx:BootstrapGridView id="dgrvReservasAdm" runat="server" keyfieldname="Id"
-                    OnRowUpdating="dgrvReservasAdm_RowUpdating">
+                <dx:BootstrapGridView id="dgrvHistorialApro" runat="server" keyfieldname="Id"
+                    OnRowUpdating="dgrvHistorialApro_RowUpdating">
                     <SettingsSearchPanel Visible="true" ShowApplyButton="true" />
                 <SettingsDataSecurity AllowEdit="true"/>
                 <Columns>
