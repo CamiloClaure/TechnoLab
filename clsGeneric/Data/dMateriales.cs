@@ -29,7 +29,6 @@ namespace clsGeneric.Data
         {
             try
             {
-
                 List<Materiales> luResult = null;
                 using (guConnection)
                 {
