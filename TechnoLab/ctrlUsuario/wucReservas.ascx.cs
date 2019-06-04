@@ -1,4 +1,6 @@
-﻿using DevExpress.Web;
+﻿using clsGeneric.Controller;
+using clsGeneric.Model;
+using DevExpress.Web;
 using DevExpress.Web.Bootstrap;
 using DevExpress.Web.Data;
 using System;
@@ -14,156 +16,165 @@ namespace TechnoLab.ctrlUsuario
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
+            if (!IsPostBack)
+            {
+                ctrlMateriales luCtrl = new ctrlMateriales();
+                 Session["tmpDetalle"] = new List<Materiales>();
+                Session["wucMateriales"] = new List<Materiales>();
+                Session["wucComboMaterial"] = luCtrl.GetMaterialesNCantidad();
+                Session["cboCatMateriales"] = luCtrl.GetCategoriaMateriales();
+            }
+
+            //((GridViewDataComboBoxColumn)grid.Columns["Codigo"]).PropertiesComboBox.DataSource = Session["wucComboMaterial"];
+            grid.DataSource = Session["wucMateriales"];
+            grid.DataBind();
+
 
         }
 
+        #region PruebaComboCascada
+        protected void grid_CellEditorInitialize(object sender, ASPxGridViewEditorEventArgs e)
+        {
+            if (!grid.IsEditing || e.Column.FieldName != "Codigo") return;
+            if (e.KeyValue == DBNull.Value || e.KeyValue == null) return;
+            object val = grid.GetRowValuesByKeyValue(e.KeyValue, "CodCategoria");
+            if (val == DBNull.Value) return;
+            string country = (string)val;
 
+            ASPxComboBox combo = e.Editor as ASPxComboBox;
+            FillCityCombo(combo, country);
+
+            combo.Callback += new CallbackEventHandlerBase(cmbCity_OnCallback);
+        }
+
+        protected void FillCityCombo(ASPxComboBox cmb, string country)
+        {
+            if (string.IsNullOrEmpty(country)) return;
+            ctrlMateriales ctrl = new ctrlMateriales();
+            List<Materiales> cities = ctrl.GetMaterialesXCategoria(1);
+            cmb.Items.Clear();
+            foreach (Materiales city in cities)
+                cmb.Items.Add(city.Nombre, city.Codigo);
+        }
+       
+        void cmbCity_OnCallback(object source, CallbackEventArgsBase e)
+        {
+            FillCityCombo(source as ASPxComboBox, e.Parameter);
+        }
+        #endregion
 
         #region ManejoControles
         private void mtdVaciarControles()
         {
-            dtxtClienteId.Text = string.Empty;
-            dtxtDireccion.Text = string.Empty;
-            dtxtDocumento.Text = string.Empty;
-            dcboEstado.Value = "P";
-            dcboEstado.ClientEnabled = false;
-            //dtxtFechaReg.Text = string.Empty;
-            dtxtFullName.Text = string.Empty;
-            dtxtTelefono.Text = string.Empty;
-            dcboNivelRiesgoId.Value = null;
-            dcboTipoEmpresa.Value = null;
+            dtxtCodigoEstudiante.Text = string.Empty;
+
+            dtxtFechaInicio.Text = string.Empty;
+            dtxtFechaFin.Text = string.Empty;
+
+            //dcboMateria.Value = null;
             //Session["wucClienteContacto"] = new List<Contacto>();
 
-            dgrvContacto.DataSource = Session["wucClienteContacto"];
-            dgrvContacto.DataBind();
 
             //Session["DocumentosCliente"] = new List<DocumentosCliente>();
-            dbgrvDocumentoCliente.DataSource = Session["DocumentosCliente"];
-            dbgrvDocumentoCliente.DataBind();
+
         }
 
         private void mtdHabilitarControles()
         {
             bool flag = true;
 
-            //dtxtClienteId.ClientEnabled = flag;
-            dtxtDireccion.ClientEnabled = flag;
-            dtxtDocumento.ClientEnabled = flag;
-            //dcboEstado.ClientEnabled = flag;
-            //dtxtFechaReg.ClientEnabled = flag;
-            dtxtFullName.ClientEnabled = flag;
-            dtxtTelefono.ClientEnabled = flag;
-            dcboNivelRiesgoId.ClientEnabled = flag;
-            dcboTipoEmpresa.ClientEnabled = flag;
-            //dgrvContacto.Enabled = flag;
-            dtbcOperacionOperacion.Enabled = flag;
-            dbtnClienteSeleccionar.Enabled = flag;
+            dtxtCodigoEstudiante.ClientEnabled = flag;
+
+            dtxtFechaFin.ClientEnabled = flag;
+            dtxtFechaInicio.ClientEnabled = flag;
+
+            dcboMateria.ClientEnabled = flag;
+
+            //dgrvMaterial.Enabled = flag;
+
+
             //dbtnClienteSeleccionar.Enabled = true;
-            (dgrvContacto.Columns["CommandColumn"] as GridViewColumn).Visible = true;
-            (dbgrvDocumentoCliente.Columns["CommandColumn"] as BootstrapGridViewCommandColumn).Visible = true;
+
+
         }
 
         private void mtdDeshabilitarControles()
         {
             bool flag = false;
 
-            //dtxtClienteId.ClientEnabled = flag;
-            dtxtDireccion.ClientEnabled = flag;
-            dtxtDocumento.ClientEnabled = flag;
-            dcboEstado.ClientEnabled = flag;
-            //dtxtFechaReg.ClientEnabled = flag;
-            dtxtFullName.ClientEnabled = flag;
-            dtxtTelefono.ClientEnabled = flag;
-            dcboNivelRiesgoId.ClientEnabled = flag;
-            dcboTipoEmpresa.ClientEnabled = flag;
-            dtbcOperacionOperacion.Enabled = flag;
-            //dgrvContacto.Enabled = flag;
+            dtxtCodigoEstudiante.ClientEnabled = flag;
 
-            dbtnClienteSeleccionar.Enabled = flag;
+            dtxtFechaFin.ClientEnabled = flag;
+            dtxtFechaInicio.ClientEnabled = flag;
+
+            dcboMateria.ClientEnabled = flag;
+
+            //dgrvMaterial.Enabled = flag;
+
+
             //dbtnClienteSeleccionar.Enabled = false;
-            (dgrvContacto.Columns["CommandColumn"] as GridViewColumn).Visible = false;
-            (dbgrvDocumentoCliente.Columns["CommandColumn"] as BootstrapGridViewCommandColumn).Visible = false;
+
+
         }
 
         private void mtdCargarComboBox()
         {
-            //using (ctrlClientes luCliente = new ctrlClientes())
-            //{
-            //    dcboTipoEmpresa.DataSource = luCliente.GetTipoEmpresas();
-            //    dcboTipoEmpresa.DataBind();
+            using (ctrlUsuarios luCliente = new ctrlUsuarios())
+            {
+                dcboMateria.DataSource = luCliente.GetMaterias();
+                dcboMateria.DataBind();
 
-            //    dcboNivelRiesgoId.DataSource = luCliente.GetNivelRiesgo();
-            //    dcboNivelRiesgoId.DataBind();
 
-            //    dcboEstado.DataSource = luCliente.GetEstadoCliente();
-            //    dcboEstado.DataBind();
-
-            //    ((BootstrapGridViewComboBoxColumn)dbgrvDocumentoCliente.Columns["TipoDocumentoId"]).PropertiesComboBox.DataSource = Session["cboTipoDocumento"];
-
-            //}
+            }
 
 
         }
 
-        private void mtdCargarControl(int pClientes)
+        private void mtdCargarControl(Reservas pClientes)
         {
-            //ctrlClientes luClientes = new ctrlClientes();
+            ctrlUsuarios luClientes = new ctrlUsuarios();
 
-            //mtdCargarComboBox();
+            mtdCargarComboBox();
 
-            //dtxtClienteId.Text = pClientes.ClienteId.ToString();
-            //dtxtDireccion.Text = pClientes.Direccion;
-            //dtxtDocumento.Text = pClientes.Documento;
-            //dcboEstado.Value = pClientes.EstadoId;
-            //dcboEstado.TextField = pClientes.EstadoDesc;
-            ////dtxtFechaReg.Value = pClientes.FechaReg.ToString();
-            //dtxtFullName.Text = pClientes.FullName;
-            //dtxtTelefono.Text = pClientes.Telefono;
-            //dcboNivelRiesgoId.Value = pClientes.NivelRiesgoId;
-            //dcboNivelRiesgoId.TextField = pClientes.NivelRiesgoDesc;
-            //dcboTipoEmpresa.Value = pClientes.TipoEmpresaId;
-            //dcboTipoEmpresa.TextField = pClientes.TipoEmpresaDesc;
-            //Session["wucClienteContacto"] = luClientes.getContactos(pClientes.ClienteId);
-            //Session["tmpCliente"] = pClientes;
-            //dgrvContacto.DataSource = Session["wucClienteContacto"];
-            //dgrvContacto.DataBind();
-            //Session["DocumentosCliente"] = luClientes.getDocumentosCliente(pClientes.ClienteId);
-            //dbgrvDocumentoCliente.DataSource = Session["DocumentosCliente"];
-            //dbgrvDocumentoCliente.DataBind();
+            dtxtCodigoEstudiante.Text = pClientes.IdEstudiante.ToString();
 
+            //dtxtFechaReg.Value = pClientes.FechaReg.ToString();
+
+            dcboMateria.Value = pClientes.IdMateria;
+            dcboMateria.TextField = pClientes.MateriaDesc;
+
+          
 
             //luClientes.Dispose();
         }
 
-        private void mtdMostrarControles(int pCliente, string pProceso)
+        private void mtdMostrarControles(Reservas pReserva, string pProceso)
         {
-            //mtdDeshabilitarControles();
-            //if (pProceso == "NEW")
-            //{
-            //    mtdHabilitarControles();
-            //    mtdVaciarControles();
-            //    dtbcOperacionOperacion.Enabled = false;
+            mtdDeshabilitarControles();
+            if (pProceso == "NEW")
+            {
+                mtdHabilitarControles();
+                mtdVaciarControles();
 
 
-            //}
-            //if (pProceso == "EDIT" || pProceso == "VER")
-            //{
-            //    dtbcOperacionOperacion.Enabled = true;
 
-            //    using (ctrlClientes luCtrl = new ctrlClientes())
-            //    {
-            //        // pOperacion = luCtrl.getOperacion(pOperacion.OperacionId);
+            }
+            if (pProceso == "EDIT" || pProceso == "VER")
+            {
 
 
-            //        if (pProceso == "EDIT")
-            //        {
-            //            mtdHabilitarControles();
+                using (ctrlUsuarios luCtrl = new ctrlUsuarios())
+                {
+                    // pOperacion = luCtrl.getOperacion(pOperacion.OperacionId);
 
-            //        }
-            //        mtdCargarControl(pCliente);
 
-            //    }
-            //}
+
+                    mtdCargarControl(pReserva);
+
+                }
+            }
         }
 
 
@@ -171,138 +182,81 @@ namespace TechnoLab.ctrlUsuario
 
         #region CallBacks y otros
 
-        protected void dupdSubirArchivos_FileUploadComplete(object sender, DevExpress.Web.FileUploadCompleteEventArgs e)
+
+
+
+        protected void dcpnEstudiantes_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
-            
-        }
+            string[] lsParametros = e.Parameter.ToString().Split('~');
+            Reservas luReservas = new Reservas();
+            Usuario user = (Usuario)Session["giUsuario"];
+            ctrlUsuarios ctrl = new ctrlUsuarios();
+            if (lsParametros[0] == "NEW" || lsParametros[0] == "EDIT" || lsParametros[0] == "VER")
+            {
+                mtdCargarComboBox();
 
+                if (lsParametros[0] == "NEW")
+                {
+                    //luOperacion.OperacionId = Convert.ToInt32(lsParametros[1]);
+                    mtdVaciarControles();
+                    Session["proceso"] = "NEW";
+                }
+                if (lsParametros[0] == "VER" || lsParametros[0] == "EDIT")
+                {
 
-        protected void dcpnClientes_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
-        {
-            //string[] lsParametros = e.Parameter.ToString().Split('~');
-            //Clientes luClientes = new Clientes();
-            //ctrlClientes ctrl = new ctrlClientes();
-            //if (lsParametros[0] == "NEW" || lsParametros[0] == "EDIT" || lsParametros[0] == "VER")
-            //{
-            //    mtdCargarComboBox();
+                    luReservas = ctrl.GetReserva(user.Codigo, Convert.ToInt32(lsParametros[1]));
+                    Session["proceso"] = "VER";
 
-            //    if (lsParametros[0] == "NEW")
-            //    {
-            //        //luOperacion.OperacionId = Convert.ToInt32(lsParametros[1]);
-            //        mtdVaciarControles();
-            //    }
-            //    if (lsParametros[0] == "VER" || lsParametros[0] == "EDIT")
-            //    {
+                }
+                mtdMostrarControles(luReservas, lsParametros[0]);
+            }
 
-            //        luClientes = ctrl.GetClientes(Convert.ToInt32(lsParametros[1]));
-
-
-            //    }
-            //    mtdMostrarControles(luClientes, lsParametros[0]);
-            //}
-
-            //dcpnClientes.JSProperties["cp_cliente"] = clsUtil.mtdToJSON(luClientes);
+            dcpnEstudiantes.JSProperties["cp_cliente"] = luReservas.IdReserva;
         }
 
         protected void dcllWucClientes_Callback(object source, CallbackEventArgs e)
         {
-            //try
-            //{
-            //    Clientes luCliente = clsUtil.mtdJsonToObj<Clientes>(e.Parameter.ToString());
-            //    List<Contacto> luContactos = (List<Contacto>)Session["wucClienteContacto"];
-            //    string lsResult = "NOK~Proceso no completado.";
-            //    int? liUsuarioId = (int?)Session["giUsuarioID"];
-            //    if (liUsuarioId == null)
-            //    {
-            //        throw new Exception("La sesión del usuario ha finalizado, favor cerrar sesión.");
-            //    }
+            try
+            {
+                int idReserva = Convert.ToInt32(e.Parameter.ToString().Split('|')[0]);
+                int IdMateria = Convert.ToInt32(e.Parameter.ToString().Split('|')[1]);
+                List<Materiales> luMateriales = (List<Materiales>)Session["tmpDetalle"];
+                string Proceso = Session["proceso"].ToString();
+                string lsResult = "NOK~Proceso no completado.";
 
-            //    if (luCliente.Proceso == "NEW")
-            //    {
-            //        luCliente.UsuarioId = (int)Session["giUsuarioID"];
 
-            //        using (ctrlClientes luCtrl = new ctrlClientes())
-            //        {
-            //            luCtrl.AddCliente(luCliente, luContactos, (int)liUsuarioId);
-            //            if (luCtrl.isSuccess())
-            //            {
-            //                lsResult = "OK~" + luCtrl.prdResult.prdMessage;
-            //            }
-            //            else
-            //            {
-            //                lsResult = "NOK~" + luCtrl.prdResult.prdMessage;
-            //            }
-            //        }
-            //    }
-            //    if (luCliente.Proceso == "EDIT")
-            //    {
-            //        using (ctrlClientes luCtrl = new ctrlClientes())
-            //        {
-            //            luCtrl.ActualizarCliente(luCliente, luContactos);
-            //            if (luCtrl.isSuccess())
-            //            {
-            //                lsResult = "OK~" + luCtrl.prdResult.prdMessage;
-            //            }
-            //            else
-            //            {
-            //                lsResult = "NOK~" + luCtrl.prdResult.prdMessage;
-            //            }
-            //        }
-            //    }
-            //    e.Result = lsResult;
-            //}
-            //catch (Exception ex)
-            //{
-            //    e.Result = "NOK~" + ex.ToString();
-            //}
+
+                if (Proceso == "NEW")
+                {
+                    Reservas luReservas = new Reservas();
+                    luReservas.IdReserva = idReserva;
+                    luReservas.IdEstudiante = dtxtCodigoEstudiante.Text;
+                    luReservas.FechaI = (DateTime)dtxtFechaInicio.Value;
+                    luReservas.FechaF = (DateTime)dtxtFechaFin.Value;
+                    var tmp = dcboMateria.SelectedItem;
+                    luReservas.IdMateria = IdMateria;
+                    luReservas.CodReserva = 1111;
+                    
+
+                    using (ctrlUsuarios luCtrl = new ctrlUsuarios())
+                    {
+                        luCtrl.AddReserva(luReservas, luMateriales);
+
+                    }
+                }
+
+                e.Result = lsResult;
+            }
+            catch (Exception ex)
+            {
+                e.Result = "NOK~" + ex.ToString();
+            }
 
         }
 
-        protected void dbgrvDocumentoCliente_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
-        {
-            //try
-            //{
-            //    string[] lsValores = e.Parameters.ToString().Split('~');
-
-            //    if (lsValores[0] == "DELETE")
-            //    {
-
-            //        int liDoc = Convert.ToInt32(lsValores[1]);
-
-            //        List<DocumentosCliente> lstDocumentos = (List<DocumentosCliente>)this.Session["DocumentosCliente"];
-            //        if (lstDocumentos == null) throw new Exception("La sesión ha caducado");
-
-            //        lstDocumentos = (from u in lstDocumentos
-            //                         where u.DocumentoId != liDoc
-            //                         select u).ToList();
-            //        this.Session["DocumentosCliente"] = lstDocumentos;
-            //    }
 
 
-            //    dbgrvDocumentoCliente.DataSource = this.Session["DocumentosCliente"];
-            //    dbgrvDocumentoCliente.DataBind();
 
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}
-        }
-
-        private void ValidarDocs(List<int> docs)
-        {
-            //bool correcto = true;
-
-            //foreach (DocumentosCliente d in docs)
-            //{
-            //    if (d.ClienteId == 0 || d.TipoDocumentoId == 0 || d.FechaVencimiento == null)
-            //    {
-            //        return correcto = false;
-            //    }
-            //}
-
-            //return correcto;
-        }
 
         protected void dcllWucClienteDocumento_Callback(object source, CallbackEventArgs e)
         {
@@ -320,11 +274,11 @@ namespace TechnoLab.ctrlUsuario
             //}
         }
 
-        protected void dgrvContacto_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
+        protected void dgrvMaterial_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
         {
             //string[] lsParameters = e.Parameters.ToString().Split('~');
             //Session["idPROCESOOpeWUC"] = lsParameters[0];
-            //(dgrvContacto.Columns["CommandColumn"] as GridViewColumn).Visible = true;
+            //(dgrvMaterial.Columns["CommandColumn"] as GridViewColumn).Visible = true;
 
 
 
@@ -352,16 +306,12 @@ namespace TechnoLab.ctrlUsuario
 
 
 
-            //dgrvContacto.DataSource = Session["idWucOperacionesDocumentacion"];
-            //dgrvContacto.DataBind();
+            //dgrvMaterial.DataSource = Session["idWucOperacionesDocumentacion"];
+            //dgrvMaterial.DataBind();
         }
 
-        protected void dgrvContacto_RowValidating(object sender, DevExpress.Web.Data.ASPxDataValidationEventArgs e)
-        {
 
-        }
-
-        protected void dgrvContacto_BatchUpdate(object sender, DevExpress.Web.Data.ASPxDataBatchUpdateEventArgs e)
+        protected void dgrvMaterial_BatchUpdate(object sender, DevExpress.Web.Data.ASPxDataBatchUpdateEventArgs e)
         {
             //try
             //{
@@ -460,8 +410,8 @@ namespace TechnoLab.ctrlUsuario
             //    }
 
             //    Session["wucClienteContacto"] = luContactos;
-            //    dgrvContacto.DataSource = Session["wucClienteContacto"];
-            //    dgrvContacto.DataBind();
+            //    dgrvMaterial.DataSource = Session["wucClienteContacto"];
+            //    dgrvMaterial.DataBind();
 
             //    e.Handled = true;
             //}
@@ -473,7 +423,7 @@ namespace TechnoLab.ctrlUsuario
 
         }
 
-        protected void dgrvContacto_CellEditorInitialize(object sender, ASPxGridViewEditorEventArgs e)
+        protected void dgrvMaterial_CellEditorInitialize(object sender, ASPxGridViewEditorEventArgs e)
         {
             e.Editor.ReadOnly = false;
         }
@@ -598,8 +548,39 @@ namespace TechnoLab.ctrlUsuario
 
         protected void dbgrvDocumentoCliente_RowUpdated(object sender, ASPxDataUpdatedEventArgs e)
         {
-            dbtnSeleccionarCliente.ClientEnabled = true;
+
         }
 
+        protected void grid_RowInserting(object sender, ASPxDataInsertingEventArgs e)
+        {
+            try
+            {
+                List<Materiales> tmp = (List < Materiales > )Session["tmpDetalle"];
+                //ctrlTipoDocumento luNewTipoDocumento = new ctrlTipoDocumento();
+                Materiales docInsert = new Materiales();
+
+
+                docInsert.Cantidad = (int)e.NewValues["Cantidad"];
+                docInsert.Nombre = e.NewValues["Nombre"].ToString();
+                docInsert.Codigo = (int)e.NewValues["Codigo"];
+                docInsert.Activo = true;
+                docInsert.CodCategoria = 1;
+                docInsert.CodMaterial = "123";
+                docInsert.Descripcion = "222";
+                docInsert.Estado = "Bueno";
+                docInsert.Ubicacion = "";
+
+                tmp.Add(docInsert);
+                e.Cancel = true;
+                Session["tmpDetalle"] = tmp;
+                ((ASPxGridView)sender).CancelEdit();
+                ((ASPxGridView)sender).DataSource = Session["tmpDetalle"];
+                ((ASPxGridView)sender).DataBind();
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
     }
 }

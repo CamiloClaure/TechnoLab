@@ -31,80 +31,7 @@
 
 		      </center>
 		
-      <%-- <div id="LogonContainer" class="LogonContainer center shadow1">
-      
-            <div style="text-align:center">
-                <div class="tittle_login"> Inicio de sesión </div>
-                <div style="background-color:#1f4e79; height:4px; width:100%"></div>
-            </div>
-
-            <br />  <br />
-
-       
-
-            <div class="card-body text-dark div_padding shadow-lg p-3 mb-5 rounded"   id="formContenido">
-                <div class="row">
-                    <div class="col" >
-                        <dx:ASPxTextBox runat="server" ID="txtUsuario" Text="Camilo"
-                            CssClass="AccountNameTextBox" Width="100%">
-                            <FocusedStyle CssClass="AccountNameFocused" />
-                            <BackgroundImage ImageUrl="Img/Btn/Login.png" Repeat="NoRepeat"
-                                HorizontalPosition="left" VerticalPosition="center" />
-                            <ValidationSettings ErrorDisplayMode="Text" Display="Dynamic" ErrorTextPosition="Bottom"
-                                SetFocusOnError="true" ErrorFrameStyle-CssClass="AccountNameError" ValidateOnLeave="false">
-                                <RegularExpression ErrorText="Usuario Inválido" ValidationExpression="\w+" />
-                                <RequiredField IsRequired="True" ErrorText="Ingrese un Usuario" />
-                            </ValidationSettings>
-                        </dx:ASPxTextBox>
-                    </div>
-                </div>
-                <br />  
-                <div class="row">
-                    <div class="col">
-                        <dx:ASPxTextBox ID="txtPassword" runat="server" Password="true" Text="123"
-                            CssClass="UserPasswordTextBox">
-                            <FocusedStyle CssClass="PasswordFocused" />
-                            <BackgroundImage ImageUrl="Img/Btn/Password.png" Repeat="NoRepeat"
-                                HorizontalPosition="left" VerticalPosition="center" />
-                        </dx:ASPxTextBox>
-                        <asp:RequiredFieldValidator runat="server" ID="rfvPassword" ControlToValidate="txtPassword" ForeColor="White"
-                            ErrorMessage="Debe ingresar una contraseña" CssClass="errorLabels">
-                        </asp:RequiredFieldValidator>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <asp:RequiredFieldValidator runat="server" ID="rfvUsuario" ControlToValidate="txtUsuario" ForeColor="White"
-                            ErrorMessage="Debe ingresar un usuario" CssClass="errorLabels">
-                        </asp:RequiredFieldValidator>
-                    </div>
-                </div>
-
-                <br />
-
-                <div class="row">
-                    <div class="col" style="text-align:center;">
-                        <asp:Button ID="btnIngresar" runat="server" BackColor="#1f4e79"
-                            Text="Ingresar" CssClass="SignInButton" OnClick="btnIngresar_Click"></asp:Button>
-                    </div>
-                </div>
-
-                
-
-                <div class="row">
-                    <div class="col">
-                        <asp:RequiredFieldValidator ID="rfvError" runat="server" ControlToValidate="txtError"
-                            ForeColor="DarkOrange">&nbsp;</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtError" runat="server" Width="1px" Visible="false" Text="a"></asp:TextBox>
-                        <dx:ASPxLabel ForeColor="Black" runat="server" ID="ErrorLabel" Text="" Visible="false" />
-                    </div>
-                </div>
-
-            </div>
     
-    </div>
- --%>
 
     <div class="container-fluid">
 		<div class="row justify-content mt-3">
@@ -117,7 +44,7 @@
             </div
 		    		<div class="campo">
 			    		<label>Código de usuario</label>
-				    	<dx:ASPxTextBox runat="server" ID="txtUsuario" Text="Camilo"
+				    	<dx:ASPxTextBox runat="server" ID="txtUsuario" Text="S5899-8"
                             CssClass="form-control contenido" Width="100%">
                             <FocusedStyle CssClass="AccountNameFocused" />
                             <BackgroundImage ImageUrl="Img/Btn/Login.png" Repeat="NoRepeat"

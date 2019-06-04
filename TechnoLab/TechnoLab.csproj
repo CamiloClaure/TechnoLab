@@ -270,6 +270,7 @@
     <Content Include="Presentacion\frmPrueba.aspx" />
     <Content Include="Presentacion\frmReservas.aspx" />
     <Content Include="Presentacion\frmReservasEstudiante.aspx" />
+    <Content Include="Presentacion\frmVacio.aspx" />
     <Content Include="Presentacion\MasterPage.Master" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin.bak" />
@@ -524,6 +525,13 @@
     </Compile>
     <Compile Include="Presentacion\frmReservasEstudiante.aspx.designer.cs">
       <DependentUpon>frmReservasEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVacio.aspx.cs">
+      <DependentUpon>frmVacio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVacio.aspx.designer.cs">
+      <DependentUpon>frmVacio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

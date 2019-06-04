@@ -10,6 +10,21 @@ namespace clsGeneric.Controller
 {
     public class ctrlMateriales : clsResult, IDisposable
     {
+
+        public List<Materiales> GetMaterialesXCategoria(int idCat)
+        {
+            try
+            {
+                using(dMateriales luResult = new dMateriales())
+                {
+                    return luResult.GetMaterialesXCategoria(idCat);
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
         public List<Materiales> mtdGetMateriales()
         {
             try
@@ -65,6 +80,38 @@ namespace clsGeneric.Controller
                 this.prdResult = luMaterial.prdResult;
             }
         }
+        
+
+        public List<Categoria> GetCategoriaMateriales()
+        {
+            try
+            {
+                using (dMateriales luResult = new dMateriales())
+                {
+                    return luResult.GetCategoriaMateriales();
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public List<Materiales> GetMaterialesNCantidad()
+        {
+            try
+            {
+                using (dMateriales luResult = new dMateriales())
+                {
+                    return luResult.GetMaterialesNCantidad();
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
 
         #region IDisposable Support
         // some fields that require cleanup

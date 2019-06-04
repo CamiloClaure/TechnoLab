@@ -161,6 +161,81 @@ namespace clsGeneric.Data
                 mtdRespError(ex.ToString());
             }
         }
+
+        public List<Categoria> GetCategoriaMateriales()
+        {
+            List<Categoria> luResult = new List<Categoria>();
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+
+                    luResult = guConnection.guDb.Query<Categoria>(@"Select * from categoria where Activo = 1").ToList();
+
+                    guConnection.mtdCerrar();
+                }
+            }
+            catch
+            {
+
+            }
+
+            return luResult;
+        }
+
+
+        public List<Materiales> GetMaterialesXCategoria(int idCat)
+        {
+            List<Materiales> luResult = new List<Materiales>();
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    DynamicParameters luParameters = new DynamicParameters();
+                    luParameters.Add("@idCat", idCat);
+                    luResult = guConnection.guDb.Query<Materiales>(@"Select * from materiales where CodCategoria = @idCat").ToList();
+                    guConnection.mtdCerrar();
+                }
+            }
+            catch
+            {
+
+            }
+
+            return luResult;
+        }
+
+        public List<Materiales> GetMaterialesNCantidad()
+        {
+            List<Materiales> luResult = new List<Materiales>();
+            List<Materiales> luResult2 = new List<Materiales>();
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                  
+                    luResult = guConnection.guDb.Query<Materiales>(@"Select CodMaterial,Descripcion,Nombre,FechaCompra,Estado,CodCategoria from materiales where activo = 1").ToList();
+
+                    foreach(Materiales mat in luResult)
+                    {
+                        mat.Cantidad = 0;
+                        luResult2.Add(mat);
+                    }
+                    guConnection.mtdCerrar();
+                }
+            }
+            catch
+            {
+
+            }
+
+            return luResult2;
+        }
+
+
         #region IDisposable Support
         // some fields that require cleanup
         private bool disposed = false; // to detect redundant calls

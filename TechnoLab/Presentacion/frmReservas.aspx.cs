@@ -30,13 +30,13 @@ namespace TechnoLab.Presentacion
         {
             try
             {
-                materialesform lunewMaterial = new materialesform();
+                Materiales lunewMaterial = new Materiales();
                 ctrlMateriales luDataMaterial = new ctrlMateriales();
                 //lunewEntidad.EntidadId = (int)e.NewValues["EntidadId"];
-                lunewMaterial.nombre = e.NewValues["nombre"].ToString();
-                lunewMaterial.fechaCompra = DateTime.Now;
-                lunewMaterial.estado = e.NewValues["estado"].ToString();
-                lunewMaterial.Cantidad = (int)e.NewValues["Cantidad"];
+                //lunewMaterial.nombre = e.NewValues["nombre"].ToString();
+                //lunewMaterial.fechaCompra = DateTime.Now;
+                //lunewMaterial.estado = e.NewValues["estado"].ToString();
+                //lunewMaterial.Cantidad = (int)e.NewValues["Cantidad"];
                 lunewMaterial.Ubicacion = e.NewValues["Ubicacion"].ToString();
                 luDataMaterial.MtdGuardarMaterial(lunewMaterial);
                 Session["Materiales"] = luDataMaterial.mtdGetMateriales();
