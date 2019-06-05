@@ -30,7 +30,7 @@ namespace clsGeneric.Controller
             try
             {
                 List<Materiales> luResult = null;
-                dMateriales luDato = new dMateriales(4);
+                dMateriales luDato = new dMateriales();
                 using (luDato)
                 {
                     luResult = luDato.mtdGetMateriales();
@@ -111,6 +111,27 @@ namespace clsGeneric.Controller
                 return null;
             }
         }
+
+
+        public List<stcComboS> mtdGetTipoCategoria()
+        {
+            try
+            {
+                List<stcComboS> luResult = null;
+                dMateriales luCategoria = new dMateriales();
+                using (luCategoria)
+                {
+                    luResult = luCategoria.mtdGetTipoCategoria();
+                }
+                mtdRespOK();
+                return luResult;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
 
 
         #region IDisposable Support

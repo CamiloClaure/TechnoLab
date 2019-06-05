@@ -266,9 +266,10 @@
     <Content Include="Imagenes\svgMostrar.png" />
     <Content Include="Imagenes\svgMostrar.svg" />
     <Content Include="Presentacion\frmBienvenida.aspx" />
+    <Content Include="Presentacion\frmMateriales.aspx" />
     <Content Include="Presentacion\frmPrincipal.aspx" />
     <Content Include="Presentacion\frmPrueba.aspx" />
-    <Content Include="Presentacion\frmReservas.aspx" />
+    <Content Include="Presentacion\frmReservasAdm.aspx" />
     <Content Include="Presentacion\frmReservasEstudiante.aspx" />
     <Content Include="Presentacion\frmVacio.aspx" />
     <Content Include="Presentacion\MasterPage.Master" />
@@ -498,6 +499,13 @@
     <Compile Include="Presentacion\frmBienvenida.aspx.designer.cs">
       <DependentUpon>frmBienvenida.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmMateriales.aspx.cs">
+      <DependentUpon>frmMateriales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmMateriales.aspx.designer.cs">
+      <DependentUpon>frmMateriales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmPrincipal.aspx.cs">
       <DependentUpon>frmPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -512,12 +520,12 @@
     <Compile Include="Presentacion\frmPrueba.aspx.designer.cs">
       <DependentUpon>frmPrueba.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmReservas.aspx.cs">
-      <DependentUpon>frmReservas.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmReservasAdm.aspx.cs">
+      <DependentUpon>frmReservasAdm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmReservas.aspx.designer.cs">
-      <DependentUpon>frmReservas.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmReservasAdm.aspx.designer.cs">
+      <DependentUpon>frmReservasAdm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmReservasEstudiante.aspx.cs">
       <DependentUpon>frmReservasEstudiante.aspx</DependentUpon>
