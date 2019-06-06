@@ -43,11 +43,11 @@ namespace TechnoLab.ctrlUsuario
         protected void grid_CellEditorInitialize(object sender, ASPxGridViewEditorEventArgs e)
         {
             e.Editor.ReadOnly = false;
-            if (e.Column.FieldName == "MatXCat")
+           /* if (e.Column.FieldName == "MatXCat")
             {
                 ASPxComboBox combo = (ASPxComboBox)e.Editor;
                 combo.DataBind();
-            }
+            }*/
         }
 
         protected void FillCityCombo( int codCat)
@@ -58,8 +58,7 @@ namespace TechnoLab.ctrlUsuario
          
             Session["wucComboMaterial"] = cities;
             //((GridViewDataComboBoxColumn)grid.Columns["CodCat"]).PropertiesComboBox.DataSource = Session["cboCategoriaMat"];
-            ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.DataSource = Session["wucComboMaterial"];
-            grid.DataBind();
+           
         }
        
         void cboMat_OnCallback(object source, CallbackEventArgsBase e)
@@ -69,7 +68,7 @@ namespace TechnoLab.ctrlUsuario
 
         protected void cbpComboMat_Callback(object sender, CallbackEventArgsBase e)
         {
-            FillCityCombo(Convert.ToInt32(e.Parameter));
+         //   FillCityCombo(Convert.ToInt32(e.Parameter));
         }
         #endregion
 
@@ -571,7 +570,7 @@ namespace TechnoLab.ctrlUsuario
                 docInsert.Cantidad = (int)e.NewValues["Cantidad"];
                 docInsert.Nombre = e.NewValues["MatXCat"].ToString();
                 //string tml = ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.;
-                docInsert.Codigo = Convert.ToInt32(((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.ValueField);
+                
                 docInsert.Activo = true;
                 docInsert.CodCategoria = 1;
                 docInsert.CodMaterial = "123";
