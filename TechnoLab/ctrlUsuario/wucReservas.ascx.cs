@@ -16,52 +16,60 @@ namespace TechnoLab.ctrlUsuario
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            ctrlMateriales luCtrl = new ctrlMateriales();
 
             if (!IsPostBack)
             {
-                ctrlMateriales luCtrl = new ctrlMateriales();
+                
                  Session["tmpDetalle"] = new List<Materiales>();
                 Session["wucMateriales"] = new List<Materiales>();
-                Session["wucComboMaterial"] = luCtrl.GetMaterialesNCantidad();
-                Session["cboCatMateriales"] = luCtrl.GetCategoriaMateriales();
+
+                Session["wucComboMaterial"] = luCtrl.mtdGetMateriales();
+                Session["cboCategoriaMat"] = luCtrl.GetCategoriaMateriales();
+
             }
-
-            //((GridViewDataComboBoxColumn)grid.Columns["Codigo"]).PropertiesComboBox.DataSource = Session["wucComboMaterial"];
-            grid.DataSource = Session["wucMateriales"];
-            grid.DataBind();
-
+           
+                
+                grid.DataSource = Session["wucMateriales"];
+                ((GridViewDataComboBoxColumn)grid.Columns["CodCat"]).PropertiesComboBox.DataSource = Session["cboCategoriaMat"];
+                ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.DataSource = Session["wucComboMaterial"];
+                grid.DataBind();
+          
+            
 
         }
 
         #region PruebaComboCascada
         protected void grid_CellEditorInitialize(object sender, ASPxGridViewEditorEventArgs e)
         {
-            if (!grid.IsEditing || e.Column.FieldName != "Codigo") return;
-            if (e.KeyValue == DBNull.Value || e.KeyValue == null) return;
-            object val = grid.GetRowValuesByKeyValue(e.KeyValue, "CodCategoria");
-            if (val == DBNull.Value) return;
-            string country = (string)val;
-
-            ASPxComboBox combo = e.Editor as ASPxComboBox;
-            FillCityCombo(combo, country);
-
-            combo.Callback += new CallbackEventHandlerBase(cmbCity_OnCallback);
+            e.Editor.ReadOnly = false;
+            if (e.Column.FieldName == "MatXCat")
+            {
+                ASPxComboBox combo = (ASPxComboBox)e.Editor;
+                combo.DataBind();
+            }
         }
 
-        protected void FillCityCombo(ASPxComboBox cmb, string country)
+        protected void FillCityCombo( int codCat)
         {
-            if (string.IsNullOrEmpty(country)) return;
+           
             ctrlMateriales ctrl = new ctrlMateriales();
-            List<Materiales> cities = ctrl.GetMaterialesXCategoria(1);
-            cmb.Items.Clear();
-            foreach (Materiales city in cities)
-                cmb.Items.Add(city.Nombre, city.Codigo);
+            List<Materiales> cities = ctrl.GetMaterialesNCantidad(codCat);
+         
+            Session["wucComboMaterial"] = cities;
+            //((GridViewDataComboBoxColumn)grid.Columns["CodCat"]).PropertiesComboBox.DataSource = Session["cboCategoriaMat"];
+            ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.DataSource = Session["wucComboMaterial"];
+            grid.DataBind();
         }
        
-        void cmbCity_OnCallback(object source, CallbackEventArgsBase e)
+        void cboMat_OnCallback(object source, CallbackEventArgsBase e)
         {
-            FillCityCombo(source as ASPxComboBox, e.Parameter);
+            FillCityCombo(Convert.ToInt32(e.Parameter));
+        }
+
+        protected void cbpComboMat_Callback(object sender, CallbackEventArgsBase e)
+        {
+            FillCityCombo(Convert.ToInt32(e.Parameter));
         }
         #endregion
 
@@ -558,11 +566,12 @@ namespace TechnoLab.ctrlUsuario
                 List<Materiales> tmp = (List < Materiales > )Session["tmpDetalle"];
                 //ctrlTipoDocumento luNewTipoDocumento = new ctrlTipoDocumento();
                 Materiales docInsert = new Materiales();
-
+               
 
                 docInsert.Cantidad = (int)e.NewValues["Cantidad"];
-                docInsert.Nombre = e.NewValues["Nombre"].ToString();
-                docInsert.Codigo = (int)e.NewValues["Codigo"];
+                docInsert.Nombre = e.NewValues["MatXCat"].ToString();
+                //string tml = ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.;
+                docInsert.Codigo = Convert.ToInt32(((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.ValueField);
                 docInsert.Activo = true;
                 docInsert.CodCategoria = 1;
                 docInsert.CodMaterial = "123";
@@ -582,5 +591,7 @@ namespace TechnoLab.ctrlUsuario
                 ex.ToString();
             }
         }
+
+       
     }
 }

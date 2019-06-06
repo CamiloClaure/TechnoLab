@@ -2,8 +2,13 @@
 function dgrvButton_Click() {
     alert('OK');
 }
-
-
+var lastCountry = null;
+function OnCatChanged(cboCat) {
+    if (cbpComboMatInst.InCallback())
+        lastCountry = cboCat.GetValue().toString();
+    else
+        cbpComboMatInst.PerformCallback(cboCat.GetValue().toString());
+}
 
 function dupdSubirArchivos_FileUploadComplete() {
 

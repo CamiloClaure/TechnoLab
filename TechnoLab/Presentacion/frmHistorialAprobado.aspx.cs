@@ -40,7 +40,7 @@ namespace TechnoLab.Presentacion
                 Reservas lunewReserva = new Reservas();
                 ctrlReservas luReserva = new ctrlReservas();
 
-                lunewReserva.Id = (int)e.Keys["Id"];
+                lunewReserva.IdReserva = (int)e.Keys["Id"];
                 lunewReserva.Estado = (int)e.NewValues["Estado"];
                 luReserva.mtdActualizarReserva(lunewReserva);
 

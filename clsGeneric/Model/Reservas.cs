@@ -20,6 +20,7 @@ namespace clsGeneric.Model
         public string IdEncargado { get; set; }
         public int CodReserva { get; set; }
         public int IdMateria { get; set; }
+        public int Estado { get; set; }
         [Computed]
         public string MateriaDesc { get; set; }
     }

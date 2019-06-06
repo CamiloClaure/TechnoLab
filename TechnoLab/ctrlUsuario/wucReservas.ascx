@@ -79,7 +79,7 @@
 
             <div id="idContactoClientesGrid">
 
-      
+
                 <%-- <dx:BootstrapGridView runat="server" on
                     ID="dgrvMaterial" ClientInstanceName="dgrvMaterialInst" KeyFieldName="Codigo">
                     <SettingsEditing Mode="Batch" ></SettingsEditing>
@@ -93,23 +93,40 @@
             </div>
 
             <div>
-               
+                <script type="text/javascript">
+                    
+                   
+                    function OnEndCallback(s, e) {
+                        if (lastCountry) {
+                            cboMat.PerformCallback(lastCountry);
+                            lastCountry = null;
+                        }
+                    }
+                </script>
+                <dx:ASPxCallbackPanel ID="cbpComboMat" ClientInstanceName="cbpComboMatInst" runat="server" OnCallback="cbpComboMat_Callback"></dx:ASPxCallbackPanel>
                 <dx:ASPxGridView ID="grid" ClientInstanceName="grid" runat="server"
-                    KeyFieldName="Codigo" Width="100%" AutoGenerateColumns="false" OnCellEditorInitialize="grid_CellEditorInitialize" OnRowInserting="grid_RowInserting">
+                    KeyFieldName="CodCat" Width="100%" AutoGenerateColumns="false" OnCellEditorInitialize="grid_CellEditorInitialize" OnRowInserting="grid_RowInserting">
                     <Settings ShowGroupPanel="true" />
                     <SettingsEditing Mode="Inline" />
                     <Columns>
                         <dx:GridViewCommandColumn ShowEditButton="true" ShowNewButton="true" />
 
-                        <%--<dx:GridViewDataComboBoxColumn FieldName="Codigo" Width="150">
-                            <PropertiesComboBox  TextField="Nombre" ValueField="CodMaterial">
-                               
+                        <dx:GridViewDataComboBoxColumn  FieldName="CodCat" Caption="Categoria" Width="150" ReadOnly="false">
+                            <PropertiesComboBox TextField="Descripcion" ValueField="Id" ClientInstanceName="cboCat">
+                                <ClientSideEvents SelectedIndexChanged="function(s, e) { OnCatChanged(s); }"/>
                             </PropertiesComboBox>
-                        </dx:GridViewDataComboBoxColumn>--%>
-                        <dx:GridViewDataColumn FieldName="Codigo" />
-                        <dx:GridViewDataColumn FieldName="Nombre" />
-                        <dx:GridViewDataColumn FieldName="Cantidad" />
+                        </dx:GridViewDataComboBoxColumn>
+
+
+
+                        <dx:GridViewDataComboBoxColumn FieldName="MatXCat" Caption="Nombre" Width="150" ReadOnly="false">
+                            <PropertiesComboBox TextField="nombre" ValueField="Codigo" ClientInstanceName="cboMat">
+                            </PropertiesComboBox>
+                        </dx:GridViewDataComboBoxColumn>
+                        <%--<dx:GridViewDataColumn FieldName="Codigo" />--%>
                         
+                        <dx:GridViewDataColumn FieldName="Cantidad" />
+
                     </Columns>
                 </dx:ASPxGridView>
             </div>

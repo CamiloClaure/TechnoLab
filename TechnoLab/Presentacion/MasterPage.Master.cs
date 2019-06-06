@@ -11,8 +11,8 @@ namespace TechnoLab.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //dtvwMenuOpciones.Nodes.Add("Reservas", "Reservitas", "../Imagenes/cuentas.png");
-            //string url = "~/Presentacion/frmReservation.aspx";
+            //dtvwMenuOpciones.Nodes.Add("Administrador", "Admin", "../Imagenes/cuentas.png");
+            //string url = "~/Presentacion/frmHistoricoDevuelto.aspx";
             //var node = dtvwMenuOpciones.Nodes.FindByName("Reservitas").Nodes.Add("ReservasEst", "1", "", url, "contentUrl");
             if (!IsPostBack){
 

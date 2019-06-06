@@ -55,13 +55,13 @@ namespace clsGeneric.Controller
             }
         }
 
-        public Reservas GetReserva(string CodEstudiante)
+        public List<Reservas > GetReserva(string CodEstudiante)
         {
             try
             {
                 using (dReservas reservas = new dReservas())
                 {
-                    return reservas.GetReserva(CodEstudiante);
+                    return reservas.GetListaReserva(CodEstudiante);
                 }
             }
             catch

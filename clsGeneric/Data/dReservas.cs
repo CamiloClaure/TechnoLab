@@ -12,6 +12,7 @@ namespace clsGeneric.Data
 {
     public class dReservas : clsResult, IDisposable
     {
+        public clsConnection guConnection;
         public dReservas()
         {
             this.guConnection = new clsConnection();
@@ -19,7 +20,7 @@ namespace clsGeneric.Data
 
         public dReservas(int t)
         {
-            this.tmp = t;
+          
             guConnection = new clsConnection();
         }
 
@@ -91,7 +92,7 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    Reservas luResult = guConnection.guDb.Get<Reservas>(lunew.Id);
+                    Reservas luResult = guConnection.guDb.Get<Reservas>(lunew.IdReserva);
 
                     if (luResult != null)
                     {
@@ -145,7 +146,7 @@ namespace clsGeneric.Data
                 {
                     guConnection.mtdAbrir();
                     luResult = guConnection.guDb.Query<stcComboS>(@"Select  
-                                                                        Id prdId,
+                                                                        IdMateria prdId,
                                                                          Nombre prdDescripcion
                                                                     From materia").ToList();
                     guConnection.mtdCerrar();
@@ -243,6 +244,37 @@ namespace clsGeneric.Data
             return reservas;
         }
 
+        public List<Reservas> GetListaReserva(string CodEstudiante)
+        {
+            List<Reservas> reservas = new List<Reservas>();
+
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    DynamicParameters luParameters = new DynamicParameters();
+                    luParameters.Add("@CodUser", CodEstudiante);
+
+                    reservas = guConnection.guDb.Query<Reservas>(@"	Select res.*,mat.Nombre as 'MateriaDesc'
+                                                                	from reserva res join
+                                                                	materia mat on mat.IdMateria = res.IdMateria
+                                                                	where res.IdEstudiante = @CodUser;
+                                                                ",luParameters).ToList();
+                    guConnection.mtdCerrar();
+
+                }
+            }
+            catch (Exception es)
+            {
+
+                es.ToString();
+            }
+
+            return reservas;
+        }
+
+
 
 
         public void AddReserva(Reservas reserva, List<Materiales> materiales)
@@ -282,5 +314,26 @@ namespace clsGeneric.Data
 
             catch (Exception e) { }
         }
+
+        #region IDisposable Support
+        // some fields that require cleanup
+        private bool disposed = false; // to detect redundant calls
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                // Dispose unmanaged managed resources.
+                disposed = true;
+            }
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        #endregion
     }
+
+
 }

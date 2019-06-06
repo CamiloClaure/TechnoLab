@@ -17,7 +17,7 @@ namespace clsGeneric.Controller
             {
                 using(dMateriales luResult = new dMateriales())
                 {
-                    return luResult.GetMaterialesXCategoria(idCat);
+                    return luResult.GetMaterialesNCantidad(idCat);
                 }
             }
             catch
@@ -88,7 +88,7 @@ namespace clsGeneric.Controller
             {
                 using (dMateriales luResult = new dMateriales())
                 {
-                    return luResult.GetCategoriaMateriales();
+                    return  luResult.GetCategoriaMateriales();
                 }
             }
             catch
@@ -97,13 +97,14 @@ namespace clsGeneric.Controller
             }
         }
 
-        public List<Materiales> GetMaterialesNCantidad()
+        public List<Materiales> GetMaterialesNCantidad(int CodCat)
         {
             try
             {
                 using (dMateriales luResult = new dMateriales())
                 {
-                    return luResult.GetMaterialesNCantidad();
+                    return luResult.GetMaterialesNCantidad(CodCat);
+                    //  return null;
                 }
             }
             catch
@@ -121,7 +122,7 @@ namespace clsGeneric.Controller
                 dMateriales luCategoria = new dMateriales();
                 using (luCategoria)
                 {
-                    luResult = luCategoria.mtdGetTipoCategoria();
+                   // luResult = luCategoria.mtdGetTipoCategoria();
                 }
                 mtdRespOK();
                 return luResult;

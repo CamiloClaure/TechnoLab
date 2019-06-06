@@ -28,7 +28,7 @@ namespace TechnoLab.Presentacion
                 }
                 ((BootstrapGridViewComboBoxColumn)dgrvReservasAdm.Columns["IdEstudiante"]).PropertiesComboBox.DataSource = Session["Usuario"];
                 ((BootstrapGridViewComboBoxColumn)dgrvReservasAdm.Columns["IdMateria"]).PropertiesComboBox.DataSource = Session["Materia"];
-                ((BootstrapGridViewComboBoxColumn)dgrvReservasAdm.Columns["Estado"]).PropertiesComboBox.DataSource = Session["Estado"];
+                //((BootstrapGridViewComboBoxColumn)dgrvReservasAdm.Columns["Estado"]).PropertiesComboBox.DataSource = Session["Estado"];
                 dgrvReservasAdm.DataBind();
             }
         }
@@ -40,7 +40,7 @@ namespace TechnoLab.Presentacion
                 Reservas lunewReserva = new Reservas();
                 ctrlReservas luReserva = new ctrlReservas();
 
-                lunewReserva.Id = (int)e.Keys["Id"];
+                lunewReserva.IdReserva = (int)e.Keys["Id"];
                 lunewReserva.Estado = (int)e.NewValues["Estado"];
                 luReserva.mtdActualizarReserva(lunewReserva);
 

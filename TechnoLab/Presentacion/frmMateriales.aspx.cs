@@ -1,4 +1,5 @@
-﻿using clsGeneric.Controller;
+﻿
+using clsGeneric.Controller;
 using clsGeneric.Model;
 using DevExpress.Web.Bootstrap;
 using System;

@@ -72,6 +72,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Controller\clsUtil.cs" />
     <Compile Include="Controller\ctrlMateriales.cs" />
+    <Compile Include="Controller\ctrlReservas.cs" />
     <Compile Include="Controller\ctrlUsuarios.cs" />
     <Compile Include="Data\clsConnection.cs" />
     <Compile Include="Data\clsResult.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Model\Materiales.cs" />
     <Compile Include="Model\MaterialesForm.cs" />
     <Compile Include="Model\Reservas.cs" />
+    <Compile Include="Model\stcCombo.cs" />
     <Compile Include="Model\stcResult.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

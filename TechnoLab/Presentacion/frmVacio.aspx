@@ -36,7 +36,7 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <div onclick="mtdMostrarCliente(<%#Eval("ClienteId")%>);" class="icoBtnVer"></div>
+                                        <div onclick="mtdMostrarCliente(<%#Eval("IdReserva")%>);" class="icoBtnVer"></div>
                                     </td>
                                 </tr>
                             </table>
@@ -47,7 +47,7 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <div onclick="mtdMostrarEditar(<%#Eval("ClienteId")%>);" class="icoBtnEditar"></div>
+                                        <div onclick="mtdMostrarEditar(<%#Eval("IdReserva")%>);" class="icoBtnEditar"></div>
                                     </td>
                                 </tr>
                             </table>
@@ -60,7 +60,8 @@
                     <dx:GridViewDataColumn FieldName="FechaF" Caption="Fecha Fin" />
                     <dx:GridViewDataColumn FieldName="IdEstudiante" Visible="false" Caption="Id Estudiante" />
                     <dx:GridViewDataColumn FieldName="IdEncargado" Caption="Id Encargado" />
-                    <dx:GridViewDataColumn FieldName="CodReserva" Visible="false" Caption="Cod. Reserva" />
+                    <dx:GridViewDataColumn FieldName="CodReserva" Visible="true" Caption="Cod. Reserva" />
+                    <dx:GridViewDataColumn FieldName="IdReserva" Visible="false" Caption="Cod. Reserva" />
                     <dx:GridViewDataColumn FieldName="IdMateria" Caption="Id materia" />
                     
                 </Columns>

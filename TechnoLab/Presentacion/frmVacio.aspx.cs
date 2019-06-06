@@ -20,8 +20,8 @@ namespace TechnoLab.Presentacion
 
 
 
-            //dgrvClientesX.DataSource = Session["idAllClientes"];
-            //dgrvClientesX.DataBind();
+            dgrvClientesX.DataSource = Session["idAllClientes"];
+            dgrvClientesX.DataBind();
         }
         protected void dgrvClientes_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
         {

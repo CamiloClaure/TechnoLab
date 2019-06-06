@@ -160,6 +160,55 @@ namespace clsGeneric.Data
                 mtdRespError(ex.ToString());
             }
         }
+
+
+        public List<Materiales> GetMaterialesNCantidad(int CodCat)
+        {
+            List<Materiales> luResult = new List<Materiales>();
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                    DynamicParameters luParameters = new DynamicParameters();
+                    luParameters.Add("@Codigo", CodCat);
+                    luResult = guConnection.guDb.Query<Materiales>(@"select Codigo, nombre, codcategoria
+                                                                from material
+                                                                where Codcategoria = @codigo;", luParameters).ToList() ;
+
+                    guConnection.mtdCerrar();
+                }
+            }catch(Exception ex)
+            {
+                ex.ToString();
+            }
+
+            return luResult;
+        }
+
+        public List<Categoria> GetCategoriaMateriales()
+        {
+            List<Categoria> luResult = new List<Categoria>();
+
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                   
+                    luResult = guConnection.guDb.Query<Categoria>(@"select * from categoria;").ToList();
+
+                    guConnection.mtdCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+
+            return luResult;
+        }
+
         #region IDisposable Support
         // some fields that require cleanup
         private bool disposed = false; // to detect redundant calls
