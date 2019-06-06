@@ -266,6 +266,8 @@
     <Content Include="Imagenes\svgMostrar.png" />
     <Content Include="Imagenes\svgMostrar.svg" />
     <Content Include="Presentacion\frmBienvenida.aspx" />
+    <Content Include="Presentacion\frmHistorialAprobado.aspx" />
+    <Content Include="Presentacion\frmHistoricoDevuelto.aspx" />
     <Content Include="Presentacion\frmMateriales.aspx" />
     <Content Include="Presentacion\frmPrincipal.aspx" />
     <Content Include="Presentacion\frmPrueba.aspx" />
@@ -497,6 +499,20 @@
     </Compile>
     <Compile Include="Presentacion\frmBienvenida.aspx.designer.cs">
       <DependentUpon>frmBienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmHistorialAprobado.aspx.cs">
+      <DependentUpon>frmHistorialAprobado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmHistorialAprobado.aspx.designer.cs">
+      <DependentUpon>frmHistorialAprobado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmHistoricoDevuelto.aspx.cs">
+      <DependentUpon>frmHistoricoDevuelto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmHistoricoDevuelto.aspx.designer.cs">
+      <DependentUpon>frmHistoricoDevuelto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmMateriales.aspx.cs">
       <DependentUpon>frmMateriales.aspx</DependentUpon>

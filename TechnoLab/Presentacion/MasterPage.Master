@@ -44,15 +44,23 @@
                              Styles-Elbow-HoverStyle-ForeColor="#1f4e79" Font-Names="Arial" Font-Size="Medium" Height="100%" >
                              <Nodes>
                                  <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmReservasAdm.aspx" 
-                                    Text="Chelo"
+                                    NavigateUrl="~/Presentacion/frmMateriales.aspx" 
+                                    Text="Materiales"
                                  
                                     Expanded="True"/>
                                   
                                  <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmPrueba.aspx" 
-                                    Text="Reservar"
+                                    NavigateUrl="~/Presentacion/frmReservasAdm.aspx" 
+                                    Text="Reservas Administrador"
                                   
+                                    Expanded="True"/>
+                                 <dx:BootstrapTreeViewNode 
+                                    NavigateUrl="~/Presentacion/frmHistorialAprobado.aspx" 
+                                    Text="Historico Aprobado"
+                                    Expanded="True"/>
+                                 <dx:BootstrapTreeViewNode 
+                                    NavigateUrl="~/Presentacion/frmHistoricoDevuelto.aspx" 
+                                    Text="Historico Devuelto"
                                     Expanded="True"/>
                              </Nodes>
 

@@ -74,6 +74,7 @@
     <Compile Include="Data\dReservas.cs" />
     <Compile Include="Model\Materiales.cs" />
     <Compile Include="Model\Reservas.cs" />
+    <Compile Include="Model\stcCombo.cs" />
     <Compile Include="Model\stcResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
