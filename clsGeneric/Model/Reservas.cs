@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace clsGeneric.Model
 {
-    [Table("reserva")]
+    [Table("Reserva")]
     public class Reservas
     {
         [Key]
-        public int Id { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
+        public int IdReserva { get; set; }
+        public DateTime FechaI { get; set; }
+        public DateTime FechaF { get; set; }
+
         public string IdEstudiante { get; set; }
+         
+        public string IdEncargado { get; set; }
         public int CodReserva { get; set; }
         public int IdMateria { get; set; }
         public int Estado { get; set; }
+        [Computed]
+        public string MateriaDesc { get; set; }
     }
 }

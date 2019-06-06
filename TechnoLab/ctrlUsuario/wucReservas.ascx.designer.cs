@@ -13,121 +13,67 @@ namespace TechnoLab.ctrlUsuario {
     public partial class wucReservas {
         
         /// <summary>
-        /// dcpnClientes control.
+        /// dcpnEstudiantes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapCallbackPanel dcpnClientes;
+        protected global::DevExpress.Web.Bootstrap.BootstrapCallbackPanel dcpnEstudiantes;
         
         /// <summary>
-        /// dtxtClienteId control.
+        /// dtxtCodigoEstudiante control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox dtxtClienteId;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox dtxtCodigoEstudiante;
         
         /// <summary>
-        /// dcboTipoEmpresa control.
+        /// dtxtFechaInicio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox dcboTipoEmpresa;
+        protected global::DevExpress.Web.Bootstrap.BootstrapDateEdit dtxtFechaInicio;
         
         /// <summary>
-        /// dcboNivelRiesgoId control.
+        /// dtxtFechaFin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox dcboNivelRiesgoId;
+        protected global::DevExpress.Web.Bootstrap.BootstrapDateEdit dtxtFechaFin;
         
         /// <summary>
-        /// dcboEstado control.
+        /// dcboMateria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox dcboEstado;
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox dcboMateria;
         
         /// <summary>
-        /// dtxtFullName control.
+        /// cbpComboMat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox dtxtFullName;
+        protected global::DevExpress.Web.ASPxCallbackPanel cbpComboMat;
         
         /// <summary>
-        /// dtxtDocumento control.
+        /// grid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox dtxtDocumento;
-        
-        /// <summary>
-        /// dtxtTelefono control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox dtxtTelefono;
-        
-        /// <summary>
-        /// dtxtDireccion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox dtxtDireccion;
-        
-        /// <summary>
-        /// dtbcOperacionOperacion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTabControl dtbcOperacionOperacion;
-        
-        /// <summary>
-        /// dbgrvDocumentoCliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapGridView dbgrvDocumentoCliente;
-        
-        /// <summary>
-        /// dbtnClienteSeleccionar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapButton dbtnClienteSeleccionar;
-        
-        /// <summary>
-        /// dbtnSeleccionarCliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapButton dbtnSeleccionarCliente;
+        protected global::DevExpress.Web.ASPxGridView grid;
         
         /// <summary>
         /// dppcSeleccionarDocumento control.
@@ -137,24 +83,6 @@ namespace TechnoLab.ctrlUsuario {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.Bootstrap.BootstrapPopupControl dppcSeleccionarDocumento;
-        
-        /// <summary>
-        /// dupdSubirArchivos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxUploadControl dupdSubirArchivos;
-        
-        /// <summary>
-        /// dlblErrorSubir control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxLabel dlblErrorSubir;
         
         /// <summary>
         /// dbtnCancelarWuc control.
@@ -173,15 +101,6 @@ namespace TechnoLab.ctrlUsuario {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCallback dcllWucClienteDocumento;
-        
-        /// <summary>
-        /// dgrvContacto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView dgrvContacto;
         
         /// <summary>
         /// dbtnGuardarX control.

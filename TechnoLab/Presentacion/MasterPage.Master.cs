@@ -11,11 +11,22 @@ namespace TechnoLab.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //dtvwMenuOpciones.Nodes.Add("Reservas", "Reservitas", "../Imagenes/cuentas.png");
-            //string url = "~/Presentacion/frmReservation.aspx";
+            //dtvwMenuOpciones.Nodes.Add("Administrador", "Admin", "../Imagenes/cuentas.png");
+            //string url = "~/Presentacion/frmHistoricoDevuelto.aspx";
             //var node = dtvwMenuOpciones.Nodes.FindByName("Reservitas").Nodes.Add("ReservasEst", "1", "", url, "contentUrl");
-            // dtvwMenuOpciones.Nodes.FindByName("Reservitas").Target = "contentUrl";
-            
+            if (!IsPostBack){
+
+                if (this.dpltPane != null) {
+                    this.dpltPane.GetPaneByName("ContentUrlPane").ContentUrl = "frmBienvenida.aspx";
+                }
+
+               
+
+            }
+
+
+
+
         }
 
         protected void btnReservas_Click(object sender, EventArgs e)

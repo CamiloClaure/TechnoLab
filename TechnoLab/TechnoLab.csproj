@@ -270,9 +270,9 @@
     <Content Include="Presentacion\frmHistoricoDevuelto.aspx" />
     <Content Include="Presentacion\frmMateriales.aspx" />
     <Content Include="Presentacion\frmPrincipal.aspx" />
-    <Content Include="Presentacion\frmPrueba.aspx" />
     <Content Include="Presentacion\frmReservasAdm.aspx" />
     <Content Include="Presentacion\frmReservasEstudiante.aspx" />
+    <Content Include="Presentacion\frmVacio.aspx" />
     <Content Include="Presentacion\MasterPage.Master" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin.bak" />
@@ -528,13 +528,6 @@
     <Compile Include="Presentacion\frmPrincipal.aspx.designer.cs">
       <DependentUpon>frmPrincipal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmPrueba.aspx.cs">
-      <DependentUpon>frmPrueba.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmPrueba.aspx.designer.cs">
-      <DependentUpon>frmPrueba.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\frmReservasAdm.aspx.cs">
       <DependentUpon>frmReservasAdm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -548,6 +541,13 @@
     </Compile>
     <Compile Include="Presentacion\frmReservasEstudiante.aspx.designer.cs">
       <DependentUpon>frmReservasEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVacio.aspx.cs">
+      <DependentUpon>frmVacio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVacio.aspx.designer.cs">
+      <DependentUpon>frmVacio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

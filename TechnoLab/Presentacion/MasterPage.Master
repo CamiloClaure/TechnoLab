@@ -18,18 +18,18 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <script type="text/javascript" src="<%=Page.ResolveClientUrl("Scripts/jquery.min.js")%>"> </script>
-    <script type="text/javascript" src="<%=Page.ResolveClientUrl("Scripts/bootstrap.min.js")%>"> </script>
+    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/jquery.min.js")%>"> </script>
+    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bootstrap.min.js")%>"> </script>
    
      <div>
          <form id="form1" runat="server">
              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-             </asp:ContentPlaceHolder>
+              
 
-                           <dx:ASPxPanel id="TopPanel" runat="server" fixedposition="WindowTop" Visible="true" fixedpositionoverlap="true" CssClass="topPanel">
+                       <dx:ASPxPanel id="TopPanel" runat="server" fixedposition="WindowTop" Visible="true" fixedpositionoverlap="true" CssClass="topPanel">
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-                    <div class="panelContent">This is ASPxPanel control with FixedPosition=WindowTop</div>
+                    <div class="panelContent">Camilo</div>
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
@@ -38,30 +38,44 @@
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                     <div class="panelContent">
                          <dx:ASPxTreeView ID="dtvwMenuOpciones"  runat="server" EnableClientSideAPI="true"  EnableTheming="true" 
-                                AllowSelectNode="True" Target="_self" EnableViewState="true" EncodeHtml="False"  
-                                    Styles-Disabled-ForeColor="White" Font-Bold="true" ForeColor="White" Styles-Node-ForeColor="White"
+                                AllowSelectNode="True" Target="contentUrl" EnableViewState="true"
+                             EncodeHtml="False"  
+                                    Styles-Disabled-ForeColor="White" Font-Bold="true" 
+                             ForeColor="White" Styles-Node-ForeColor="White"
                                 Images-NodeImage-Width="32" BackColor="#1f4e79" Styles-Elbow-HoverStyle-BackColor="White"
                              Styles-Elbow-HoverStyle-ForeColor="#1f4e79" Font-Names="Arial" Font-Size="Medium" Height="100%" >
                              <Nodes>
-                                 <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmMateriales.aspx" 
-                                    Text="Materiales"
+                             
                                  
-                                    Expanded="True"/>
-                                  
                                  <dx:BootstrapTreeViewNode 
+                                    NavigateUrl="~/Presentacion/frmVacio.aspx" 
+                                    Text="Reservas" Target="contentUrl"
+                                  
+                                    Expanded="True"/>
+
+                                   <dx:BootstrapTreeViewNode 
+                                    NavigateUrl="~/Presentacion/frmMateriales.aspx" 
+                                    Text="Materiales" Target="contentUrl"
+                                  
+                                    Expanded="True"/>
+
+                                   <dx:BootstrapTreeViewNode 
                                     NavigateUrl="~/Presentacion/frmReservasAdm.aspx" 
-                                    Text="Reservas Administrador"
+                                    Text="ReservasAdm" Target="contentUrl"
                                   
                                     Expanded="True"/>
-                                 <dx:BootstrapTreeViewNode 
+                                 
+                                   <dx:BootstrapTreeViewNode 
                                     NavigateUrl="~/Presentacion/frmHistorialAprobado.aspx" 
-                                    Text="Historico Aprobado"
+                                    Text="frmHistorialAprobado" Target="contentUrl"
+                                  
                                     Expanded="True"/>
-                                 <dx:BootstrapTreeViewNode 
+                              <dx:BootstrapTreeViewNode 
                                     NavigateUrl="~/Presentacion/frmHistoricoDevuelto.aspx" 
-                                    Text="Historico Devuelto"
+                                    Text="frmHistorialDevuelto" Target="contentUrl"
+                                  
                                     Expanded="True"/>
+                             
                              </Nodes>
 
                   </dx:ASPxTreeView>
@@ -70,20 +84,27 @@
             </PanelCollection>
         </dx:ASPxPanel>
                     
-      <dx:ASPxSplitter ID="dpltPane" ClientInstanceName="splitter" FullscreenMode="true"  runat="server">
+      <dx:ASPxSplitter ID="dpltPane" ClientInstanceName="splitter"
+          FullscreenMode="true"  runat="server">
            <Panes>
           
-                                <dx:SplitterPane Name="ContentUrlPane" ContentUrl="~/Presentacion/frmBienvenida.aspx"  Collapsed="false" ScrollBars="Auto" 
+                                <dx:SplitterPane Name="ContentUrlPane" 
+                        Collapsed="false" ScrollBars="Auto" 
                                     ContentUrlIFrameName="contentUrl" >
                                     <ContentCollection>
                                         <dx:SplitterContentControl runat="server"  >
-                                             <asp:ContentPlaceHolder ID="chpBody" runat="server" EnableViewState="true">
+                                             <asp:ContentPlaceHolder ID="chpBody"
+                                                 runat="server" EnableViewState="true">
                                             </asp:ContentPlaceHolder>
                                         </dx:SplitterContentControl>
                                     </ContentCollection>
                                 </dx:SplitterPane>
               </Panes>
       </dx:ASPxSplitter>
+
+             </asp:ContentPlaceHolder>
+
+                     
             
             
             <dx:ASPxLoadingPanel ID="dlplLoading" ClientInstanceName="dlplLoadingInst"

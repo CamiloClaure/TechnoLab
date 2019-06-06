@@ -1,23 +1,13 @@
-﻿function dtbcDocumentosClientes_ActiveTabChanged(s, e) {
-
-    var luTab = s.GetActiveTab();
-    var lsText = luTab.GetText();
-
-    var lsTab = luTab.name;
-    $('#idDocumentosClientes').hide();
-    $('#idContactoClientesGrid').hide();
-
-    if (lsTab == 'idDocumentosCli') {
-        dhddClienteWucInst.Set("guTAB", 'DOCUMENTOS');
-
-
-        $('#idDocumentosClientes').show();
-    }
-    else {
-        dhddClienteWucInst.Set("guTAB", 'PENDIENTES');
-        //dgrvOperacionesInst.PerformCallback('PENDIENTES');
-        $('#idContactoClientesGrid').show();
-    }
+﻿
+function dgrvButton_Click() {
+    alert('OK');
+}
+var lastCountry = null;
+function OnCatChanged(cboCat) {
+    if (cbpComboMatInst.InCallback())
+        lastCountry = cboCat.GetValue().toString();
+    else
+        cbpComboMatInst.PerformCallback(cboCat.GetValue().toString());
 }
 
 function dupdSubirArchivos_FileUploadComplete() {
@@ -62,13 +52,9 @@ function mtdMostrarEditar(pOperacionId) {
 function mtdValidarCliente() {
 
 
-    if (dtxtClienteIdInst.GetIsValid() &&
+    if (dtxtCodigoEstudianteInst.GetIsValid() &&
         //dtxtFechaRegInst.GetIsValid() &&
-        dcboTipoEmpresaInst.GetIsValid() &&
-        dcboNivelRiesgoIdInst.GetIsValid() && dcboEstadoInst.GetIsValid() &&
-        dtxtFullNameInst.GetIsValid() && dtxtDocumentoInst.GetIsValid() &&
-        dtxtTelefonoInst.GetIsValid() && dtxtDireccionInst.GetIsValid()
-    ) {
+        dcboMateriaInst.GetIsValid()) {
         return true;
     }
     else return false;
@@ -89,30 +75,22 @@ function mtdGuardarWucCliente() {
     var luOperacion = dhddClienteWucInst.Get('guCliente');
     luOperacion.Proceso = dhddClienteWucInst.Get('idProceso');
     if (luOperacion.Proceso == "EDIT") {
-        luOperacion.ClienteId = dtxtClienteIdInst.GetValue();
+        luOperacion.ClienteId = dtxtCodigoEstudianteInst.GetValue();
     } else {
         luOperacion.ClienteId = 0;
     }
 
     //luOperacion.FechaReg = mtdConvertJSONDate(dtxtFechaRegInst.GetValue());
-    luOperacion.TipoEmpresaId = dcboTipoEmpresaInst.GetValue();
-    luOperacion.NivelRiesgoId = dcboNivelRiesgoIdInst.GetValue();
-    luOperacion.EstadoId = dcboEstadoInst.GetValue();
-    luOperacion.FullName = dtxtFullNameInst.GetValue();
-    luOperacion.Documento = dtxtDocumentoInst.GetValue();
+   
 
-    luOperacion.Telefono = dtxtTelefonoInst.GetValue();
-    luOperacion.Direccion = dtxtDireccionInst.GetText();
-
-
-    dcllWucClientesInst.PerformCallback(mtdJsonToString(luOperacion));
+    dcllWucClientesInst.PerformCallback(luOperacion + "|" + dcboMateriaInst.GetValue());
 
     dlplLoadingInst.Show();
 }
 
 
 function mtdNuevoCliente() {
-    dcpnClientesInst.PerformCallback('NEW~');
+    dcpnEstudiantesInst.PerformCallback('NEW~');
 
     dhddClienteWucInst.Set('idProceso', 'NEW');
     dbtnGuardarXInst.SetEnabled(true);
@@ -122,7 +100,7 @@ function mtdNuevoCliente() {
 
 function mtdEditarOperacion(pClienteId) {
     var lsX = 'EDIT~' + pClienteId;
-    dcpnClientesInst.PerformCallback(lsX);
+    dcpnEstudiantesInst.PerformCallback(lsX);
 
     dhddClienteWucInst.Set('idProceso', 'EDIT');
     dhddClienteWucInst.Set('idCliente', pClienteId);
@@ -130,22 +108,18 @@ function mtdEditarOperacion(pClienteId) {
 }
 
 function mtdManejarControles(valor) {
-    dtxtClienteIdInst.SetIsValid(valor);
+    dtxtCodigoEstudianteInst.SetIsValid(valor);
     //dtxtFechaRegInst.SetIsValid(valor);
-    dcboTipoEmpresaInst.SetIsValid(valor);
-    dcboNivelRiesgoIdInst.SetIsValid(valor);
-    dcboEstadoInst.SetIsValid(valor);
-    dtxtFullNameInst.SetIsValid(valor);
-    dtxtDocumentoInst.SetIsValid(valor);
-    dtxtTelefonoInst.SetIsValid(valor);
-    dtxtDireccionInst.SetIsValid(valor);
+    dcboMateriaInst.SetIsValid(valor);
+   
+ 
 }
 
 
 function mtdVerCliente(pClienteId) {
 
 
-    dcpnClientesInst.PerformCallback('VER~' + pClienteId);
+    dcpnEstudiantesInst.PerformCallback('VER~' + pClienteId);
 
     dhddClienteWucInst.Set('idProceso', 'VER');
 
@@ -153,10 +127,10 @@ function mtdVerCliente(pClienteId) {
 
 }
 
-function dcpnClientes_EndCallback(s, e) {
-    var lsValor = dcpnClientesInst.cp_cliente;
-    var luCliente = mtdStringToJson(lsValor);
-    dhddClienteWucInst.Set('guCliente', luCliente);
+function dcpnEstudiantes_EndCallback(s, e) {
+    var lsValor = dcpnEstudiantesInst.cp_cliente;
+   
+    dhddClienteWucInst.Set('guCliente', lsValor);
     mtdManejarControles(true);
 }
 
@@ -168,10 +142,10 @@ function dcllWucClientes_CallbackComplete(s, e) {
 
     var lsResult = e.result.toString().split('~');
 
-    if (lsResult[0] == 'OK') {
+    //if (lsResult[0] == 'OK') {
 
         var lsProceso = dhddClienteWucInst.Get('idProceso');
-        if (lsProceso == 'NEW' || lsProceso == 'EDIT') {
+        //if (lsProceso == 'NEW' || lsProceso == 'EDIT') {
             dlblConfirmarProcesoClienteInst.SetVisible(true);
             dlblConfirmarProcesoClienteInst.SetText('Proceso Completado');
             //mtdVerOperacion(lsResult[1]);
@@ -181,12 +155,12 @@ function dcllWucClientes_CallbackComplete(s, e) {
             mtdAtrasCarga();
 
 
-        }
+    //    }
 
-    } else {
-        dlblConfirmarProcesoClienteInstError.SetVisible(true);
-        dlblConfirmarProcesoClienteInstError.SetText(lsResult[1]);
-    }
+    //} else {
+    //    dlblConfirmarProcesoClienteInstError.SetVisible(true);
+    //    dlblConfirmarProcesoClienteInstError.SetText(lsResult[1]);
+    //}
 
 }
 
@@ -209,4 +183,3 @@ function dbtnSeleccionarCliente_Click() {
     dcllWucClienteDocumentoInst.PerformCallback();
     dlplLoadingInst.Show();
 }
-

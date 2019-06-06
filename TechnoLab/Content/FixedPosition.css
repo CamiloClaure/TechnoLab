@@ -1,14 +1,15 @@
 ﻿body {
     padding: 0;
     margin: 0;
-    background-color: #F4F0DB;
+    background-color: white;
     font: 14px Tahoma;
 }
 
 .panelContent {
     font-size: 14px;
-    text-align: center;
+    text-align: right;
     white-space: normal;
+    color: white;
 }
 
 .bodyContent {
@@ -25,13 +26,13 @@
 
 .leftPanel {
     width: 20%;
-    max-width: 180px;
-    min-width: 80px;
+    /*max-width: 180px;
+    min-width: 80px;*/
     /*background-color: #F3EAFB !important;*/
 }
 
 .topPanel {
-    background-color: #DBF4DE !important;
+    background-color: rgb(31, 78, 121) !important;
     padding: 20px 0 20px !important;
 }
 

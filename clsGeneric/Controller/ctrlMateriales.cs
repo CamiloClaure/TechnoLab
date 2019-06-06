@@ -10,6 +10,21 @@ namespace clsGeneric.Controller
 {
     public class ctrlMateriales : clsResult, IDisposable
     {
+
+        public List<Materiales> GetMaterialesXCategoria(int idCat)
+        {
+            try
+            {
+                using(dMateriales luResult = new dMateriales())
+                {
+                    return luResult.GetMaterialesNCantidad(idCat);
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
         public List<Materiales> mtdGetMateriales()
         {
             try
@@ -65,6 +80,39 @@ namespace clsGeneric.Controller
                 this.prdResult = luMaterial.prdResult;
             }
         }
+        
+
+        public List<Categoria> GetCategoriaMateriales()
+        {
+            try
+            {
+                using (dMateriales luResult = new dMateriales())
+                {
+                    return  luResult.GetCategoriaMateriales();
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public List<Materiales> GetMaterialesNCantidad(int CodCat)
+        {
+            try
+            {
+                using (dMateriales luResult = new dMateriales())
+                {
+                    return luResult.GetMaterialesNCantidad(CodCat);
+                    //  return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
 
         public List<stcComboS> mtdGetTipoCategoria()
         {
@@ -74,7 +122,7 @@ namespace clsGeneric.Controller
                 dMateriales luCategoria = new dMateriales();
                 using (luCategoria)
                 {
-                    luResult = luCategoria.mtdGetTipoCategoria();
+                   // luResult = luCategoria.mtdGetTipoCategoria();
                 }
                 mtdRespOK();
                 return luResult;

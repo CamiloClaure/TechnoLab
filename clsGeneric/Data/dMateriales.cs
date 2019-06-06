@@ -160,30 +160,53 @@ namespace clsGeneric.Data
             }
         }
 
-        public List<stcComboS> mtdGetTipoCategoria()
+
+        public List<Materiales> GetMaterialesNCantidad(int CodCat)
         {
+            List<Materiales> luResult = new List<Materiales>();
             try
             {
-
-                List<stcComboS> luResult = null;
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Query<stcComboS>(@"Select  
-                                                                        Id prdId,
-                                                                         Descripcion prdDescripcion
-                                                                    From categoria").ToList();
+                    DynamicParameters luParameters = new DynamicParameters();
+                    luParameters.Add("@Codigo", CodCat);
+                    luResult = guConnection.guDb.Query<Materiales>(@"select Codigo, nombre, codcategoria
+                                                                from material
+                                                                where Codcategoria = @codigo;", luParameters).ToList() ;
+
                     guConnection.mtdCerrar();
                 }
-                return luResult;
+            }catch(Exception ex)
+            {
+                ex.ToString();
+            }
 
+            return luResult;
+        }
+
+        public List<Categoria> GetCategoriaMateriales()
+        {
+            List<Categoria> luResult = new List<Categoria>();
+
+            try
+            {
+                using (guConnection)
+                {
+                    guConnection.mtdAbrir();
+                   
+                    luResult = guConnection.guDb.Query<Categoria>(@"select * from categoria;").ToList();
+
+                    guConnection.mtdCerrar();
+                }
             }
             catch (Exception ex)
             {
-                return null;
+                ex.ToString();
             }
-        }
 
+            return luResult;
+        }
 
         #region IDisposable Support
         // some fields that require cleanup
