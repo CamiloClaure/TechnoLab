@@ -30,6 +30,8 @@ namespace TechnoLab.ctrlUsuario
            
                 
                 grid.DataSource = Session["wucMateriales"];
+                ((BootstrapGridViewComboBoxColumn)grid.Columns["Codigo"]).PropertiesComboBox.DataSource = Session["wucComboMaterial"];
+                ((BootstrapGridViewComboBoxColumn)grid.Columns["CodCategoria"]).PropertiesComboBox.DataSource = Session["cboCategoriaMat"];
                
                 grid.DataBind();
           
@@ -42,7 +44,7 @@ namespace TechnoLab.ctrlUsuario
         {
             e.Editor.ReadOnly = false;
          
-           
+          
         }
 
         protected void FillCityCombo(BootstrapComboBox cmb, int codCat)
@@ -601,7 +603,7 @@ namespace TechnoLab.ctrlUsuario
                 docInsert.Cantidad = (int)e.NewValues["Cantidad"];
                 docInsert.Nombre = "";
                 docInsert.CodCategoria = (int)e.NewValues["CodCategoria"];
-                docInsert.Nombre = e.NewValues["CodMaterial"].ToString();
+                docInsert.Codigo = (int)e.NewValues["Codigo"];
                 //string tml = ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.;
 
                 docInsert.Activo = true;

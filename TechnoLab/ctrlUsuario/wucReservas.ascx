@@ -105,18 +105,27 @@
                 </script>
                 <dx:ASPxCallbackPanel ID="cbpComboMat" ClientInstanceName="cbpComboMatInst" runat="server" OnCallback="cbpComboMat_Callback"></dx:ASPxCallbackPanel>
                 <dx:BootstrapGridView  ID="grid" ClientInstanceName="grid" runat="server"
-                    KeyFieldName="CodCategoria" Width="100%" AutoGenerateColumns="false" OnCellEditorInitialize="grid_CellEditorInitialize" OnRowInserting="grid_RowInserting">
+                    KeyFieldName="Codigo" Width="100%" AutoGenerateColumns="false" OnCellEditorInitialize="grid_CellEditorInitialize" OnRowInserting="grid_RowInserting">
                     <Settings ShowGroupPanel="true" />
                      <SettingsDataSecurity AllowEdit="true" AllowDelete="true" AllowInsert="true" />
                     <SettingsEditing Mode="Inline" />
                     <Columns>
                         <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowNewButton="true" />
 
-                      
+                        <dx:BootstrapGridViewComboBoxColumn   FieldName="CodCategoria" Caption="Categoria" Width="150" ReadOnly="false">
+                            <PropertiesComboBox TextField="Descripcion" ValueField="Id" ClientInstanceName="cboCat">
+                                <ClientSideEvents SelectedIndexChanged="function(s, e) { OnCatChanged(s); }"/>
+                            </PropertiesComboBox>
+                        </dx:BootstrapGridViewComboBoxColumn>
+
+
+                        
+                        <dx:BootstrapGridViewComboBoxColumn FieldName="Codigo" Caption="Nombre" Width="150" ReadOnly="false">
+                            <PropertiesComboBox TextField="Nombre" ValueField="Codigo" ClientInstanceName="cboMat">
+                            </PropertiesComboBox>
+                        </dx:BootstrapGridViewComboBoxColumn>
                         <%--<dx:GridViewDataColumn FieldName="Codigo" />--%>
                         
-                        <dx:BootstrapGridViewDataColumn FieldName="CodCategoria" />
-                        <dx:BootstrapGridViewDataColumn FieldName="CodMaterial" />
                         <dx:BootstrapGridViewDataColumn FieldName="Cantidad" />
 
                     </Columns>
