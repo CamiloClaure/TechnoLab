@@ -21,7 +21,7 @@ namespace TechnoLab.ctrlUsuario
             if (!IsPostBack)
             {
                 
-                 Session["tmpDetalle"] = new List<Materiales>();
+                Session["tmpDetalle"] = new List<Materiales>();
                 Session["wucMateriales"] = new List<Materiales>();
 
                 Session["wucComboMaterial"] = luCtrl.mtdGetMateriales();
