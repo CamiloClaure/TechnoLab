@@ -45,6 +45,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Web.Bootstrap.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
@@ -272,6 +273,7 @@
     <Content Include="Presentacion\frmPrincipal.aspx" />
     <Content Include="Presentacion\frmReservasAdm.aspx" />
     <Content Include="Presentacion\frmReservasEstudiante.aspx" />
+    <Content Include="Presentacion\frmScheduler.aspx" />
     <Content Include="Presentacion\frmVacio.aspx" />
     <Content Include="Presentacion\MasterPage.Master" />
     <Content Include="App_Themes\Generic\ASPxBinaryImage.skin" />
@@ -542,6 +544,13 @@
     </Compile>
     <Compile Include="Presentacion\frmReservasEstudiante.aspx.designer.cs">
       <DependentUpon>frmReservasEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmScheduler.aspx.cs">
+      <DependentUpon>frmScheduler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmScheduler.aspx.designer.cs">
+      <DependentUpon>frmScheduler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmVacio.aspx.cs">
       <DependentUpon>frmVacio.aspx</DependentUpon>

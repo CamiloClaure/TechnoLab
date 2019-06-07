@@ -96,7 +96,6 @@ namespace clsGeneric.Data
 
         public void mtdActualizarMaterial(Materiales lunew)
         {
-
             try
             {
                 using (guConnection)

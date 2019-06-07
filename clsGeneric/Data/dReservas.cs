@@ -32,7 +32,9 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = 1").ToList();
+                    DynamicParameters luParams = new DynamicParameters();
+                    luParams.Add("@Estado", "Pendiente");
+                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = @Estado",luParams).ToList();
                     guConnection.mtdCerrar();
                 }
                 return luResult;
@@ -52,7 +54,9 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = 2").ToList();
+                    DynamicParameters luParams = new DynamicParameters();
+                    luParams.Add("@Estado", "Aprobado");
+                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = @Estado", luParams).ToList();
                     guConnection.mtdCerrar();
                 }
                 return luResult;
@@ -72,7 +76,9 @@ namespace clsGeneric.Data
                 using (guConnection)
                 {
                     guConnection.mtdAbrir();
-                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = 4").ToList();
+                    DynamicParameters luParams = new DynamicParameters();
+                    luParams.Add("@Estado", "Devuelto");
+                    luResult = guConnection.guDb.Query<Reservas>(@"Select * from reserva where Estado = @Estado", luParams).ToList();
                     guConnection.mtdCerrar();
                 }
                 return luResult;

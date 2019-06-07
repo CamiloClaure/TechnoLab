@@ -23,8 +23,9 @@
                     <dx:BootstrapGridViewTextColumn FieldName="CodReserva" Caption="Codigo" ReadOnly="true"/>
                     <dx:BootstrapGridViewComboBoxColumn FieldName="IdMateria" Caption="Materia" ReadOnly="true"
                         PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>
-                    <dx:BootstrapGridViewComboBoxColumn FieldName="Estado" Caption="Estado"
-                        PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>
+                  <%--  <dx:BootstrapGridViewComboBoxColumn FieldName="Estado" Caption="Estado"
+                        PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>--%>
+                    <dx:BootstrapGridViewTextColumn FieldName="Estado" Caption="Estado"></dx:BootstrapGridViewTextColumn>
                     <dx:BootstrapGridViewDateColumn FieldName="FechaI" Caption="Fecha Inicio" ReadOnly="true"/>
                   <dx:BootstrapGridViewTimeEditColumn FieldName="FechaI" Caption="Hora Inicio" ReadOnly="true"/>
                     <dx:BootstrapGridViewDateColumn FieldName="FechaF" Caption="Fecha Fin" ReadOnly="true"/>
