@@ -104,31 +104,23 @@
                     }
                 </script>
                 <dx:ASPxCallbackPanel ID="cbpComboMat" ClientInstanceName="cbpComboMatInst" runat="server" OnCallback="cbpComboMat_Callback"></dx:ASPxCallbackPanel>
-                <dx:ASPxGridView ID="grid" ClientInstanceName="grid" runat="server"
-                    KeyFieldName="CodCat" Width="100%" AutoGenerateColumns="false" OnCellEditorInitialize="grid_CellEditorInitialize" OnRowInserting="grid_RowInserting">
+                <dx:BootstrapGridView  ID="grid" ClientInstanceName="grid" runat="server"
+                    KeyFieldName="CodCategoria" Width="100%" AutoGenerateColumns="false" OnCellEditorInitialize="grid_CellEditorInitialize" OnRowInserting="grid_RowInserting">
                     <Settings ShowGroupPanel="true" />
+                     <SettingsDataSecurity AllowEdit="true" AllowDelete="true" AllowInsert="true" />
                     <SettingsEditing Mode="Inline" />
                     <Columns>
-                        <dx:GridViewCommandColumn ShowEditButton="true" ShowNewButton="true" />
+                        <dx:BootstrapGridViewCommandColumn ShowEditButton="true" ShowNewButton="true" />
 
-                        <dx:GridViewDataComboBoxColumn  FieldName="CodCat" Caption="Categoria" Width="150" ReadOnly="false">
-                            <PropertiesComboBox TextField="Descripcion" ValueField="Id" ClientInstanceName="cboCat">
-                                <ClientSideEvents SelectedIndexChanged="function(s, e) { OnCatChanged(s); }"/>
-                            </PropertiesComboBox>
-                        </dx:GridViewDataComboBoxColumn>
-
-
-
-                        <dx:GridViewDataComboBoxColumn FieldName="MatXCat" Caption="Nombre" Width="150" ReadOnly="false">
-                            <PropertiesComboBox TextField="nombre" ValueField="Codigo" ClientInstanceName="cboMat">
-                            </PropertiesComboBox>
-                        </dx:GridViewDataComboBoxColumn>
+                      
                         <%--<dx:GridViewDataColumn FieldName="Codigo" />--%>
                         
-                        <dx:GridViewDataColumn FieldName="Cantidad" />
+                        <dx:BootstrapGridViewDataColumn FieldName="CodCategoria" />
+                        <dx:BootstrapGridViewDataColumn FieldName="CodMaterial" />
+                        <dx:BootstrapGridViewDataColumn FieldName="Cantidad" />
 
                     </Columns>
-                </dx:ASPxGridView>
+                </dx:BootstrapGridView>
             </div>
 
             <dx:BootstrapPopupControl ID="dppcSeleccionarDocumento" ClientInstanceName="dppcSeleccionarDocumentoInst"

@@ -413,6 +413,7 @@
     <Content Include="App_Themes\Generic\WeekDaysEdit.skin.bak" />
     <Content Include="App_Themes\Generic\WeekOfMonthEdit.skin" />
     <Content Include="App_Themes\Generic\WeekOfMonthEdit.skin.bak" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

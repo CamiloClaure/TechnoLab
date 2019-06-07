@@ -26,13 +26,11 @@ namespace TechnoLab.ctrlUsuario
 
                 Session["wucComboMaterial"] = luCtrl.mtdGetMateriales();
                 Session["cboCategoriaMat"] = luCtrl.GetCategoriaMateriales();
-
             }
            
                 
                 grid.DataSource = Session["wucMateriales"];
-                ((GridViewDataComboBoxColumn)grid.Columns["CodCat"]).PropertiesComboBox.DataSource = Session["cboCategoriaMat"];
-                ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.DataSource = Session["wucComboMaterial"];
+               
                 grid.DataBind();
           
             
@@ -43,27 +41,29 @@ namespace TechnoLab.ctrlUsuario
         protected void grid_CellEditorInitialize(object sender, ASPxGridViewEditorEventArgs e)
         {
             e.Editor.ReadOnly = false;
-           /* if (e.Column.FieldName == "MatXCat")
-            {
-                ASPxComboBox combo = (ASPxComboBox)e.Editor;
-                combo.DataBind();
-            }*/
+         
+           
         }
 
-        protected void FillCityCombo( int codCat)
+        protected void FillCityCombo(BootstrapComboBox cmb, int codCat)
         {
            
             ctrlMateriales ctrl = new ctrlMateriales();
             List<Materiales> cities = ctrl.GetMaterialesNCantidad(codCat);
-         
-            Session["wucComboMaterial"] = cities;
+
+            ((BootstrapGridViewComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.Items.Clear();
+            foreach (Materiales city in cities)
+                ((BootstrapGridViewComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.Items.Add(city.Nombre,city.Codigo);
             //((GridViewDataComboBoxColumn)grid.Columns["CodCat"]).PropertiesComboBox.DataSource = Session["cboCategoriaMat"];
-           
+
         }
-       
+        void cmbCity_OnCallback(object source, CallbackEventArgsBase e)
+        {
+            FillCityCombo(source as BootstrapComboBox, Convert.ToInt32(e.Parameter));
+        }
         void cboMat_OnCallback(object source, CallbackEventArgsBase e)
         {
-            FillCityCombo(Convert.ToInt32(e.Parameter));
+            //FillCityCombo(Convert.ToInt32(e.Parameter));
         }
 
         protected void cbpComboMat_Callback(object sender, CallbackEventArgsBase e)
@@ -73,6 +73,20 @@ namespace TechnoLab.ctrlUsuario
         #endregion
 
         #region ManejoControles
+        private void mtdVaciarControles(string codigo)
+        {
+            dtxtCodigoEstudiante.Text = codigo;
+
+            dtxtFechaInicio.Text = string.Empty;
+            dtxtFechaFin.Text = string.Empty;
+
+            //dcboMateria.Value = null;
+            //Session["wucClienteContacto"] = new List<Contacto>();
+
+
+            //Session["DocumentosCliente"] = new List<DocumentosCliente>();
+
+        }
         private void mtdVaciarControles()
         {
             dtxtCodigoEstudiante.Text = string.Empty;
@@ -163,7 +177,7 @@ namespace TechnoLab.ctrlUsuario
             if (pProceso == "NEW")
             {
                 mtdHabilitarControles();
-                mtdVaciarControles();
+                //mtdVaciarControles();
 
 
 
@@ -205,8 +219,10 @@ namespace TechnoLab.ctrlUsuario
                 if (lsParametros[0] == "NEW")
                 {
                     //luOperacion.OperacionId = Convert.ToInt32(lsParametros[1]);
-                    mtdVaciarControles();
+                    mtdVaciarControles(user.Codigo);
                     Session["proceso"] = "NEW";
+                    dtxtCodigoEstudiante.ReadOnly = true;
+                  
                 }
                 if (lsParametros[0] == "VER" || lsParametros[0] == "EDIT")
                 {
@@ -242,8 +258,8 @@ namespace TechnoLab.ctrlUsuario
                     luReservas.FechaF = (DateTime)dtxtFechaFin.Value;
                     var tmp = dcboMateria.SelectedItem;
                     luReservas.IdMateria = IdMateria;
-                    luReservas.CodReserva = 1111;
-                    
+                    luReservas.CodReserva = Aleatorio();
+                    luReservas.Estado = "Pendiente";
 
                     using (ctrlUsuarios luCtrl = new ctrlUsuarios())
                     {
@@ -262,7 +278,22 @@ namespace TechnoLab.ctrlUsuario
         }
 
 
-
+        private int Aleatorio()
+        {
+            var seed = Environment.TickCount;
+            var random = new Random(seed);
+            int value = 0;
+            for (int i = 0; i <= 10; i++)
+            {
+                value = random.Next(0, 9999);
+                Console.WriteLine($"Iteración {i} - semilla {seed} - valor {value}");
+            }
+            if(value < 10000)
+            {
+                value *= 10;
+            }
+            return value;
+        }
 
 
         protected void dcllWucClienteDocumento_Callback(object source, CallbackEventArgs e)
@@ -562,15 +593,17 @@ namespace TechnoLab.ctrlUsuario
         {
             try
             {
-                List<Materiales> tmp = (List < Materiales > )Session["tmpDetalle"];
+                List<Materiales> tmp = (List<Materiales>)Session["tmpDetalle"];
                 //ctrlTipoDocumento luNewTipoDocumento = new ctrlTipoDocumento();
                 Materiales docInsert = new Materiales();
-               
+
 
                 docInsert.Cantidad = (int)e.NewValues["Cantidad"];
-                docInsert.Nombre = e.NewValues["MatXCat"].ToString();
+                docInsert.Nombre = "";
+                docInsert.CodCategoria = (int)e.NewValues["CodCategoria"];
+                docInsert.Nombre = e.NewValues["CodMaterial"].ToString();
                 //string tml = ((GridViewDataComboBoxColumn)grid.Columns["MatXCat"]).PropertiesComboBox.;
-                
+
                 docInsert.Activo = true;
                 docInsert.CodCategoria = 1;
                 docInsert.CodMaterial = "123";
@@ -590,7 +623,5 @@ namespace TechnoLab.ctrlUsuario
                 ex.ToString();
             }
         }
-
-       
     }
 }

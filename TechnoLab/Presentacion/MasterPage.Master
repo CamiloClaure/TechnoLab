@@ -43,42 +43,7 @@
                                     Styles-Disabled-ForeColor="White" Font-Bold="true" 
                              ForeColor="White" Styles-Node-ForeColor="White"
                                 Images-NodeImage-Width="32" BackColor="#1f4e79" Styles-Elbow-HoverStyle-BackColor="White"
-                             Styles-Elbow-HoverStyle-ForeColor="#1f4e79" Font-Names="Arial" Font-Size="Medium" Height="100%" >
-                             <Nodes>
-                             
-                                 
-                                 <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmVacio.aspx" 
-                                    Text="Reservas" Target="contentUrl"
-                                  
-                                    Expanded="True"/>
-
-                                   <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmMateriales.aspx" 
-                                    Text="Materiales" Target="contentUrl"
-                                  
-                                    Expanded="True"/>
-
-                                   <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmReservasAdm.aspx" 
-                                    Text="ReservasAdm" Target="contentUrl"
-                                  
-                                    Expanded="True"/>
-                                 
-                                   <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmHistorialAprobado.aspx" 
-                                    Text="frmHistorialAprobado" Target="contentUrl"
-                                  
-                                    Expanded="True"/>
-                              <dx:BootstrapTreeViewNode 
-                                    NavigateUrl="~/Presentacion/frmHistoricoDevuelto.aspx" 
-                                    Text="frmHistorialDevuelto" Target="contentUrl"
-                                  
-                                    Expanded="True"/>
-                             
-                             </Nodes>
-
-                  </dx:ASPxTreeView>
+                             Styles-Elbow-HoverStyle-ForeColor="#1f4e79" Font-Names="Arial" Font-Size="Medium" Height="100%" ></dx:ASPxTreeView>
                     </div>
                 </dx:PanelContent>
             </PanelCollection>
