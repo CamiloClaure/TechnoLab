@@ -14,13 +14,11 @@ namespace clsGeneric.Model
         public int IdReserva { get; set; }
         public DateTime FechaI { get; set; }
         public DateTime FechaF { get; set; }
-
         public string IdEstudiante { get; set; }
-         
         public string IdEncargado { get; set; }
         public int CodReserva { get; set; }
         public int IdMateria { get; set; }
-        public int Estado { get; set; }
+        public string Estado { get; set; }
         [Computed]
         public string MateriaDesc { get; set; }
     }

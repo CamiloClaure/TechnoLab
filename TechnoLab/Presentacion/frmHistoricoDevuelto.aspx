@@ -12,24 +12,26 @@
                 <br />
                 <br />
                 <br />
-                <dx:BootstrapGridView id="dgrvHistorialDevuelto" runat="server" keyfieldname="Id"
+                <dx:BootstrapGridView id="dgrvHistorialDevuelto" runat="server" keyfieldname="IdReserva"
                     OnRowUpdating="dgrvHistorialApro_RowUpdating">
                     <SettingsSearchPanel Visible="true" ShowApplyButton="true" />
                 <SettingsDataSecurity AllowEdit="true"/>
                 <Columns>
                     <dx:BootstrapGridViewCommandColumn ShowEditButton="true"/>
-                    <dx:BootstrapGridViewDataColumn FieldName="Id" Visible="false"/>
+                    <dx:BootstrapGridViewDataColumn FieldName="IdReserva" Visible="false"/>
                     <dx:BootstrapGridViewComboBoxColumn FieldName="IdEstudiante" Caption="Estudiante" ReadOnly="true" 
                         PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>
                     <dx:BootstrapGridViewTextColumn FieldName="CodReserva" Caption="Codigo" ReadOnly="true"/>
                     <dx:BootstrapGridViewComboBoxColumn FieldName="IdMateria" Caption="Materia" ReadOnly="true"
                         PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>
-                    <dx:BootstrapGridViewComboBoxColumn FieldName="Estado" Caption="Estado"
-                        PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>
-                    <dx:BootstrapGridViewDateColumn FieldName="FechaInicio" Caption="Fecha Inicio" ReadOnly="true"/>
-                  <dx:BootstrapGridViewTimeEditColumn FieldName="FechaInicio" Caption="Hora Inicio" ReadOnly="true"/>
-                    <dx:BootstrapGridViewDateColumn FieldName="FechaFin" Caption="Fecha Fin" ReadOnly="true"/>
-                    <dx:BootstrapGridViewTimeEditColumn FieldName="FechaFin" Caption="Hora Fin" ReadOnly="true"/>    
+                  <%--  <dx:BootstrapGridViewComboBoxColumn FieldName="Estado" Caption="Estado"
+                        PropertiesComboBox-ValueField="prdId" PropertiesComboBox-TextField="prdDescripcion"/>--%>
+                    <dx:BootstrapGridViewTextColumn FieldName="Estado" Caption="Estado"></dx:BootstrapGridViewTextColumn>
+                    <dx:BootstrapGridViewDateColumn FieldName="FechaI" Caption="Fecha Inicio" ReadOnly="true"/>
+                  <dx:BootstrapGridViewTimeEditColumn FieldName="FechaI" Caption="Hora Inicio" ReadOnly="true"/>
+                    <dx:BootstrapGridViewDateColumn FieldName="FechaF" Caption="Fecha Fin" ReadOnly="true"/>
+                    <dx:BootstrapGridViewTimeEditColumn FieldName="FechaF" Caption="Hora Fin" ReadOnly="true"/>
+                    
                 </Columns>
             </dx:BootstrapGridView>
             </div>
